@@ -16,7 +16,7 @@ gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
-# gem 'fae-rails', path: '~/Sites/fae'
+gem 'fae-rails', github: 'wearefine/fae', branch: 'rails-5'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
