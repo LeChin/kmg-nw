@@ -30,7 +30,14 @@ module Fae
 
     def structure
       [
-        # scaffold inject marker
+        item('Pages', subitems: [
+          item('Home', path: fae.edit_content_block_path('home')),
+          item('About', path: fae.edit_content_block_path('about_landing')),
+          item('Class Landing', path: fae.edit_content_block_path('class_landing')),
+          item('Class Schedule Landing', path: fae.edit_content_block_path('class_schedule_landing')),
+          item('Instructors Landing', path: fae.edit_content_block_path('instructors_landing')),
+          item('Memebership Landing', path: fae.edit_content_block_path('membership_landing')),
+        ])
       ]
     end
 
