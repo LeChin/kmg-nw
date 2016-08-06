@@ -6,7 +6,11 @@ class Instructor < ApplicationRecord
   	through: :instructor_workouts
 
   def fae_display_field
-    
+    name
+  end
+
+  def name
+  	"#{ first_name } #{ last_name }"
   end
 
   acts_as_list add_new_at: :top
