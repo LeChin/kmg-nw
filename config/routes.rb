@@ -1,6 +1,15 @@
 Rails.application.routes.draw do
 
   namespace :admin do
+    resources :pricings
+    resources :news_items
+    resources :media
+    resources :instructors
+    resources :days
+    resources :schedules
+    resources :workouts
+    resources :class_types
+    resources :home_gallery_items
   end
   # mount Fae below your admin namespec
   mount Fae::Engine => '/admin'

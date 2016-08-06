@@ -10,10 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160728004824) do
+ActiveRecord::Schema.define(version: 20160806225547) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "class_types", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "days", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "fae_changes", force: :cascade do |t|
     t.integer  "changeable_id"
@@ -161,6 +173,103 @@ ActiveRecord::Schema.define(version: 20160728004824) do
     t.index ["reset_password_token"], name: "index_fae_users_on_reset_password_token", unique: true, using: :btree
     t.index ["role_id"], name: "index_fae_users_on_role_id", using: :btree
     t.index ["unlock_token"], name: "index_fae_users_on_unlock_token", unique: true, using: :btree
+  end
+
+  create_table "home_gallery_items", force: :cascade do |t|
+    t.boolean  "on_stage",       default: true
+    t.boolean  "on_prod"
+    t.integer  "position"
+    t.integer  "static_page_id"
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.index ["on_prod"], name: "index_home_gallery_items_on_on_prod", using: :btree
+    t.index ["on_stage"], name: "index_home_gallery_items_on_on_stage", using: :btree
+    t.index ["position"], name: "index_home_gallery_items_on_position", using: :btree
+    t.index ["static_page_id"], name: "index_home_gallery_items_on_static_page_id", using: :btree
+  end
+
+  create_table "instructors", force: :cascade do |t|
+    t.boolean  "on_stage",          default: true
+    t.boolean  "on_prod"
+    t.integer  "position"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "role"
+    t.string   "rank"
+    t.text     "bio"
+    t.text     "quote"
+    t.string   "quote_attribution"
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+    t.index ["on_prod"], name: "index_instructors_on_on_prod", using: :btree
+    t.index ["on_stage"], name: "index_instructors_on_on_stage", using: :btree
+    t.index ["position"], name: "index_instructors_on_position", using: :btree
+  end
+
+  create_table "media", force: :cascade do |t|
+    t.date     "date"
+    t.string   "media_type"
+    t.string   "video_link"
+    t.integer  "position"
+    t.boolean  "on_stage",   default: true
+    t.boolean  "on_prod"
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+    t.index ["date"], name: "index_media_on_date", using: :btree
+    t.index ["on_prod"], name: "index_media_on_on_prod", using: :btree
+    t.index ["on_stage"], name: "index_media_on_on_stage", using: :btree
+    t.index ["position"], name: "index_media_on_position", using: :btree
+  end
+
+  create_table "news_items", force: :cascade do |t|
+    t.string   "title"
+    t.date     "date"
+    t.text     "intro"
+    t.text     "body"
+    t.boolean  "on_stage",   default: true
+    t.boolean  "on_prod"
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+    t.index ["date"], name: "index_news_items_on_date", using: :btree
+    t.index ["on_prod"], name: "index_news_items_on_on_prod", using: :btree
+    t.index ["on_stage"], name: "index_news_items_on_on_stage", using: :btree
+  end
+
+  create_table "pricings", force: :cascade do |t|
+    t.string   "level"
+    t.string   "general_price"
+    t.string   "public_safety_price"
+    t.string   "time_free"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+  end
+
+  create_table "schedules", force: :cascade do |t|
+    t.integer  "workout_id"
+    t.integer  "day_id"
+    t.time     "start_time"
+    t.time     "end_time"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["day_id"], name: "index_schedules_on_day_id", using: :btree
+    t.index ["end_time"], name: "index_schedules_on_end_time", using: :btree
+    t.index ["start_time"], name: "index_schedules_on_start_time", using: :btree
+    t.index ["workout_id"], name: "index_schedules_on_workout_id", using: :btree
+  end
+
+  create_table "workouts", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "type_id"
+    t.text     "body"
+    t.boolean  "appointment_only"
+    t.boolean  "on_stage",         default: true
+    t.boolean  "on_prod"
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+    t.index ["appointment_only"], name: "index_workouts_on_appointment_only", using: :btree
+    t.index ["on_prod"], name: "index_workouts_on_on_prod", using: :btree
+    t.index ["on_stage"], name: "index_workouts_on_on_stage", using: :btree
+    t.index ["type_id"], name: "index_workouts_on_type_id", using: :btree
   end
 
 end

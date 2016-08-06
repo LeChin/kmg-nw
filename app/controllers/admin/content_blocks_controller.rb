@@ -4,7 +4,7 @@ module Admin
     private
 
     def fae_pages
-      [HomePage, AboutLandingPage, InstructorsLandingPage, ClassLandingPage, MembershipLandingPage, ClassScheduleLandingPage]
+      [HomePage, AboutLandingPage, InstructorsLandingPage, ClassLandingPage, MembershipLandingPage, ClassScheduleLandingPage, PhotoLandingPage, ContactInfoPage]
     end
   end
 end

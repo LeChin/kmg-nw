@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  on_stage: false
+  on_prod: false
+  position: 1
+  first_name: MyString
+  last_name: MyString
+  role: MyString
+  rank: MyString
+  bio: MyText
+  quote: MyText
+  quote_attribution: MyString
+
+two:
+  on_stage: false
+  on_prod: false
+  position: 1
+  first_name: MyString
+  last_name: MyString
+  role: MyString
+  rank: MyString
+  bio: MyText
+  quote: MyText
+  quote_attribution: MyString

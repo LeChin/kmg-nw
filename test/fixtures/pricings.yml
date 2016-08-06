@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  level: MyString
+  general_price: MyString
+  public_safety_price: MyString
+  time_free: MyString
+
+two:
+  level: MyString
+  general_price: MyString
+  public_safety_price: MyString
+  time_free: MyString
