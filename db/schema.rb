@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160806225547) do
+ActiveRecord::Schema.define(version: 20160806232517) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -188,6 +188,13 @@ ActiveRecord::Schema.define(version: 20160806225547) do
     t.index ["static_page_id"], name: "index_home_gallery_items_on_static_page_id", using: :btree
   end
 
+  create_table "instructor_workouts", force: :cascade do |t|
+    t.integer "instructor_id"
+    t.integer "workout_id"
+    t.index ["instructor_id"], name: "index_instructor_workouts_on_instructor_id", using: :btree
+    t.index ["workout_id"], name: "index_instructor_workouts_on_workout_id", using: :btree
+  end
+
   create_table "instructors", force: :cascade do |t|
     t.boolean  "on_stage",          default: true
     t.boolean  "on_prod"
@@ -259,7 +266,7 @@ ActiveRecord::Schema.define(version: 20160806225547) do
 
   create_table "workouts", force: :cascade do |t|
     t.string   "title"
-    t.integer  "type_id"
+    t.integer  "class_type_id"
     t.text     "body"
     t.boolean  "appointment_only"
     t.boolean  "on_stage",         default: true
@@ -267,9 +274,9 @@ ActiveRecord::Schema.define(version: 20160806225547) do
     t.datetime "created_at",                      null: false
     t.datetime "updated_at",                      null: false
     t.index ["appointment_only"], name: "index_workouts_on_appointment_only", using: :btree
+    t.index ["class_type_id"], name: "index_workouts_on_class_type_id", using: :btree
     t.index ["on_prod"], name: "index_workouts_on_on_prod", using: :btree
     t.index ["on_stage"], name: "index_workouts_on_on_stage", using: :btree
-    t.index ["type_id"], name: "index_workouts_on_type_id", using: :btree
   end
 
 end

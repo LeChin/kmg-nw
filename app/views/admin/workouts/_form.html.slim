@@ -5,7 +5,8 @@
 
   main.content
     = fae_input f, :title
-    = fae_input f, :body
-    = fae_input f, :appointment_only
+    = fae_association f, :class_type
+    = fae_input f, :body, markdown: true
+    = fae_association f, :instructors
+    = fae_input f, :appointment_only, label: 'Appointment Only?'
 
-    = fae_association f, :type

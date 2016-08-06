@@ -30,13 +30,21 @@ module Fae
 
     def structure
       [
+        item('Classes and Instructors', subitems: [
+          item('Classes', path: admin_workouts_path),
+          item('Class Types', path: admin_class_types_path),
+          item('Instructors', path: admin_instructors_path)
+        ]),
+        item('News', path: admin_news_items_path),
         item('Pages', subitems: [
           item('Home', path: fae.edit_content_block_path('home')),
           item('About', path: fae.edit_content_block_path('about_landing')),
           item('Class Landing', path: fae.edit_content_block_path('class_landing')),
           item('Class Schedule Landing', path: fae.edit_content_block_path('class_schedule_landing')),
           item('Instructors Landing', path: fae.edit_content_block_path('instructors_landing')),
+          item('Media Landing', path: fae.edit_content_block_path('photo_landing')),
           item('Memebership Landing', path: fae.edit_content_block_path('membership_landing')),
+          item('Contact Info', path: fae.edit_content_block_path('contact_info')),
         ])
       ]
     end

@@ -1,6 +1,10 @@
 class Instructor < ApplicationRecord
   include Fae::BaseModelConcern
 
+  has_many :instructor_workouts
+  has_many :workouts,
+  	through: :instructor_workouts
+
   def fae_display_field
     
   end
