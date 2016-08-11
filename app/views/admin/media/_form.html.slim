@@ -5,6 +5,7 @@
 
   main.content
     = fae_input f, :date
-    = fae_input f, :media_type
+    = fae_input f, :media_type, collection: ['Photo', 'Video']
+    = fae_image_form f, :image, alt_label: 'Image Alt Text', helper_text: 'tdb x tbd jpg, Used on Detail Page.', show_caption: true, caption_label: 'Image Caption'
     = fae_input f, :video_link
 

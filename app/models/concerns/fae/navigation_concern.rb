@@ -36,6 +36,7 @@ module Fae
           item('Instructors', path: admin_instructors_path)
         ]),
         item('News', path: admin_news_items_path),
+        item('Media', path: admin_media_path),
         item('Pages', subitems: [
           item('Home', path: fae.edit_content_block_path('home')),
           item('About', path: fae.edit_content_block_path('about_landing')),

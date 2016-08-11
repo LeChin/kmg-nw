@@ -4,11 +4,13 @@
   == render 'fae/shared/errors'
 
   main.content
-    = fae_input f, :first_name
-    = fae_input f, :last_name
+    = fae_input f, :first_name, input_class: 'slugger', required: true
+    = fae_input f, :last_name, input_class: 'slugger', required: true
+    = fae_input f, :slug, required: true
     = fae_input f, :role
     = fae_input f, :rank
     = fae_input f, :bio, markdown: true
     = fae_input f, :quote
     = fae_input f, :quote_attribution
-
+    = fae_image_form f, :hero_image, label: 'Hero Image', alt_label: 'Hero Image Alt Text', helper_text: 'tdb x tbd jpg, Used on Detail Page.'
+    = fae_image_form f, :bio_image, label: 'Bio Image', alt_label: 'Bio Image Alt Text', helper_text: 'tdb x tbd jpg, Used on Detail Page.'
