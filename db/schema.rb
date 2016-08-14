@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160811025749) do
+ActiveRecord::Schema.define(version: 20160814221503) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -176,14 +176,12 @@ ActiveRecord::Schema.define(version: 20160811025749) do
   end
 
   create_table "home_gallery_items", force: :cascade do |t|
-    t.boolean  "on_stage",       default: true
-    t.boolean  "on_prod"
+    t.boolean  "live"
     t.integer  "position"
     t.integer  "static_page_id"
-    t.datetime "created_at",                    null: false
-    t.datetime "updated_at",                    null: false
-    t.index ["on_prod"], name: "index_home_gallery_items_on_on_prod", using: :btree
-    t.index ["on_stage"], name: "index_home_gallery_items_on_on_stage", using: :btree
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.index ["live"], name: "index_home_gallery_items_on_live", using: :btree
     t.index ["position"], name: "index_home_gallery_items_on_position", using: :btree
     t.index ["static_page_id"], name: "index_home_gallery_items_on_static_page_id", using: :btree
   end
@@ -196,8 +194,7 @@ ActiveRecord::Schema.define(version: 20160811025749) do
   end
 
   create_table "instructors", force: :cascade do |t|
-    t.boolean  "on_stage",          default: true
-    t.boolean  "on_prod"
+    t.boolean  "live"
     t.integer  "position"
     t.string   "first_name"
     t.string   "last_name"
@@ -206,27 +203,35 @@ ActiveRecord::Schema.define(version: 20160811025749) do
     t.text     "bio"
     t.text     "quote"
     t.string   "quote_attribution"
-    t.datetime "created_at",                       null: false
-    t.datetime "updated_at",                       null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
     t.string   "slug"
-    t.index ["on_prod"], name: "index_instructors_on_on_prod", using: :btree
-    t.index ["on_stage"], name: "index_instructors_on_on_stage", using: :btree
+    t.index ["live"], name: "index_instructors_on_live", using: :btree
     t.index ["position"], name: "index_instructors_on_position", using: :btree
   end
 
   create_table "media", force: :cascade do |t|
     t.date     "date"
     t.string   "media_type"
-    t.string   "video_link"
+    t.text     "video_link"
     t.integer  "position"
-    t.boolean  "on_stage",   default: true
-    t.boolean  "on_prod"
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.boolean  "live"
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+    t.boolean  "featured_on_home", default: false
+    t.string   "name"
     t.index ["date"], name: "index_media_on_date", using: :btree
-    t.index ["on_prod"], name: "index_media_on_on_prod", using: :btree
-    t.index ["on_stage"], name: "index_media_on_on_stage", using: :btree
+    t.index ["live"], name: "index_media_on_live", using: :btree
     t.index ["position"], name: "index_media_on_position", using: :btree
+  end
+
+  create_table "news_gallery_items", force: :cascade do |t|
+    t.string   "name"
+    t.boolean  "live"
+    t.integer  "news_item_id"
+    t.integer  "position"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "news_items", force: :cascade do |t|
@@ -234,13 +239,11 @@ ActiveRecord::Schema.define(version: 20160811025749) do
     t.date     "date"
     t.text     "intro"
     t.text     "body"
-    t.boolean  "on_stage",   default: true
-    t.boolean  "on_prod"
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.boolean  "live"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["date"], name: "index_news_items_on_date", using: :btree
-    t.index ["on_prod"], name: "index_news_items_on_on_prod", using: :btree
-    t.index ["on_stage"], name: "index_news_items_on_on_stage", using: :btree
+    t.index ["live"], name: "index_news_items_on_live", using: :btree
   end
 
   create_table "pricings", force: :cascade do |t|
@@ -270,14 +273,12 @@ ActiveRecord::Schema.define(version: 20160811025749) do
     t.integer  "class_type_id"
     t.text     "body"
     t.boolean  "appointment_only"
-    t.boolean  "on_stage",         default: true
-    t.boolean  "on_prod"
-    t.datetime "created_at",                      null: false
-    t.datetime "updated_at",                      null: false
+    t.boolean  "live"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
     t.index ["appointment_only"], name: "index_workouts_on_appointment_only", using: :btree
     t.index ["class_type_id"], name: "index_workouts_on_class_type_id", using: :btree
-    t.index ["on_prod"], name: "index_workouts_on_on_prod", using: :btree
-    t.index ["on_stage"], name: "index_workouts_on_on_stage", using: :btree
+    t.index ["live"], name: "index_workouts_on_live", using: :btree
   end
 
 end

@@ -1,2 +1,10 @@
 // Do Not Delete this page! FAE depends on it in order to set its highlight color.
 $c-custom-highlight: #d66b1d;
+
+.hidden {
+	display: none;
+}
+
+.index .content table {
+	margin-bottom: 20px;
+}

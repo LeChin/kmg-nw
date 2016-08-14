@@ -1,25 +1,45 @@
 == render 'fae/shared/index_header', title: @klass_humanized.pluralize.titleize
 
 main.content
-  table.js-sort-row
+  - if @items.present?
+    - @items.group_by(&:media_type).each do |type, items|
+      table.js-sort-row
+        - if type == 'Photo'
+          h3 Photos
+        - elsif type == 'Video'
+          h3 Videos - (Only one video, in the highest position, will be featured on Home)
+        thead
+          tr
+            th.th-sortable-handle
+            th Name
+            th Date
+            th Image or Video Link
+            th Featured On Home?
+            th.-action-wide Modified
+            th.-action-wide data-sorter="false" Live?
+            th.-action data-sorter="false"
+
+        tbody
+          - items.each do |item|
+            tr id=fae_sort_id(item)
+              td.sortable-handle: i.icon-sort
+              td = link_to item.fae_display_field, edit_admin_medium_path(item)
+              td = fae_date_format item.date
+              td = item.media_type == 'Photo' ? image_tag(item.image.asset.thumb.url) : item.video_link
+              td = item.featured_on_home ? 'Yes' : 'No'
+              td = fae_date_format item.updated_at
+              td = fae_toggle item, :live
+              td = fae_delete_button item
+  - else
     thead
       tr
         th.th-sortable-handle
         th Name
+        th Date
+        th Image or Video Link
+        th Featured On Home?
         th.-action-wide Modified
-        th.-action-wide data-sorter="false" On stage
-        th.-action-wide data-sorter="false" On prod
+        th.-action-wide data-sorter="false" Live?
         th.-action data-sorter="false"
-
     tbody
-      - if @items.present?
-        - @items.each do |item|
-          tr id=fae_sort_id(item)
-            td.sortable-handle: i.icon-sort
-            td = link_to item.fae_display_field, edit_admin_media_path(item)
-            td = fae_date_format item.updated_at
-            td = fae_toggle item, :on_stage
-            td = fae_toggle item, :on_prod
-            td = fae_delete_button item
-      - else
-        tr: td colspan="6" No items found
+      tr: td colspan="8" No items found

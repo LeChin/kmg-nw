@@ -1,5 +1,7 @@
-class Medium < ApplicationRecord
+class NewsGalleryItem < ApplicationRecord
   include Fae::BaseModelConcern
+
+  belongs_to :news_item
 
   has_one :image, -> { where(attached_as: 'image') },
     as: :imageable,
@@ -10,12 +12,12 @@ class Medium < ApplicationRecord
   acts_as_list add_new_at: :top
   default_scope { order(:position) }
 
-  validates :media_type, presence: true
-
-  scope :photos, -> { where(media_type: 'Photo') }
-
   def fae_display_field
-  	name
+    name
+  end
+
+  def fae_nested_parent
+    :news_item
   end
 
 end

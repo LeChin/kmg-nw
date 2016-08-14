@@ -4,8 +4,15 @@
   == render 'fae/shared/errors'
 
   main.content
-    = fae_input f, :title
-    = fae_input f, :date
+    = fae_input f, :title, required: true
+    = fae_input f, :date, required: true
     = fae_input f, :intro
-    = fae_input f, :body
+    = fae_input f, :body, markdown: true, required: true
 
+- if params[:action] == 'edit'
+  section.content#nested_table
+    = render 'fae/shared/nested_table',
+      assoc: :news_gallery_items,
+      parent_item: @item,
+      cols: [:name, :image, :live, :updated_at],
+      ordered: true

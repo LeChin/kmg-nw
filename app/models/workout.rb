@@ -6,6 +6,8 @@ class Workout < ApplicationRecord
   	through: :instructor_workouts
   belongs_to :class_type
 
+  validates :title, :body, :class_type, presence: true
+
   def fae_display_field
     title
   end

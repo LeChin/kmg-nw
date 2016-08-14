@@ -4,9 +4,9 @@
   == render 'fae/shared/errors'
 
   main.content
-    = fae_input f, :title
-    = fae_association f, :class_type
-    = fae_input f, :body, markdown: true
+    = fae_input f, :title, required: true
+    = fae_association f, :class_type, required: true
+    = fae_input f, :body, markdown: true, required: true
     = fae_association f, :instructors
     = fae_input f, :appointment_only, label: 'Appointment Only?'
 

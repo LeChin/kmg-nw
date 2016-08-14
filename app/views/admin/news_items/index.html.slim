@@ -6,8 +6,7 @@ main.content
       tr
         th Title
         th.-action-wide Modified
-        th.-action-wide data-sorter="false" On stage
-        th.-action-wide data-sorter="false" On prod
+        th.-action-wide data-sorter="false" Live?
         th.-action data-sorter="false"
 
     tbody
@@ -16,8 +15,7 @@ main.content
           tr id=fae_sort_id(item)
             td = link_to item.fae_display_field, edit_admin_news_item_path(item)
             td = fae_date_format item.updated_at
-            td = fae_toggle item, :on_stage
-            td = fae_toggle item, :on_prod
+            td = fae_toggle item, :live
             td = fae_delete_button item
       - else
-        tr: td colspan="5" No items found
+        tr: td colspan="4" No items found
