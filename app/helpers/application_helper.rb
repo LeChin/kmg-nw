@@ -1,4 +1,8 @@
 module ApplicationHelper
-  # Initializes a Markdown parser
-  markdown = Redcarpet::Markdown.new(renderer, extensions = {})
+
+  def markdown(string, klass = '')
+    if string.present? && @markdown.present?
+      content_tag :div, @markdown.render(string).html_safe, class: "markdown #{klass}"
+    end
+  end
 end
