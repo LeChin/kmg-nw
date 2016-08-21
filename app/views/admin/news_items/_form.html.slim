@@ -8,6 +8,9 @@
     = fae_input f, :date, required: true
     = fae_input f, :intro
     = fae_input f, :body, markdown: true, required: true
+    = fae_image_form f, :image_1, label: 'Image 1', alt_label: 'Image 1 Alt Text', helper_text: 'tdb x tbd jpg'
+    = fae_image_form f, :image_2, label: 'Image 2', alt_label: 'Image 2 Alt Text', helper_text: 'tdb x tbd jpg'
+    = fae_image_form f, :image_3, label: 'Image 3', alt_label: 'Image 3 Alt Text', helper_text: 'tdb x tbd jpg'
 
 - if params[:action] == 'edit'
   section.content#nested_table

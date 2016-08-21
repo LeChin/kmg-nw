@@ -31,15 +31,16 @@ main.content
               td = fae_toggle item, :live
               td = fae_delete_button item
   - else
-    thead
-      tr
-        th.th-sortable-handle
-        th Name
-        th Date
-        th Image or Video Link
-        th Featured On Home?
-        th.-action-wide Modified
-        th.-action-wide data-sorter="false" Live?
-        th.-action data-sorter="false"
-    tbody
-      tr: td colspan="8" No items found
+    table.js-sort-row
+      thead
+        tr
+          th.th-sortable-handle
+          th Name
+          th Date
+          th Image or Video Link
+          th Featured On Home?
+          th.-action-wide Modified
+          th.-action-wide data-sorter="false" Live?
+          th.-action data-sorter="false"
+      tbody
+        tr: td colspan="8" No items found

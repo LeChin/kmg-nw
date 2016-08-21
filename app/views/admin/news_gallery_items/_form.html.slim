@@ -1,7 +1,0 @@
-= simple_form_for(['admin', @item], html: {multipart: true, novalidate: true, class: 'js-file-form'}, remote: true, data: {type: "html"}) do |f|
-  = fae_input f, :name
-  = fae_image_form f, :image, alt_label: 'Image Alt Text', helper_text: 'tdb x tbd jpg', show_caption: true, caption_label: 'Image Caption'
-  = f.hidden_field :news_item_id
-
-  = f.submit
-  = button_tag 'Cancel', type: 'button', class: 'js-cancel-nested cancel-nested-button'
