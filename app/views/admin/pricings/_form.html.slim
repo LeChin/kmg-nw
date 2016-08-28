@@ -1,7 +1,10 @@
 = simple_form_for(['admin', @item], html: {multipart: true, novalidate: true, class: 'js-file-form'}, remote: true, data: {type: "html"}) do |f|
-    = fae_input f, :level
-    = fae_input f, :general_price
-    = fae_input f, :public_safety_price
-    = fae_input f, :time_free
-    = f.hidden_field :static_page_id
+  = fae_input f, :level
+  = fae_input f, :general_price
+  = fae_input f, :public_safety_price
+  = fae_input f, :time_free, helper_text: 'If none, leave blank'
+  = f.hidden_field :static_page_id
+  
+  = f.submit
+  = button_tag 'Cancel', type: 'button', class: 'js-cancel-nested cancel-nested-button'
 
