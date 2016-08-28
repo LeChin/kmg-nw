@@ -1,11 +1,7 @@
-= simple_form_for(['admin', @item]) do |f|
-  header.content-header.js-content-header
-    == render 'fae/shared/form_header', header: @klass_name
-  == render 'fae/shared/errors'
-
-  main.content
+= simple_form_for(['admin', @item], html: {multipart: true, novalidate: true, class: 'js-file-form'}, remote: true, data: {type: "html"}) do |f|
     = fae_input f, :level
     = fae_input f, :general_price
     = fae_input f, :public_safety_price
     = fae_input f, :time_free
+    = f.hidden_field :static_page_id
 

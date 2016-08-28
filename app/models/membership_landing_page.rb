@@ -2,6 +2,8 @@ class MembershipLandingPage < Fae::StaticPage
 
   @slug = 'membership_landing'
 
+  has_many :pricings, foreign_key: 'static_page_id'
+
   # required to set the has_one associations, Fae::StaticPage will build these associations dynamically
   def self.fae_fields
     {

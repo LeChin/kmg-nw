@@ -9,3 +9,10 @@
     = fae_content_form f, :public_saftey_info, markdown: true
     = fae_content_form f, :corporate_rates, markdown: true
     = fae_file_form f, :pdf, label: 'PDF'
+
+- if params[:action] == 'edit'
+  section.content#nested_table
+  = render 'fae/shared/nested_table_advanced',
+    assoc: :pricings,
+    parent_item: Fae::StaticPage.find_by_id(@item.id),
+    cols: [:level, :general_price, :public_saftey_price, :time_free]

@@ -1,4 +1,4 @@
 module Admin
-  class PricingsController < Fae::BaseController
+  class PricingsController < Fae::NestedBaseController
   end
 end
