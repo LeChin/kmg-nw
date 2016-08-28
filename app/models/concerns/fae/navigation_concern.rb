@@ -33,7 +33,8 @@ module Fae
         item('Classes and Instructors', subitems: [
           item('Classes', path: admin_workouts_path),
           item('Class Types', path: admin_class_types_path),
-          item('Instructors', path: admin_instructors_path)
+          item('Instructors', path: admin_instructors_path),
+          item('Schedule', path: admin_schedules_path)
         ]),
         item('News', path: admin_news_items_path),
         item('Media', path: admin_media_path),

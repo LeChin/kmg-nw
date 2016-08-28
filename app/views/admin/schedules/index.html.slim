@@ -1,0 +1,21 @@
+== render 'fae/shared/index_header', title: 'Schedules'
+
+main.content
+  table.js-sort-column
+    thead
+      tr
+        th Class
+        th Days
+        th.-action-wide Start Time
+        th.-action-wide End Time
+
+    tbody
+      - if Schedule.all.present?
+        - Schedule.all.each_with_index do |item, index|
+          tr id=fae_sort_id(item)
+            td = link_to "#{ item.workout.title } (#{ index + 1 })", edit_admin_workout_path(item.workout)
+            td = item.formatted_days
+            td = item.formatted_start_time
+            td = item.formatted_end_time
+      - else
+        tr: td colspan="4" No items found
