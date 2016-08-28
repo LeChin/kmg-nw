@@ -15,4 +15,4 @@
     = render 'fae/shared/nested_table',
       assoc: :schedules,
       parent_item: @item,
-      cols: [:day, { attr: :formatted_start_time, title: 'Start Time' }, { attr: :formatted_end_time, title: 'End Time' }]
+      cols: [{ attr: :formatted_days, title: 'Days'}, { attr: :formatted_start_time, title: 'Start Time' }, { attr: :formatted_end_time, title: 'End Time' }]

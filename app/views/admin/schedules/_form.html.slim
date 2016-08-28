@@ -1,5 +1,5 @@
 = simple_form_for(['admin', @item], html: {multipart: true, novalidate: true, class: 'js-file-form'}, remote: true, data: {type: "html"}) do |f|
-  = fae_checkbox f, :day, collection: %w(Monday Tuesday Wednesday Thursday Friday Saturday Sunday)
+  = fae_checkbox f, :days
   = fae_input f, :start_time
   = fae_input f, :end_time
   = f.hidden_field :workout_id
