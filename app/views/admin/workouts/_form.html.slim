@@ -10,3 +10,9 @@
     = fae_association f, :instructors
     = fae_input f, :appointment_only, label: 'Appointment Only?'
 
+- if params[:action] == 'edit'
+  section.content#nested_table
+    = render 'fae/shared/nested_table',
+      assoc: :schedules,
+      parent_item: @item,
+      cols: [:day, { attr: :formatted_start_time, title: 'Start Time' }, { attr: :formatted_end_time, title: 'End Time' }]

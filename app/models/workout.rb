@@ -5,6 +5,7 @@ class Workout < ApplicationRecord
   has_many :instructors,
   	through: :instructor_workouts
   belongs_to :class_type
+  has_many :schedules
 
   validates :title, :body, :class_type, presence: true
 

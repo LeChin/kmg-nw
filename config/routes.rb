@@ -1,12 +1,10 @@
 Rails.application.routes.draw do
 
   namespace :admin do
-    resources :news_gallery_items
     resources :pricings
     resources :news_items
     resources :media
     resources :instructors
-    resources :days
     resources :schedules
     resources :workouts
     resources :class_types

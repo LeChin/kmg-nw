@@ -10,18 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160814221503) do
+ActiveRecord::Schema.define(version: 20160821013653) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "class_types", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "days", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -225,15 +219,6 @@ ActiveRecord::Schema.define(version: 20160814221503) do
     t.index ["position"], name: "index_media_on_position", using: :btree
   end
 
-  create_table "news_gallery_items", force: :cascade do |t|
-    t.string   "name"
-    t.boolean  "live"
-    t.integer  "news_item_id"
-    t.integer  "position"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-  end
-
   create_table "news_items", force: :cascade do |t|
     t.string   "title"
     t.date     "date"
@@ -257,12 +242,11 @@ ActiveRecord::Schema.define(version: 20160814221503) do
 
   create_table "schedules", force: :cascade do |t|
     t.integer  "workout_id"
-    t.integer  "day_id"
     t.time     "start_time"
     t.time     "end_time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["day_id"], name: "index_schedules_on_day_id", using: :btree
+    t.string   "day"
     t.index ["end_time"], name: "index_schedules_on_end_time", using: :btree
     t.index ["start_time"], name: "index_schedules_on_start_time", using: :btree
     t.index ["workout_id"], name: "index_schedules_on_workout_id", using: :btree

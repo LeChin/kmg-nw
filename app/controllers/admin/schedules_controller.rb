@@ -1,4 +1,4 @@
 module Admin
-  class SchedulesController < Fae::BaseController
+  class SchedulesController < Fae::NestedBaseController
   end
 end

@@ -16,7 +16,7 @@ Fae.setup do |config|
   ## dashboard_exclusions
   # The dashboard will show all objects with recent activity.
   # To exclude any objects, add them to this array.
-  config.dashboard_exclusions = %w( Media ClassType HeroGalleryItem )
+  config.dashboard_exclusions = %w( Media ClassType Schedule )
 
   ## max_image_upload_size
   # This will set a file size limit on image uploads in MBs.

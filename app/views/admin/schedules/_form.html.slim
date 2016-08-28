@@ -1,11 +1,8 @@
-= simple_form_for(['admin', @item]) do |f|
-  header.content-header.js-content-header
-    == render 'fae/shared/form_header', header: @klass_name
-  == render 'fae/shared/errors'
+= simple_form_for(['admin', @item], html: {multipart: true, novalidate: true, class: 'js-file-form'}, remote: true, data: {type: "html"}) do |f|
+  = fae_checkbox f, :day, collection: %w(Monday Tuesday Wednesday Thursday Friday Saturday Sunday)
+  = fae_input f, :start_time
+  = fae_input f, :end_time
+  = f.hidden_field :workout_id
 
-  main.content
-    = fae_input f, :start_time
-    = fae_input f, :end_time
-
-    = fae_association f, :workout
-    = fae_association f, :day
+  = f.submit
+  = button_tag 'Cancel', type: 'button', class: 'js-cancel-nested cancel-nested-button'
