@@ -2,7 +2,9 @@ class Schedule < ApplicationRecord
   include Fae::BaseModelConcern
 
   belongs_to :workout
-  has_many :days
+  has_many :day_schedules
+  has_many :days,
+    through: :day_schedules
 
   def fae_nested_parent
     :workout

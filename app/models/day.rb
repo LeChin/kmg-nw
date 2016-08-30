@@ -1,7 +1,9 @@
 class Day < ApplicationRecord
   include Fae::BaseModelConcern
 
-  belongs_to :schedule
+  has_many :day_schedules
+  has_many :schedules,
+  	through: :day_schedules
 
   default_scope { order(:created_at) }
 
