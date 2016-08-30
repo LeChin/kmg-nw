@@ -9,7 +9,7 @@ class Workout < ApplicationRecord
     through: :class_type_workouts
   has_many :schedules
 
-  validates :title, :body, :class_types, :slug, presence: true
+  validates :title, :class_types, :slug, presence: true
 
   def fae_display_field
     title

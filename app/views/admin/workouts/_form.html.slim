@@ -7,7 +7,8 @@
     = fae_input f, :title, required: true, input_class: 'slugger'
     = fae_input f, :slug, required: true
     = fae_association f, :class_types, required: true
-    = fae_input f, :body, markdown: true, required: true
+    = fae_input f, :show_on_landing, label: 'Show on Class Landing Page?'
+    = fae_input f, :body, markdown: true
     = fae_association f, :instructors
     = fae_input f, :appointment_only, label: 'Appointment Only?'
 
