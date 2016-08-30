@@ -38,7 +38,7 @@ module Fae
         ]),
         item('News', path: admin_news_items_path),
         item('Media', path: admin_media_path),
-        item('Pages', subitems: [
+        item('Pages', path: fae.pages_path, subitems: [
           item('Home', path: fae.edit_content_block_path('home')),
           item('About', path: fae.edit_content_block_path('about_landing')),
           item('Class Landing', path: fae.edit_content_block_path('class_landing')),

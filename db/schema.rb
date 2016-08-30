@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160830041242) do
+ActiveRecord::Schema.define(version: 20160830042320) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -241,8 +241,9 @@ ActiveRecord::Schema.define(version: 20160830041242) do
     t.text     "intro"
     t.text     "body"
     t.boolean  "live"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.text     "youtube_link"
     t.index ["date"], name: "index_news_items_on_date", using: :btree
     t.index ["live"], name: "index_news_items_on_live", using: :btree
   end
