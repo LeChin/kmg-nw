@@ -1,9 +1,10 @@
 == render 'fae/shared/index_header', title: @klass_humanized.pluralize.titleize
 
 main.content
-  table.js-sort-column
+  table.js-sort-row
     thead
       tr
+        th.th-sortable-handle
         th Title
         th.-action-wide Modified
         th.-action-wide data-sorter="false" Show on Class Landing?
@@ -14,10 +15,11 @@ main.content
       - if @items.present?
         - @items.each do |item|
           tr id=fae_sort_id(item)
+            td.sortable-handle: i.icon-sort
             td = link_to item.fae_display_field, edit_admin_workout_path(item)
             td = fae_date_format item.updated_at
             td = fae_toggle item, :show_on_landing
             td = fae_toggle item, :live
             td = fae_delete_button item
       - else
-        tr: td colspan="5" No items found
+        tr: td colspan="6" No items found
