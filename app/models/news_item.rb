@@ -26,7 +26,7 @@ class NewsItem < ApplicationRecord
   end
 
   def self.for_fae_index
-    order(:date)
+    order('date DESC')
   end
 
 end
