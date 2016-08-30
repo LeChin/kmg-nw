@@ -1,7 +1,9 @@
 class ClassType < ApplicationRecord
   include Fae::BaseModelConcern
 
-  has_many :workouts
+  has_many :class_type_workouts
+  has_many :workouts,
+    through: :class_type_workouts
   
   validates :name,
   	presence: true,

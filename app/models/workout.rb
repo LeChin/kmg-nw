@@ -4,10 +4,12 @@ class Workout < ApplicationRecord
   has_many :instructor_workouts
   has_many :instructors,
   	through: :instructor_workouts
-  belongs_to :class_type
+  has_many :class_type_workouts
+  has_many :class_types,
+    through: :class_type_workouts
   has_many :schedules
 
-  validates :title, :body, :class_type, presence: true
+  validates :title, :body, :class_types, :slug, presence: true
 
   def fae_display_field
     title

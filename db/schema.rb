@@ -10,10 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160830030000) do
+ActiveRecord::Schema.define(version: 20160830032700) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "class_type_workouts", force: :cascade do |t|
+    t.integer "class_type_id"
+    t.integer "workout_id"
+  end
 
   create_table "class_types", force: :cascade do |t|
     t.string   "name"
@@ -265,14 +270,13 @@ ActiveRecord::Schema.define(version: 20160830030000) do
 
   create_table "workouts", force: :cascade do |t|
     t.string   "title"
-    t.integer  "class_type_id"
     t.text     "body"
     t.boolean  "appointment_only"
     t.boolean  "live"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+    t.string   "slug"
     t.index ["appointment_only"], name: "index_workouts_on_appointment_only", using: :btree
-    t.index ["class_type_id"], name: "index_workouts_on_class_type_id", using: :btree
     t.index ["live"], name: "index_workouts_on_live", using: :btree
   end
 
