@@ -25,4 +25,8 @@ class NewsItem < ApplicationRecord
     title
   end
 
+  def self.for_fae_index
+    order(:date)
+  end
+
 end
