@@ -4,6 +4,7 @@ module Fae
 
     included do
       has_many :pricings
+      has_many :home_gallery_items
     end
 
   end

@@ -1,0 +1,5 @@
+= render 'fae/shared/nested_table_advanced',
+  assoc: :home_gallery_items,
+  parent_item: Fae::StaticPage.find_by_id(@parent_item.id),
+  cols: [:image, :live],
+  ordered: true

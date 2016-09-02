@@ -1,0 +1,24 @@
+- if @gallery_items.present?
+  - @gallery_items.each do |gallery_item|
+    - if asset_present?(gallery_item.image)
+      img src=gallery_item.image.asset_url alt=gallery_item.image.alt
+h1 = @page.headline_content
+h2 = @page.subhead_content
+
+a href=about_index_path About Krav Maga
+
+- if @featured_video.present? && @featured_video.video_link.present?
+  iframe title="YouTube video player" class="youtube-player" type="text/html" width="640" height="390" src="http://www.youtube.com/embed/#{ @featured_video.video_link }" frameborder="0" allowFullScreen
+
+- if @workouts.present?
+  h2 Class Schedule
+  p Here is the class schedule we have to offer. We can't wait to see you on the mats!
+
+  a href="TODO PDF" Print PDF
+  - @days.each do |day|
+    div
+      - if day.schedules.present?
+        b = day.name
+        - day.schedules.each do |schedule|
+          p = schedule.workout.title
+          p = schedule.formatted_start_time

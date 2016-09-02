@@ -5,3 +5,11 @@
   main.content
     = fae_content_form f, :headline
     = fae_content_form f, :subhead
+
+- if params[:action] == 'edit'
+  section.content#nested_table
+    = render 'fae/shared/nested_table_advanced',
+      assoc: :home_gallery_items,
+      parent_item: Fae::StaticPage.find_by_id(@item.id),
+      cols: [:image, :live],
+      ordered: true

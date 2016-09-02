@@ -11,11 +11,11 @@ class Schedule < ApplicationRecord
   end
 
   def formatted_start_time
-    start_time.strftime('%H:%M')
+    start_time.strftime('%I:%M %p')
   end
 
   def formatted_end_time
-    end_time.strftime('%H:%M')
+    end_time.strftime('%I:%M %p')
   end
 
   def formatted_days
