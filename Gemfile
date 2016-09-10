@@ -34,8 +34,6 @@ gem 'redcarpet'
 gem 'pry'
 # for better_errors
 gem "binding_of_caller"
-# for image management
-gem 'cloudinary'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
