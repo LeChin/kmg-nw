@@ -16,5 +16,13 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'pages#home'
 
+  # ABOUT
   get '/about', to: "about#index", as: 'about_index'
+
+  # # CLASSES
+  # get '/classes', to: "about#index", as: 'about_index'
+
+  # # MEDIA
+  # get '/media', to: "about#index", as: 'about_index'
+
 end
