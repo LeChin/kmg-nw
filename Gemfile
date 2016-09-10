@@ -34,6 +34,8 @@ gem 'redcarpet'
 gem 'pry'
 # for better_errors
 gem "binding_of_caller"
+# s3 access
+gem 'aws-sdk', '~> 2'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
