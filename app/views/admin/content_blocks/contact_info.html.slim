@@ -4,8 +4,7 @@
 
   main.content
     = fae_content_form f, :email
-    = fae_content_form f, :phone
-    = fae_content_form f, :address, markdown: true
-    = fae_content_form f, :facebook_url
-    = fae_content_form f, :instagram_url
-    = fae_content_form f, :map_url
+    = fae_content_form f, :phone, helper_text: 'Format as: 503-111-1111'
+    = fae_content_form f, :address, helper_text: 'Format as: 8340 SW Nibus Ave, Beaverton, OR, 97008'
+    = fae_content_form f, :facebook_url, label: 'Facebook URL', helper_text: 'Format as: https://www.facebook.com/KMGNorthWest'
+    = fae_content_form f, :instagram_url, label: 'Instagram URL', helper_text: 'Format as: https://www.instagram.com/kravmaganw'

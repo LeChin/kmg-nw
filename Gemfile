@@ -36,6 +36,7 @@ gem 'pry'
 gem "binding_of_caller"
 # s3 access
 gem 'aws-sdk', '~> 2'
+gem 'paperclip'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

@@ -7,10 +7,9 @@ class ContactInfoPage < Fae::StaticPage
     {
       email: { type: Fae::TextField },
       phone: { type: Fae::TextField },
-      address: { type: Fae::TextArea },
+      address: { type: Fae::TextField },
       facebook_url: { type: Fae::TextField },
-      instagram_url: { type: Fae::TextField },
-      map_url: { type: Fae::TextArea }
+      instagram_url: { type: Fae::TextField }
     }
   end
 

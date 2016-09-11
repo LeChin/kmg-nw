@@ -1,0 +1,27 @@
+.contact_info
+  ul
+    li.class_schedule: a href=schedule_path Class Schedule
+    li.email: a href="mailto:#{ @contact_page.email_content }" = @contact_page.email_content
+    li.phone: a href="tel:#{ @contact_page.phone_content }" = @contact_page.phone_content
+    li.address: a href="http://maps.google.com/?q=#{ @contact_page.address_content }" target="_blank" = @contact_page.address_content
+    li.facebook: a href=@contact_page.facebook_url_content target="_blank" facebook logo
+    li.instagram: a href=@contact_page.instagram_url_content target="_blank" instagram logo
+
+
+p: a href="#" About
+ul
+  li: a href=about_index_path What is Krav Maga?
+  li: a href=instructors_index_path Instructors
+  li: a href=membership_path Membership About
+
+p: a href="#" Classes
+ul
+  li: a href=classes_index_path Classes
+  li: a href=schedule_path Schedule
+
+p: a href="#" Media
+ul
+  li: a href=photos_path Photos
+  li: a href=videos_path Videos
+
+p: a href=news_index_path News
