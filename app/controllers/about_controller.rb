@@ -18,6 +18,8 @@ class AboutController < ApplicationController
   end
 
   def membership
+    @page = MembershipLandingPage.instance
+    @pricings = @page.pricings
   end
 
 end

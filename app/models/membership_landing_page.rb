@@ -10,7 +10,7 @@ class MembershipLandingPage < Fae::StaticPage
       headline: { type: Fae::TextField },
       body: { type: Fae::TextArea },
       benefits: { type: Fae::TextArea },
-      public_saftey_info: { type: Fae::TextArea },
+      public_safety_info: { type: Fae::TextArea },
       corporate_rates: { type: Fae::TextArea },
       pdf: { type: Fae::File }
     }
