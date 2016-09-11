@@ -5,6 +5,10 @@ class ApplicationController < ActionController::Base
 
   private
 
+  def show_404
+    render template: 'pages/error404.html.slim', status: :not_found
+  end
+
   def init_contact_page
     @contact_page = ContactInfoPage.instance
   end

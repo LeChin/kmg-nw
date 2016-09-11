@@ -1,8 +1,8 @@
 doctype html
 html
   head
-    title Krav Maga Global Northwest
-    <!-- TODO - make dynamic -->
+    title = @page_title.present? ? @page_title : 'Krav Maga Global Northwest'
+    / TODO meta tags and opengraph
     = csrf_meta_tags
 
     / = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'

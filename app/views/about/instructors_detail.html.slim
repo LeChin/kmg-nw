@@ -1,0 +1,16 @@
+- if asset_present?(@instructor.hero_image)
+  img src=@instructor.hero_image.asset_url alt=@instructor.hero_image.alt
+
+h1 = @instructor.name
+p = @instructor.role
+
+- if @instructor.rank.present?
+  p Rank: #{ @instructor.rank }
+
+= markdown(@instructor.bio)
+
+- if @instructor.quote.present?
+  blockquote
+    p = @instructor.quote
+    footer
+      cite = @instructor.quote_attribution
