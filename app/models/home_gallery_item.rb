@@ -6,7 +6,10 @@ class HomeGalleryItem < ApplicationRecord
   has_one :image, -> { where(attached_as: 'image') },
     as: :imageable,
     class_name: '::Fae::Image',
-    dependent: :destroy
+    dependent: :destroy,
+    storage: :s3,
+    s3_credentials: "#{Rails.root}/config/aws.yml",
+    bucket: 'kmg-nw-01'
   accepts_nested_attributes_for :image, allow_destroy: true
 
   scope :live, -> { where(live: true) }
