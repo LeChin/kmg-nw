@@ -1,8 +1,9 @@
 module ApplicationHelper
 
-  def markdown(string, klass = '')
+  def markdown(string, options={})
+    optional_class = options[:class] ? options[:class] : ''
     if string.present? && @markdown.present?
-      content_tag :div, @markdown.render(string).html_safe, class: "markdown #{klass}"
+      content_tag :div, raw(@markdown.render(string)), class: "markdown-content #{optional_class}"
     end
   end
 

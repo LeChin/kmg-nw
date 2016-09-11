@@ -1,0 +1,11 @@
+h1 Our Instructors
+
+h2 = @page.headline_content
+= markdown(@page.body_content)
+
+- if @instructors.present?
+  - @instructors.each do |instructor|
+    - if asset_present?(instructor.bio_image)
+      img src=instructor.bio_image.asset_url alt=instructor.bio_image.alt
+    h3 = instructor.name
+    p #{ instructor.role } | <a href="#{ instructors_detail_path(instructor.slug) }"> View Details > </a>

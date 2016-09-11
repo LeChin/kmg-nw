@@ -1,5 +1,6 @@
 class Instructor < ApplicationRecord
   include Fae::BaseModelConcern
+  acts_as_list add_new_at: :top
 
   has_many :instructor_workouts
   has_many :workouts,
@@ -24,10 +25,10 @@ class Instructor < ApplicationRecord
   end
 
   def name
-  	"#{ first_name } #{ last_name }"
+    "#{ first_name } #{ last_name }"
   end
 
-  acts_as_list add_new_at: :top
   default_scope { order(:position) }
+  scope :live, -> { where(live: true) }
 
 end

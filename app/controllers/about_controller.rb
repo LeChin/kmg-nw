@@ -5,6 +5,8 @@ class AboutController < ApplicationController
   end
 
   def instructors_index
+    @page = InstructorsLandingPage.instance
+    @instructors = Instructor.live
   end
 
   def instructors_detail
