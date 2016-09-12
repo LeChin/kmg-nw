@@ -1,0 +1,9 @@
+h1 Classes
+
+h2 = @page.headline_content
+= markdown(@page.body_content)
+
+- if @classes.present?
+  - @classes.each do |workout|
+    h3 = workout.title
+    p #{ workout.class_types_list } | <a href="#{ classes_detail_path(workout.slug) }"> View Details > </a>

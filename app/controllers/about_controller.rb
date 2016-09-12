@@ -20,6 +20,7 @@ class AboutController < ApplicationController
   def membership
     @page = MembershipLandingPage.instance
     @pricings = @page.pricings
+    @page_title =  'Membership | Krav Maga Global Northwest'
   end
 
 end
