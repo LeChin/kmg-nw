@@ -14,7 +14,7 @@ class Medium < ApplicationRecord
   scope :live, -> { where(live: true) }
   scope :photos, -> { where(media_type: 'Photo') }
   scope :videos, -> { where(media_type: 'Video') }
-  scope :first_featured_video, -> { live.videos.where(featured_on_home: true).first }
+  scope :featured, -> { where(featured_on_home: true) }
 
   def fae_display_field
   	name
