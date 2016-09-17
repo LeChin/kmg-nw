@@ -19,6 +19,6 @@ a href=about_index_path About Krav Maga
     div
       - if day.schedules.present?
         b = day.name
-        - day.schedules.each do |schedule|
+        - day.schedules.ordered_by_time.each do |schedule|
           p = schedule.workout.title
           p = schedule.formatted_start_time

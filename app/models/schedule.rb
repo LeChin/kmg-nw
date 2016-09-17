@@ -6,6 +6,8 @@ class Schedule < ApplicationRecord
   has_many :days,
     through: :day_schedules
 
+  scope :ordered_by_time, -> { order(:start_time) }
+
   def fae_nested_parent
     :workout
   end
