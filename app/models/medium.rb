@@ -11,10 +11,10 @@ class Medium < ApplicationRecord
   validates :media_type, presence: true
 
   default_scope { order(:position) }
+  scope :live, -> { where(live: true) }
   scope :photos, -> { where(media_type: 'Photo') }
   scope :videos, -> { where(media_type: 'Video') }
-  scope :featured_video, -> { videos.where(featured_on_home: true).first }
-  scope :live, -> { where(live: true) }
+  scope :featured_video, -> { live.videos.where(featured_on_home: true).first }
 
   def fae_display_field
   	name
