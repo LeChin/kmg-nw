@@ -5,7 +5,7 @@ class PagesController < ApplicationController
     @page_title = 'Home'
 
     @gallery_items = @page.home_gallery_items.live
-    @featured_video = Medium.featured_video
+    @featured_video = Medium.first_featured_video
     @days = Day.all
     @workouts = Workout.live
   end
