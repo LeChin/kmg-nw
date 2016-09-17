@@ -7,8 +7,9 @@ h2 = @page.subhead_content
 
 a href=about_index_path About Krav Maga
 
-- if @featured_video.present? && @featured_video.video_link.present?
-  iframe title="YouTube video player" class="youtube-player" type="text/html" width="640" height="390" src="http://www.youtube.com/embed/#{ @featured_video.video_link }" frameborder="0" allowFullScreen
+- if @featured_video.present?
+  - if @featured_video.video_link.present?
+    iframe title="YouTube video player" class="youtube-player" type="text/html" width="640" height="390" src="http://www.youtube.com/embed/#{ @featured_video.video_link }" frameborder="0" allowFullScreen
 
 - if @workouts.present?
   h2 Class Schedule
