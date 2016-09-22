@@ -15,7 +15,7 @@ ul
   - if @sitemap_workouts.present?
     ul
       - @sitemap_workouts.each do |workout|
-        li a href=classes_detail_path(slug: workout.slug) = workout.title
+        li: a href=classes_detail_path(slug: workout.slug) = workout.title
   li: a href=schedule_path Schedule
 
   h2: a href=photos_path Media
