@@ -23,3 +23,13 @@ a href=about_index_path About Krav Maga
           - if schedule.workout.live.present?
             p = schedule.workout.title
             p = schedule.formatted_start_time
+
+- if @news_items.present?
+  h2 News + Events
+  a href=news_index_path More News + Events
+
+  - @news_items.each do |news_item|
+    h3 = news_item.title
+    p = news_item.date
+    p = news_item.intro
+    a href=news_detail_path(news_item.slug) Read More

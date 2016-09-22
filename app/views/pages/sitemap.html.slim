@@ -1,0 +1,25 @@
+h1 Sitemap
+  
+ul
+  h2: a href=about_index_path About
+  li: a href=about_index_path What is Krav Maga?
+  li: a href=instructors_index_path Instructors
+  - if @sitemap_instructors.present?
+    ul
+      - @sitemap_instructors.each do |instructor|
+        li: a href=instructors_detail_path(slug: instructor.slug) = instructor.name
+  li: a href=membership_path Membership
+
+  h2: a href=classes_index_path Classes
+  li: a href=classes_index_path Classes
+  - if @sitemap_workouts.present?
+    ul
+      - @sitemap_workouts.each do |workout|
+        li a href=classes_detail_path(slug: workout.slug) = workout.title
+  li: a href=schedule_path Schedule
+
+  h2: a href=photos_path Media
+  li: a href=photos_path Photos
+  li: a href=videos_path Videos
+
+  h2: a href=news_index_path News
