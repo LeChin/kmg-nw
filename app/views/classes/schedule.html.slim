@@ -1,0 +1,14 @@
+h2 Class Schedule
+p Here is the class schedule we have to offer. We can't wait to see you on the mats!
+
+a href="TODO PDF" Print PDF  
+
+- if @workouts.present?
+  - @days.each do |day|
+    div
+      - if day.schedules.present?
+        b = day.name
+        - day.schedules.ordered_by_time.each do |schedule|
+          - if schedule.workout.live.present?
+            p = schedule.workout.title
+            p = schedule.formatted_start_time

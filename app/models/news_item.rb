@@ -1,8 +1,6 @@
 class NewsItem < ApplicationRecord
   include Fae::BaseModelConcern
 
-  validates :title, :date, :body, presence: true
-
   has_one :image_1, -> { where(attached_as: 'image_1') },
     as: :imageable,
     class_name: '::Fae::Image',
@@ -20,6 +18,11 @@ class NewsItem < ApplicationRecord
     class_name: '::Fae::Image',
     dependent: :destroy
   accepts_nested_attributes_for :image_3, allow_destroy: true
+
+  validates :title, :date, :body, :slug, presence: true
+
+  scope :live, -> { where(live: true) }
+  scope :ordered_by_date, -> { order('date DESC') }
 
   def fae_display_field
     title

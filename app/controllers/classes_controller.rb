@@ -7,9 +7,15 @@ class ClassesController < ApplicationController
   end
 
   def detail
+    @workout = Workout.live.find_by_slug(params[:slug])
+    return show_404 if @workout.blank?
+    @page_title =  @workout.title + ' | Classes | Krav Maga Global Northwest'
   end
 
   def schedule
+    @page_title = 'Schedule | Krav Maga Global Northwest'
+    @days = Day.all
+    @workouts = Workout.live
   end
 
 end

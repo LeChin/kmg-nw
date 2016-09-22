@@ -10,6 +10,6 @@
     .js-photo-section.hidden
       = fae_image_form f, :image, alt_label: 'Image Alt Text', helper_text: 'tdb x tbd jpg, Used on Detail Page.', show_caption: true, caption_label: 'Image Caption'
     .js-video-section.hidden
-      = fae_input f, :video_link
+      = fae_input f, :video_link, helper_text: 'include id found at end of URL ex: "https://www.youtube.com/watch?v=saDUCXz13H4" use only "saDUCXz13H4"'
       = fae_input f, :featured_on_home, label: 'Featured On Home?'
 

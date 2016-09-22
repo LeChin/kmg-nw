@@ -9,6 +9,7 @@ class MediaController < ApplicationController
   def videos
     @page = PhotoLandingPage.instance
     @page_title = 'Videos | Krav Maga Global Northwest'
+    @videos = Medium.live.videos
   end
 
 end

@@ -14,7 +14,7 @@ class AboutController < ApplicationController
   def instructors_detail
     @instructor = Instructor.live.find_by_slug(params[:slug])
     return show_404 if @instructor.blank?
-    @page_title =  @instructor.name + ' | Krav Maga Global Northwest'
+    @page_title =  @instructor.name + ' | Instructors | Krav Maga Global Northwest'
   end
 
   def membership
