@@ -1,0 +1,8 @@
+h1 News + Events
+
+- if @news_items.present?
+  - @news_items.each do |news_item|
+    h3 = news_item.title
+    p = news_item.date
+    p = news_item.intro
+    a href=news_detail_path(news_item.slug) Read More

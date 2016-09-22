@@ -35,6 +35,4 @@ Rails.application.routes.draw do
   get '/news', to: "news#index", as: 'news_index'
   get '/news/:slug', to: "news#detail", as: 'news_detail'
 
-
-
 end
