@@ -14,7 +14,7 @@ class PagesController < ApplicationController
   def sitemap
     @page_title = 'Sitemap'
     @sitemap_news_items = NewsItem.live.ordered_by_date
-    @sitemap_workouts = Workout.live
+    @sitemap_workouts = Workout.for_landing
     @sitemap_instructors = Instructor.live
 
     respond_to do |format|
