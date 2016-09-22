@@ -7,8 +7,6 @@ class Day < ApplicationRecord
 
   default_scope { order(:created_at) }
 
-  
-
   def fae_display_field
     name
   end

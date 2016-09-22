@@ -7,7 +7,6 @@ class PagesController < ApplicationController
     @gallery_items = @page.home_gallery_items.live
     @video = Medium.live.videos.featured.first
     @days = Day.all
-    @workouts = Workout.live
   end
 
 end
