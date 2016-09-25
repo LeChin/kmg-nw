@@ -1,0 +1,27 @@
+{
+  "name": "kmg-nw",
+  "version": "1.0.0",
+  "description": "Krav Maga Global Northwest",
+  "main": "index.js",
+  "dependencies": {
+    "bulma": "^0.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeChin/kmg-nw.git"
+  },
+  "keywords": [
+    "Krav",
+    "Maga"
+  ],
+  "author": "Nichole Barrett",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LeChin/kmg-nw/issues"
+  },
+  "homepage": "https://github.com/LeChin/kmg-nw#readme"
+}
