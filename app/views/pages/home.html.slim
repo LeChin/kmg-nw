@@ -22,16 +22,22 @@
 
     .container
       section
-        .columns
-          - @days.each do |day|
-            .column.is-2
+        .day-header
+          .columns
+            - @days.each do |day|
               - if day.schedules.present?
-                b = day.name
+                .column
+                  p.day-name = day.name
+        .columns.schedule
+          - @days.each do |day|
+            - if day.schedules.present?
+              .column.border-right
                 - day.schedules.ordered_by_time.each do |schedule|
                   - if schedule.workout.live.present?
-                    span class="#{ workout_class(schedule.workout) }"
-                    p = schedule.workout.title
-                    p = schedule.formatted_start_time
+                    .column.fixed-height
+                      span class="#{ workout_class(schedule.workout) }"
+                      p.bold-upcase = schedule.workout.title
+                      p = schedule.formatted_start_time
 
 - if @news_items.present?
   .container

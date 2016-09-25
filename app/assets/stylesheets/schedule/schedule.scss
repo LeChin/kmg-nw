@@ -1,34 +1,76 @@
 .columns {
-  .column.is-2 span {
-    display: block;
-    width: 25px;
-    height: 35px;
-    margin: 0 auto;
+  .column {
+
+    span {
+      display: block;
+      width: 35px;
+      height: 35px;
+      margin: 0 auto;
+    }
+
+    .bold-upcase {
+      text-transform: uppercase;
+      font-weight: bold;
+      width: 120px;
+    }
   }
 
   .teen {
     background: url(icons/Teen.svg);
-    background-size: 25px 35px;
+    background-size: 35px 35px;
   }
 
   .krav {
     background: url(icons/Krav_Maga.svg);
-    background-size: 25px 35px;
+    background-size: 35px 35px;
   }
 
   .strike {
     background: url(icons/Strike_Lab.svg);
-    background-size: 25px 35px;
+    background-size: 35px 35px;
   }
 
   .combat {
     background: url(icons/Combat_Conditioning.svg);
-    background-size: 25px 35px;
+    background-size: 35px 35px;
   }
 
   .coach {
     background: url(icons/Coach.svg);
-    background-size: 25px 35px;
+    background-size: 35px 35px;
   }
 
+}
+
+.column.fixed-height {
+  height: 140px;
+}
+
+.column.border-right {
+  border-right: 1px solid #525252;
+}
+
+.column.border-right:last-child {
+  border-right: 0px;
+}
+
+.day-header {
+  position: absolute;
+  display: block;
+  background-color: #252525;
+  padding: 30px 0;
+  top: 0;
+
+  .column {
+    width: 161px;
+    padding: 0px;
+  }
+
+  .day-name {
+    text-transform: uppercase;
+  }
+}
+
+.schedule {
+  margin-top: 50px;
 }
