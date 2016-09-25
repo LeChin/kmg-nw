@@ -1,31 +1,40 @@
-header
-  .sub_header
-    .contact_info
-      ul
-        li.class_schedule: a href=schedule_path Class Schedule
-        li.email: a href="mailto:#{ @contact_page.email_content }" = @contact_page.email_content
-        li.phone: a href="tel:#{ @contact_page.phone_content }" = @contact_page.phone_content
-        li.address: a href="http://maps.google.com/?q=#{ @contact_page.address_content }" target="_blank" = @contact_page.address_content
-        li.facebook: a href=@contact_page.facebook_url_content target="_blank" facebook logo
-        li.instagram: a href=@contact_page.instagram_url_content target="_blank" instagram logo
+nav.nav.has-shadow#contact-bar
+  .container
+    .nav-center
+      a.nav-item.is-tab href=schedule_path
+        span.time
+        | Class Schedule
+      a.nav-item.is-tab href="mailto:#{ @contact_page.email_content }"
+        span.email
+        = @contact_page.email_content
+      a.nav-item.is-tab href="tel:#{ @contact_page.phone_content }"
+        span.phone
+        = @contact_page.phone_content
+      a.nav-item.is-tab href="http://maps.google.com/?q=#{ @contact_page.address_content }" target="_blank"
+        span.address
+        = @contact_page.address_content
+      a.nav-item.is-tab href=@contact_page.facebook_url_content target="_blank"
+        span.facebook
+      a.nav-item.is-tab href=@contact_page.instagram_url_content target="_blank"
+        span.instagram
 
-  .main_header
-    p: a href=about_index_path About
-    ul
-      li: a href=about_index_path What is Krav Maga?
-      li: a href=instructors_index_path Instructors
-      li: a href=membership_path Membership
+nav.nav#main-nav
+  .container
+    .nav-center
+      a.nav-item.is-tab href=about_index_path About
+      / a.nav-item href=about_index_path What is Krav Maga?
+      / a.nav-item href=instructors_index_path Instructors
+      / a.nav-item href=membership_path Membership
 
-    p: a href=classes_index_path Classes
-    ul
-      li: a href=classes_index_path Classes
-      li: a href=schedule_path Schedule
+      a.nav-item.is-tab href=classes_index_path Classes
+      / a.nav-item href=classes_index_path Classes
+      / a.nav-item href=schedule_path Schedule
 
-    a.logo href=root_path Krav Maga Global Northwest
+      a.nav-item.is-brand href=root_path
+        span.logo
 
-    p: a href=photos_path Media
-    ul
-      li: a href=photos_path Photos
-      li: a href=videos_path Videos
-
-    p: a href=news_index_path News
+      a.nav-item.is-tab href=photos_path Media
+      / a.nav-item href=photos_path Photos
+      / a.nav-item href=videos_path Videos
+      
+      a.nav-item.is-tab href=news_index_path News

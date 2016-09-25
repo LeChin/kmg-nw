@@ -1,0 +1,78 @@
+nav.nav {
+  a:link,
+  a:visited {
+    color: #fff;
+  }
+
+  a:hover {
+    color: #d66b1d;
+  }
+
+  a.is-tab:hover {
+    border-bottom: 1px solid #d66b1d;
+  }
+}
+
+#contact-bar {
+  background-color: #000;
+
+  a span {
+    display: block;
+    width: 25px;
+    height: 35px;
+    margin-right: 5px;
+  }
+
+  .time {
+    background: url(top-nav/Time.svg);
+    background-size: 25px 35px;
+  }
+
+
+  .address {
+    background: url(top-nav/Address.svg);
+    background-size: 25px 35px;
+  }
+
+  .email {
+    background: url(top-nav/Email.svg);
+    background-size: 25px 35px;
+  }
+
+  .phone {
+    background: url(top-nav/Phone.svg);
+    background-size: 25px 35px;
+  }
+
+  .facebook {
+    background: url(top-nav/Facebook.svg);
+    background-size: 25px 35px;
+  }
+
+  .instagram {
+    background: url(top-nav/Instagram.svg);
+    background-size: 25px 35px;
+  }
+}
+
+#main-nav {
+  background-color: #292929;
+
+  .is-tab {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0 50px;
+  }
+
+  span {
+    display: block;
+    width: 230px;
+    height: 115px;
+    margin-right: 5px;
+  }
+
+  .logo {
+    background: url(top-nav/Logo_230x115.png);
+    background-size: 230px 115px;
+  }
+}
