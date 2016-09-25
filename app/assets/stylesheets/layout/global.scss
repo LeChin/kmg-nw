@@ -28,3 +28,23 @@ body {
   font-weight: bold;
   font-size: 50px;
 }
+
+iframe {
+  margin-bottom: -5px;
+}
+
+.dark-section {
+  background-color: #252525;
+  color: #fff;
+  padding: 50px 0 80px;
+
+  .title,
+  .subtitle {
+    color: #fff;
+  }
+
+  .button {
+    background-color: #252525;
+  }
+}
+

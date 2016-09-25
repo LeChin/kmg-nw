@@ -17,4 +17,18 @@ module ApplicationHelper
     # full_url_w_protocol = "#{protocol}://" + "www." "#{request.domain}" + "#{path}"
     request.protocol + request.subdomain + '.' + request.domain + path
   end
+
+  def workout_class(workout)
+    if workout.class_types_list.include? 'Teen'
+      'teen'
+    elsif workout.class_types_list.include? 'Krav'
+      'krav'
+    elsif workout.class_types_list.include? 'Strike'
+      'strike'
+    elsif workout.class_types_list.include? 'Combat'
+      'combat'
+    elsif workout.class_types_list.include? 'Coach'
+      'coach'
+    end
+  end
 end
