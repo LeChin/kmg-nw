@@ -6,6 +6,7 @@ nav.nav {
 
   a:hover {
     color: #d66b1d;
+    text-decoration: none;
   }
 
   a.is-tab:hover {
@@ -61,6 +62,7 @@ nav.nav {
   .is-tab {
     text-transform: uppercase;
     font-weight: bold;
+    font-size: 16px;
     margin: 0 50px;
   }
 

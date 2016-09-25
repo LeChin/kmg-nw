@@ -2,34 +2,46 @@
   - @gallery_items.each do |gallery_item|
     - if asset_present?(gallery_item.image)
       img src=gallery_item.image.asset_url alt=gallery_item.image.alt
-h1 = @page.headline_content
-h2 = @page.subhead_content
 
-a href=about_index_path About Krav Maga
+.container
+  section.section.has-text-centered.tall-section
+    h1.title.large-bold-title = @page.headline_content
+    h2.subtitle = @page.subhead_content
+    a.button href=about_index_path About Krav Maga
 
 - if @video.present? && @video.video_link.present?
-  iframe title="YouTube video player" class="youtube-player" type="text/html" width="640" height="390" src="https://www.youtube.com/embed/#{ @video.video_link }" frameborder="0" allowFullScreen
+  iframe title="YouTube video player" class="youtube-player" type="text/html" width="100%" height="390" src="https://www.youtube.com/embed/#{ @video.video_link }" frameborder="0" allowFullScreen
 
 - if @workouts.present?
-  h2 Class Schedule
-  p Here is the class schedule we have to offer. We can't wait to see you on the mats!
+  .container
+    section.section.has-text-centered
+      h2.title.large-bold-title Class Schedule
+      p.subtitle Here is the class schedule we have to offer. We can't wait to see you on the mats!
+      a.button href="TODO PDF" Print PDF
 
-  a href="TODO PDF" Print PDF
-  - @days.each do |day|
-    div
-      - if day.schedules.present?
-        b = day.name
-        - day.schedules.ordered_by_time.each do |schedule|
-          - if schedule.workout.live.present?
-            p = schedule.workout.title
-            p = schedule.formatted_start_time
+      .container
+        section.section
+          .columns
+            - @days.each do |day|
+              .column.is-2
+                - if day.schedules.present?
+                  b = day.name
+                  - day.schedules.ordered_by_time.each do |schedule|
+                    - if schedule.workout.live.present?
+                      p = schedule.workout.title
+                      p = schedule.formatted_start_time
 
 - if @news_items.present?
-  h2 News + Events
-  a href=news_index_path More News + Events
+  .container
+    section.section
+      .columns
+        .column.is-4
+          h2.title.large-bold-title News + Events
+          a.button href=news_index_path More News + Events
 
-  - @news_items.each do |news_item|
-    h3 = news_item.title
-    p = news_item.date
-    p = news_item.intro
-    a href=news_detail_path(news_item.slug) Read More
+        - @news_items.each do |news_item|
+          .column.is-4
+            h3 = news_item.title
+            p = news_item.date
+            p = news_item.intro
+            a href=news_detail_path(news_item.slug) Read More
