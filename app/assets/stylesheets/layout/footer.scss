@@ -1,15 +1,15 @@
 .footer {
   padding: 0px;
   .nav {
-    background-color: #252525;
+    background-color: $c-gray-dark;
 
     a:link,
     a:visited {
-      color: #d66b1d;
+      color: $c-orange;
     }
 
     a:hover {
-      color: #fff;
+      color: $c-white;
       text-decoration: none;
     }
   }

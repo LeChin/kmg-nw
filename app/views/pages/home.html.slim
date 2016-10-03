@@ -1,7 +1,8 @@
 - if @gallery_items.present?
-  - @gallery_items.each do |gallery_item|
-    - if asset_present?(gallery_item.image)
-      img src=gallery_item.image.asset_url alt=gallery_item.image.alt
+  section.hero
+    - @gallery_items.each do |gallery_item|
+      - if asset_present?(gallery_item.image)
+        img src=gallery_item.image.asset_url alt=gallery_item.image.alt
 
 .container
   section.section.has-text-centered.tall-section
@@ -41,15 +42,18 @@
 
 - if @news_items.present?
   .container
-    section.section
+    section.section.tall-section
       .columns
         .column.is-4
-          h2.title.large-bold-title News + Events
+          h2.title.large-bold-title
+            | News +
+            br
+            | Events
           a.button href=news_index_path More News + Events
 
         - @news_items.each do |news_item|
-          .column.is-4
-            h3 = news_item.title
-            p = news_item.date
+          .column.is-4.news-item
+            h3.title = news_item.title
+            p.date = news_item.date
             p = news_item.intro
-            a href=news_detail_path(news_item.slug) Read More
+            a.read-more href=news_detail_path(news_item.slug) Read More

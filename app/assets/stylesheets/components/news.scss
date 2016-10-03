@@ -1,0 +1,19 @@
+.news-item {
+  .title {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+
+  .date {
+    color: $c-orange;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+
+  .read-more {
+    margin-top: 15px;
+  }
+}

@@ -1,21 +1,21 @@
 nav.nav {
   a:link,
   a:visited {
-    color: #fff;
+    color: $c-white;
   }
 
   a:hover {
-    color: #d66b1d;
+    color: $c-orange;
     text-decoration: none;
   }
 
   a.is-tab:hover {
-    border-bottom: 1px solid #d66b1d;
+    border-bottom: 1px solid $c-orange;
   }
 }
 
 #contact-bar {
-  background-color: #000;
+  background-color: $c-black;
 
   a span {
     display: block;
@@ -57,7 +57,7 @@ nav.nav {
 }
 
 #main-nav {
-  background-color: #252525;
+  background-color: $c-gray-dark;
 
   .is-tab {
     text-transform: uppercase;
@@ -76,5 +76,40 @@ nav.nav {
   .logo {
     background: url(top-nav/Logo_230x115.png);
     background-size: 230px 115px;
+  }
+}
+
+// Dropdown
+
+nav.nav .is-tab:hover a {
+  color: $c-orange;
+}
+
+#main-nav ul li > ul {
+  background-color: $c-gray-dark;
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 135px;
+}
+
+#main-nav ul li:hover > ul {
+  display: flex;
+}
+
+#main-nav ul li ul li:first-child {
+  padding-top: 20px;
+}
+
+#main-nav ul li ul li {
+  padding: 10px 15px 20px 15px;
+
+  a {
+    color: $c-white;
+    font-weight: bold;
+  }
+
+  a:hover {
+    color: $c-orange;
   }
 }

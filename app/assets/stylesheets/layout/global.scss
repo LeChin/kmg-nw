@@ -1,9 +1,10 @@
 body {
-  background-color: #fff;
+  background-color: $c-white;
+  color: $c-black;
 
   a:link,
   a:visited {
-    color: #d66b1d;
+    color: $c-orange;
   }
 
   a:hover {
@@ -13,11 +14,15 @@ body {
 
 .button {
   border-radius: 0px;
-  border: 2px solid #d66b1d;
-  color: #d66b1d;
+  border: 2px solid $c-orange;
+  color: $c-orange;
   text-transform: uppercase;
   font-size: 13px;
   padding: 25px 60px;
+}
+
+.button:hover {
+  text-decoration: none;
 }
 
 .tall-section {
@@ -27,24 +32,31 @@ body {
 .large-bold-title {
   font-weight: bold;
   font-size: 50px;
+  padding-bottom: 10px;
 }
 
 iframe {
   margin-bottom: -5px;
 }
 
+// DARK SECTION
+
 .dark-section {
-  background-color: #252525;
-  color: #fff;
+  background-color: $c-gray-dark;
+  color: $c-white;
   padding: 50px 0 80px;
 
   .title,
   .subtitle {
-    color: #fff;
+    color: $c-white;
   }
 
   .button {
-    background-color: #252525;
+    background-color: $c-gray-dark;
+  }
+
+  .button:hover {
+    color: $c-white;
   }
 }
 

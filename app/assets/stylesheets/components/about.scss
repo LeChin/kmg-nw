@@ -1,0 +1,97 @@
+.about.index {
+
+  .icons-centered {
+    text-align: center;
+
+    .column {
+      border-right: 2px solid $c-gray-lightest;
+      padding: 10px 0;
+
+      h3 {
+        font-weight: bold;
+        color: $c-gray-light;
+        padding-top: 10px;
+      }
+    }
+
+    .column:last-child {
+      border-right: 0px;
+    }
+
+    .icons {
+      display: block;
+      width: 85px;
+      height: 85px;
+      margin: 0 auto;
+    }
+
+    .self-defense {
+      background: url(about/Self-Defense.svg);
+      background-size: 85px 85px;
+    }
+
+    .fighting-skills {
+      background: url(about/Fighting_Skills.svg);
+      background-size: 85px 85px;
+    }
+
+    .third-party {
+      background: url(about/Third_Party.svg);
+      background-size: 85px 85px;
+    }
+  }
+
+  .medium-bold-title {
+    color: $c-black;
+    font-weight: bold;
+    font-size: 22px;
+    text-transform: uppercase;
+  }
+
+  p {
+    margin-bottom: 20px;
+  }
+
+  blockquote {
+    border-left: 2px solid $c-gray-lightest;
+    padding-left: 50px;
+    max-width: 500px;
+    margin-top: 50px;
+
+    p {
+      font-weight: bold;
+      color: $c-black;
+      font-size: 19px;
+      line-height: 20px;
+    }
+
+    cite {
+      font-style: normal;
+    }
+  }
+
+  h3 {
+    text-transform: none;
+    font-weight: bold;
+  }
+
+  section ul {
+    margin: 20px 0 30px 0;
+
+    li {
+      padding-bottom: 20px;
+    }
+  }
+
+  .citation {
+    margin-top: 80px;
+
+    span {
+      color: $c-orange;
+      font-size: 20px;
+      width: 15px;
+      display: block;
+      float: left;
+    }
+  }
+}

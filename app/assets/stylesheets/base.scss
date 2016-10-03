@@ -2,10 +2,15 @@
 
 // Layout
 @import
+  'layout/variables',
   'layout/global',
   'layout/header',
   'layout/footer'
 ;
 
 // Schedule
-@import "schedule/schedule";
+@import
+  'components/schedule',
+  'components/news',
+  'components/about'
+;
