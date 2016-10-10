@@ -74,8 +74,6 @@ GEM
       debug_inspector (>= 0.0.1)
     browser (0.8.0)
     builder (3.2.2)
-    bulma-rails (0.1.2)
-      sass (~> 3.2)
     byebug (9.0.5)
     carrierwave (0.10.0)
       activemodel (>= 3.2.0)
@@ -378,7 +376,6 @@ PLATFORMS
 DEPENDENCIES
   better_errors
   binding_of_caller
-  bulma-rails (~> 0.1.2)
   byebug
   coffee-rails (~> 4.2)
   fae-rails!

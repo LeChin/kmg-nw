@@ -36,8 +36,6 @@ gem 'pry'
 gem "binding_of_caller"
 # s3 access
 gem 'fog', require: 'fog/aws'
-# flexbox framework
-gem 'bulma-rails', '~> 0.1.2'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
