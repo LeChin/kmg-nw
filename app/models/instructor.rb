@@ -18,7 +18,7 @@ class Instructor < ApplicationRecord
     dependent: :destroy
   accepts_nested_attributes_for :bio_image, allow_destroy: true
 
-  validates :first_name, :last_name, :slug, presence: true
+  validates :first_name, :last_name, :slug, :role, presence: true
 
   def fae_display_field
     name
