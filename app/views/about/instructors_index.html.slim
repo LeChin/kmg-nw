@@ -1,9 +1,9 @@
 .container
   section.section.tall-section
     .columns
-      .column.is-one-quarter
+      .column.is-3
         h1.title.large-bold-title Our Instructors
-      .column.is-one-quarter
+      .column.is-3
       .column
         h2.title.med-bold-title = @page.headline_content
         = markdown(@page.body_content)
@@ -11,7 +11,7 @@
 - if @instructors.present?
   .columns.instructors
     - @instructors.each do |instructor|
-      .column.is-one-half
+      .column.is-6
         - if asset_present?(instructor.bio_image)
           img src=instructor.bio_image.asset_url alt=instructor.bio_image.alt
         .title-overlay
