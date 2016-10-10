@@ -11,7 +11,7 @@
 - if @instructors.present?
   .columns.instructors
     - @instructors.each do |instructor|
-      .column.is-one-half
+      .column.is-half
         - if asset_present?(instructor.bio_image)
           img src=instructor.bio_image.asset_url alt=instructor.bio_image.alt
         .title-overlay
