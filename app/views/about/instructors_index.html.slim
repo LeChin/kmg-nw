@@ -9,14 +9,23 @@
         = markdown(@page.body_content)
 
 - if @instructors.present?
-  .columns.instructors
-    - @instructors.each do |instructor|
-      .column.is-half
-        - if asset_present?(instructor.bio_image)
-          img src=instructor.bio_image.asset_url alt=instructor.bio_image.alt
-        .title-overlay
-          h3 = instructor.name
-          p
-            span #{ instructor.role }
-            span.separator |
-            span.link: a href="#{ instructors_detail_path(instructor.slug) }" View Details >
+  - row_count = @instructors.size - 2
+  p = row_count
+  - (1..row_count + 1).each do |row|
+    .columns.instructors
+      - if row == 1
+        - range_1 = 0
+        - range_2 = 1
+      - else
+        - range_1 = row
+        - range_2 = row + 1
+      - @instructors[range_1..range_2].each do |instructor|
+        .column.is-half
+          - if asset_present?(instructor.bio_image)
+            img src=instructor.bio_image.asset_url alt=instructor.bio_image.alt
+          .title-overlay
+            h3 = instructor.name
+            p
+              span #{ instructor.role }
+              span.separator |
+              span.link: a href="#{ instructors_detail_path(instructor.slug) }" View Details >
