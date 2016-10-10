@@ -1,11 +1,22 @@
-h1 Our Instructors
-
-h2 = @page.headline_content
-= markdown(@page.body_content)
+.container
+  section.section.tall-section
+    .columns
+      .column.is-one-quarter
+        h1.title.large-bold-title Our Instructors
+      .column.is-one-quarter
+      .column
+        h2.title.med-bold-title = @page.headline_content
+        = markdown(@page.body_content)
 
 - if @instructors.present?
-  - @instructors.each do |instructor|
-    - if asset_present?(instructor.bio_image)
-      img src=instructor.bio_image.asset_url alt=instructor.bio_image.alt
-    h3 = instructor.name
-    p #{ instructor.role } | <a href="#{ instructors_detail_path(instructor.slug) }"> View Details > </a>
+  .columns.instructors
+    - @instructors.each do |instructor|
+      .column.is-one-half
+        - if asset_present?(instructor.bio_image)
+          img src=instructor.bio_image.asset_url alt=instructor.bio_image.alt
+        .title-overlay
+          h3 = instructor.name
+          p
+            span #{ instructor.role }
+            span.separator |
+            span.link: a href="#{ instructors_detail_path(instructor.slug) }" View Details >
