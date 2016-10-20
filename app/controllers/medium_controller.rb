@@ -1,4 +1,4 @@
-class MediaController < ApplicationController
+class MediumController < ApplicationController
 
   def photos
     @page = PhotoLandingPage.instance

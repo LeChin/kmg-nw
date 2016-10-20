@@ -1,4 +1,4 @@
-section.hero.nav-hero-header
+section.nav-hero-header
   .hero-head
     .container
       nav.nav.has-shadow#contact-bar
@@ -21,6 +21,32 @@ section.hero.nav-hero-header
             a.nav-item.is-tab href=@contact_page.instagram_url_content target="_blank"
               span.instagram
 
+      nav.nav-menu.nav#nav-menu
+        ul.nav-center
+          li.nav-item.is-tab
+            a href=about_index_path About
+            ul
+              li: a.nav-item href=about_index_path What is Krav Maga?
+              li: a.nav-item href=instructors_index_path Instructors
+              li: a.nav-item href=membership_path Membership
+
+          li.nav-item.is-tab
+            a href=classes_index_path Classes
+            ul
+              li: a.nav-item href=schedule_path Schedule
+
+          a.nav-item.is-brand href=root_path
+            span.logo
+
+          li.nav-item.is-tab 
+            a href=photos_path Media
+            ul
+              li: a.nav-item href=photos_path Photos
+              li: a.nav-item href=videos_path Videos
+          
+          a.nav-item.is-tab href=news_index_path News
+
+      / MOBILE
 
       nav.nav.hide#mobile-nav
         .nav-left
@@ -40,29 +66,4 @@ section.hero.nav-hero-header
           a.nav-item href=schedule_path Schedule
           a.nav-item href=photos_path Photos
           a.nav-item href=videos_path Videos
-
-      .nav-menu.nav#nav-menu
-        .container
-          ul.nav-center
-            li.nav-item.is-tab
-              a href=about_index_path About
-              ul
-                li: a.nav-item href=about_index_path What is Krav Maga?
-                li: a.nav-item href=instructors_index_path Instructors
-                li: a.nav-item href=membership_path Membership
-
-            li.nav-item.is-tab
-              a href=classes_index_path Classes
-              ul
-                li: a.nav-item href=schedule_path Schedule
-
-            a.nav-item.is-brand href=root_path
-              span.logo
-
-            li.nav-item.is-tab 
-              a href=photos_path Media
-              ul
-                li: a.nav-item href=photos_path Photos
-                li: a.nav-item href=videos_path Videos
-            
-            a.nav-item.is-tab href=news_index_path News
+          a.nav-item href="http://maps.google.com/?q=#{ @contact_page.address_content }" target="_blank" = @contact_page.address_content

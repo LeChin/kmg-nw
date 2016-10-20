@@ -17,7 +17,6 @@
 
 
 $(document).ready(function ($) {
-  console.log('here');
   var $toggle = $('#nav-toggle');
   var $menu = $('#nav-menu-toggle');
 

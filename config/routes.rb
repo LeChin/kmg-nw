@@ -28,8 +28,8 @@ Rails.application.routes.draw do
   get '/schedule', to: "classes#schedule", as: 'schedule'
 
   # MEDIA
-  get '/media/photos', to: "media#photos", as: 'photos'
-  get '/media/videos', to: "media#videos", as: 'videos'
+  get '/media/photos', to: "medium#photos", as: 'photos'
+  get '/media/videos', to: "medium#videos", as: 'videos'
 
   # NEWS
   get '/news', to: "news#index", as: 'news_index'

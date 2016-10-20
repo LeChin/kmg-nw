@@ -29,7 +29,6 @@ nav.nav {
     background-size: 25px 35px;
   }
 
-
   .address {
     background: url(top-nav/Address.svg);
     background-size: 25px 35px;
@@ -95,6 +94,7 @@ nav.nav .is-tab:hover a {
 
 #nav-menu ul li:hover > ul {
   display: flex;
+  z-index: 10;
 }
 
 #nav-menu ul li ul li:first-child {
@@ -122,6 +122,10 @@ nav.nav .is-tab:hover a {
 
 .hero-head .container {
   max-width: 100%;
+
+  #mobile-nav {
+    background-color: $c-gray-dark;
+  }
 }
 
 .nav-toggle.is-active span {
