@@ -20,7 +20,7 @@ $(document).ready(function ($) {
   var $toggle = $('#nav-toggle');
   var $menu = $('#nav-menu-toggle');
 
-  $toggle.click(function() {
+  $toggle.on('click', function() {
     $(this).toggleClass('is-active');
     $menu.toggleClass('is-active');
   });
