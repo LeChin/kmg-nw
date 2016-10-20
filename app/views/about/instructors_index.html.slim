@@ -5,12 +5,11 @@
         h1.title.large-bold-title Our Instructors
       .column.is-one-quarter
       .column
-        h2.title.med-bold-title = @page.headline_content
+        h2.title.medium-bold-title = @page.headline_content
         = markdown(@page.body_content)
 
 - if @instructors.present?
   - row_count = @instructors.size - 2
-  p = row_count
   - (1..row_count + 1).each do |row|
     .columns.instructors
       - if row == 1

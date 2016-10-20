@@ -1,107 +1,107 @@
-section.hero
+section.hero.bordered-hero
   - if asset_present?(@page.hero_image)
     img src=@page.hero_image.asset_url alt=@page.hero_image.alt
   - if @page.quote_content.present?
-    h1.title = @page.quote_content
-    h2.subtitle = @page.quote_attribution.content
+    .hero-quote
+      h1.title.large-bold-title = @page.quote_content
+      h2.subtitle - #{ @page.quote_attribution.content } -
 
 .container
-
-  .columns
-
-    .column.is-4
-      section.section
-        h1.title.large-bold-title
-          | What is 
-          br
-          | Krav Maga
-        
-        aside.menu
-          ul.menu-list
-            li: a href="#origin" Origin of Krav Maga
-            li: a href="#development" Krav Maga Development
-            li: a href="#learning" Learning Krav Maga
-            li: a href="#training" Krav Maga Training
-
-    .column
-
-      section.section#origin
-        h2.subtitle.medium-bold-title Origin of Krav Maga
-
-        p Krav Maga translated from Hebrew into English, as ‘Contact Combat’ was initially developed as an unarmed combat system by <a href="http://krav-maga.com/imi-lichtenfeld/" target="_blank">Imi Lichtenfeld</a> for the Israeli Defense Forces (<a href="https://en.wikipedia.org/wiki/Israel_Defense_Forces" target="_blank">IDF</a>) due to its no-nonsense approach.
-
-        p Krav Maga has since been adapted by <a href="http://krav-maga.com/eyal-yanilov/">Eyal Yanilov</a> to meet the needs of civilians, law enforcement officers and security personnel. Krav Maga is widely recognized as the most comprehensive reality based self-defense system in the world today.
-
-        blockquote
-          p People respect power, and it comes in many forms, Krav Maga is power, and people will respect you for knowing it.
-          footer
-            cite - Imi Lichtenfeld -
-
-      section.section#development
-        h2.subtitle.medium-bold-title Krav Maga Development
-
-        p Krav Maga is composed of three pillars, self-defense; fighting skills and tactics; 3rd party and VIP protection and consideration. Krav Maga is a practical realistic system that teaches how to avoid, prevent, deter or deal with all types of violent confrontations having been developed under realistic conditions in Israel by its founder Imi (Sde-or) Lichenfeld). Krav Maga continues to be developed by Imi’s closest assistant and highest-level instructor Eyal Yanilov of Krav Maga Global.
-
-      .columns.icons-centered
-        .column.is-4
-          span.icons.self-defense
-          h3
-            | Self 
+  section.section.tall-section
+    .columns
+      .column.is-4
+        section.section
+          h1.title.large-bold-title
+            | What is 
             br
-            | Defence
-        .column.is-4
-          span.icons.fighting-skills
-          h3
-            | Fighting Skills 
-            br
-            | and Tactics
-        .column.is-4
-          span.icons.third-party
-          h3
-            | Third Party 
-            br
-            | Consideration
+            | Krav Maga
+          
+          aside.menu
+            ul.menu-list
+              li: a href="#origin" Origin of Krav Maga
+              li: a href="#development" Krav Maga Development
+              li: a href="#learning" Learning Krav Maga
+              li: a href="#training" Krav Maga Training
 
-      section.section#learning
-        h2.subtitle.medium-bold-title Learning Krav Maga
+      .column
 
-        p Krav Maga is a unique and logical system of self-defense, fighting skills and defensive tactics. There are no traditional or sporting elements in Krav Maga with all of its training methods being based on the adaptation of instinctive response through principal based learning, resulting in skills that become practical in a short space of time and useful under stressful conditions. Elevating the trainee’s capabilities on the physical, mental, technical and tactical levels, Krav Maga is suitable for all, as each person, with the guidance of a certified instructor can reach their own goals and fulfill their needs.
+        section.section#origin
+          h2.subtitle.medium-bold-title Origin of Krav Maga
 
-        blockquote
-          p Words show your ego, actions show your spirit.
-          footer
-            cite - Eyal Yanilov -
+          p Krav Maga translated from Hebrew into English, as ‘Contact Combat’ was initially developed as an unarmed combat system by <a href="http://krav-maga.com/imi-lichtenfeld/" target="_blank">Imi Lichtenfeld</a> for the Israeli Defense Forces (<a href="https://en.wikipedia.org/wiki/Israel_Defense_Forces" target="_blank">IDF</a>) due to its no-nonsense approach.
 
-      section.section#training
-        h2.subtitle.medium-bold-title Krav Maga Training
+          p Krav Maga has since been adapted by <a href="http://krav-maga.com/eyal-yanilov/">Eyal Yanilov</a> to meet the needs of civilians, law enforcement officers and security personnel. Krav Maga is widely recognized as the most comprehensive reality based self-defense system in the world today.
 
-        p An essential part of Krav Maga training is its structured teaching process, delivery of learning and training methodologies. Its curriculum is divided into grades and levels, whether it is for civilians, military soldiers, Law-Enforcement and security officers, Close Personal Protection personnel or members of special units. Click <a href="http://krav-maga.com/about-krav-maga-global/" target="_blank">here</a> to read more about how Krav Maga Global is developing Krav Maga further.
+          blockquote
+            p People respect power, and it comes in many forms, Krav Maga is power, and people will respect you for knowing it.
+            footer
+              cite - Imi Lichtenfeld -
 
-        h3 KRAV MAGA TRAINING INCLUDES:
-        ul
-          li How to prevent, avoid, escape and evade situations of conflict
-          li Learning how to fall and roll to reduce injury through impact on the ground
-          li Attacking and counter-attacking skills, using the hands, legs, feet, arms and head
-          li How to use everyday objects for self-defense and fighting
-          li Techniques to defend yourself again unarmed attacks such as kicks, strikes, throws, different grabs of body and clothing
-          li Techniques to defend yourself again armed threats and attacks involving knives, other sharp objects, sticks and other blunt objects
-          li Techniques to defend yourself against threats with both a short barreled or long barreled firearms
-          li How to defend yourself when on the ground
-          li How to deal with multiple attackers
-          li How to defend other people also known as third party protection
-          li To see the full Krav Maga units of the curriculum, please click here.
-          li Specific curriculums for the governmental and security forces and departments from the infantry to the anti-terror, from the law-enforcement to the peace keeping missions.
+        section.section#development
+          h2.subtitle.medium-bold-title Krav Maga Development
 
-        p Krav Maga techniques and principles are taught with ultimate reality in mind. To enable someone to cope with all types of conflict situations and violent encounters in all types of environments, places, surrounding and situation, such as open or confined spaces, around or in a car or on public transport, in water, in low-light conditions and on shaky, uneven or non-resisting grounds and more.
+          p Krav Maga is composed of three pillars, self-defense; fighting skills and tactics; 3rd party and VIP protection and consideration. Krav Maga is a practical realistic system that teaches how to avoid, prevent, deter or deal with all types of violent confrontations having been developed under realistic conditions in Israel by its founder Imi (Sde-or) Lichenfeld). Krav Maga continues to be developed by Imi’s closest assistant and highest-level instructor Eyal Yanilov of Krav Maga Global.
 
-        p Krav Maga training also emphasis the need to train to deal with conflict when in positions of disadvantage such as; standing, sitting down, laying down (on your front or back), when on moving transport or with a loved one.
+        .columns.icons-centered
+          .column.is-4
+            span.icons.self-defense
+            h3
+              | Self 
+              br
+              | Defence
+          .column.is-4
+            span.icons.fighting-skills
+            h3
+              | Fighting Skills 
+              br
+              | and Tactics
+          .column.is-4
+            span.icons.third-party
+            h3
+              | Third Party 
+              br
+              | Consideration
 
-        p Krav Maga enables personal growth from both a physical and mental perspective with those training Krav Maga seeing vast improves in their physical health and mental abilities to make decisions in stressful, fast moving situations and to be able to cope with demanding lifestyles.
+        section.section#learning
+          h2.subtitle.medium-bold-title Learning Krav Maga
 
-        p Krav Maga is adaptable to meet the needs of both men and women, from children to mature adults.
+          p Krav Maga is a unique and logical system of self-defense, fighting skills and defensive tactics. There are no traditional or sporting elements in Krav Maga with all of its training methods being based on the adaptation of instinctive response through principal based learning, resulting in skills that become practical in a short space of time and useful under stressful conditions. Elevating the trainee’s capabilities on the physical, mental, technical and tactical levels, Krav Maga is suitable for all, as each person, with the guidance of a certified instructor can reach their own goals and fulfill their needs.
 
-        p Krav Maga training also has specific curriculums including tactical adaptations to meet the ever-growing needs of Military Units, Anti-Terrorist Groups, Special Units, Undercover Officers, Close Protection Agents, Correctional Officers, Air Marshalls and much more.
+          blockquote
+            p Words show your ego, actions show your spirit.
+            footer
+              cite - Eyal Yanilov -
+
+        section.section#training
+          h2.subtitle.medium-bold-title Krav Maga Training
+
+          p An essential part of Krav Maga training is its structured teaching process, delivery of learning and training methodologies. Its curriculum is divided into grades and levels, whether it is for civilians, military soldiers, Law-Enforcement and security officers, Close Personal Protection personnel or members of special units. Click <a href="http://krav-maga.com/about-krav-maga-global/" target="_blank">here</a> to read more about how Krav Maga Global is developing Krav Maga further.
+
+          h3 KRAV MAGA TRAINING INCLUDES:
+          ul
+            li How to prevent, avoid, escape and evade situations of conflict
+            li Learning how to fall and roll to reduce injury through impact on the ground
+            li Attacking and counter-attacking skills, using the hands, legs, feet, arms and head
+            li How to use everyday objects for self-defense and fighting
+            li Techniques to defend yourself again unarmed attacks such as kicks, strikes, throws, different grabs of body and clothing
+            li Techniques to defend yourself again armed threats and attacks involving knives, other sharp objects, sticks and other blunt objects
+            li Techniques to defend yourself against threats with both a short barreled or long barreled firearms
+            li How to defend yourself when on the ground
+            li How to deal with multiple attackers
+            li How to defend other people also known as third party protection
+            li To see the full Krav Maga units of the curriculum, please click here.
+            li Specific curriculums for the governmental and security forces and departments from the infantry to the anti-terror, from the law-enforcement to the peace keeping missions.
+
+          p Krav Maga techniques and principles are taught with ultimate reality in mind. To enable someone to cope with all types of conflict situations and violent encounters in all types of environments, places, surrounding and situation, such as open or confined spaces, around or in a car or on public transport, in water, in low-light conditions and on shaky, uneven or non-resisting grounds and more.
+
+          p Krav Maga training also emphasis the need to train to deal with conflict when in positions of disadvantage such as; standing, sitting down, laying down (on your front or back), when on moving transport or with a loved one.
+
+          p Krav Maga enables personal growth from both a physical and mental perspective with those training Krav Maga seeing vast improves in their physical health and mental abilities to make decisions in stressful, fast moving situations and to be able to cope with demanding lifestyles.
+
+          p Krav Maga is adaptable to meet the needs of both men and women, from children to mature adults.
+
+          p Krav Maga training also has specific curriculums including tactical adaptations to meet the ever-growing needs of Military Units, Anti-Terrorist Groups, Special Units, Undercover Officers, Close Protection Agents, Correctional Officers, Air Marshalls and much more.
 
 
-        footer.citation
-          p <span>*</span> This section is taken from the <a href="http://krav-maga.com/contact-combat/#", target="_blank">Krav Maga Global, Headquarters</a> website.
+          footer.citation
+            p <span>*</span> This section is taken from the <a href="http://krav-maga.com/contact-combat/#", target="_blank">Krav Maga Global, Headquarters</a> website.

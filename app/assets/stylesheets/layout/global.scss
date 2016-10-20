@@ -10,7 +10,18 @@ body {
   a:hover {
     text-decoration: underline;
   }
+
+  .menu-list a {
+    color: $c-gray-light;
+  }
+
+  .menu-list a:hover {
+    color: $c-orange;
+    background-color: $c-white;
+  }
 }
+
+// BUTTONS
 
 .button {
   border-radius: 0px;
@@ -25,8 +36,46 @@ body {
   text-decoration: none;
 }
 
+// SECTIONS
+
 .tall-section {
   margin: 70px 0;
+}
+
+// QUOTE
+
+blockquote {
+  border-left: 2px solid $c-gray-lightest;
+  padding-left: 50px;
+  max-width: 500px;
+  margin-top: 50px;
+
+  p {
+    font-weight: bold;
+    color: $c-black;
+    font-size: 19px;
+    line-height: 20px;
+    margin-bottom: 20px;
+  }
+
+  cite {
+    font-style: normal;
+  }
+}
+
+// VIDEO
+
+iframe {
+  margin-bottom: -5px;
+}
+
+// FONT TREATMENT
+
+.medium-bold-title {
+  color: $c-black;
+  font-weight: bold;
+  font-size: 22px;
+  text-transform: uppercase;
 }
 
 .large-bold-title {
@@ -35,14 +84,10 @@ body {
   padding-bottom: 10px;
 }
 
-.med-bold-title {
-  font-weight: bold;
-  text-transform: uppercase;
-  font-size: 20px;
-}
+// IMAGE TREATMENT
 
-iframe {
-  margin-bottom: -5px;
+.bordered-hero {
+  border-bottom: 10px solid $c-orange;
 }
 
 // DARK SECTION
@@ -66,7 +111,7 @@ iframe {
   }
 }
 
-// markdown
+// MARKDOWN
 
 .markdown-content {
   p {

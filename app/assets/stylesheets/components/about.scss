@@ -1,5 +1,21 @@
 .about.index {
 
+  .hero {
+    position: relative;
+
+    .hero-quote {
+      position: absolute;
+      text-align: center;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+
+      h1, h2 {
+        color: $c-white;
+      }
+    }
+  }
+
   .icons-centered {
     text-align: center;
 
@@ -41,33 +57,8 @@
     }
   }
 
-  .medium-bold-title {
-    color: $c-black;
-    font-weight: bold;
-    font-size: 22px;
-    text-transform: uppercase;
-  }
-
   p {
     margin-bottom: 20px;
-  }
-
-  blockquote {
-    border-left: 2px solid $c-gray-lightest;
-    padding-left: 50px;
-    max-width: 500px;
-    margin-top: 50px;
-
-    p {
-      font-weight: bold;
-      color: $c-black;
-      font-size: 19px;
-      line-height: 20px;
-    }
-
-    cite {
-      font-style: normal;
-    }
   }
 
   h3 {
