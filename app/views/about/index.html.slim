@@ -3,7 +3,7 @@ section.hero.bordered-hero
     img src=@page.hero_image.asset_url alt=@page.hero_image.alt
   - if @page.quote_content.present?
     .hero-quote
-      h1.title.large-bold-title = @page.quote_content
+      h1.title.med-bold-title = @page.quote_content
       h2.subtitle - #{ @page.quote_attribution.content } -
 
 .container
@@ -11,7 +11,7 @@ section.hero.bordered-hero
     .columns
       .column.is-4
         section.section
-          h1.title.large-bold-title
+          h1.title.med-bold-title
             | What is 
             br
             | Krav Maga

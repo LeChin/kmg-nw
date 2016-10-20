@@ -56,7 +56,6 @@
 .day-header {
   position: absolute;
   display: block;
-  background-color: $c-gray-dark;
   padding: 30px 0;
   top: 0;
 
@@ -68,6 +67,10 @@
   .day-name {
     text-transform: uppercase;
   }
+}
+
+.day-header-dark {
+  background-color: $c-gray-dark;
 }
 
 .schedule {

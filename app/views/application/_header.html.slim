@@ -24,22 +24,23 @@ section.nav-hero-header
       nav.nav-menu.nav#nav-menu
         ul.nav-center
           li.nav-item.is-tab
-            a href=about_index_path About
+            a.no-hover About
             ul
               li: a.nav-item href=about_index_path What is Krav Maga?
               li: a.nav-item href=instructors_index_path Instructors
               li: a.nav-item href=membership_path Membership
 
           li.nav-item.is-tab
-            a href=classes_index_path Classes
+            a.no-hover Classes
             ul
+              li: a href=classes_index_path Overview
               li: a.nav-item href=schedule_path Schedule
 
           a.nav-item.is-brand href=root_path
             span.logo
 
           li.nav-item.is-tab 
-            a href=photos_path Media
+            a.no-hover Media
             ul
               li: a.nav-item href=photos_path Photos
               li: a.nav-item href=videos_path Videos

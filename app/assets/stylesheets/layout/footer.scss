@@ -1,16 +1,22 @@
-.footer {
+footer.footer {
   padding: 0px;
   .nav {
     background-color: $c-gray-dark;
 
+    a {
+      border-bottom: 0px;
+      color: $c-white;
+    }
+
     a:link,
     a:visited {
-      color: $c-orange;
+      color: $c-white;
     }
 
     a:hover {
-      color: $c-white;
+      color: $c-orange;
       text-decoration: none;
+      pointer-events: hand;
     }
   }
 }

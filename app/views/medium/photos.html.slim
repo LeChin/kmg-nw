@@ -7,7 +7,7 @@
       - @photos.each do |photo|
         - if asset_present?(photo.image)
           img src=photo.image.asset_url alt=photo.image.alt
-          p photo.image.caption
+          p = photo.image.caption
 
 
     / repeat again for thumbnail list...

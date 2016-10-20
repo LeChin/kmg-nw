@@ -19,11 +19,11 @@
       .container
         h2.title.large-bold-title Class Schedule
         p.subtitle Here is the class schedule we have to offer. We can't wait to see you on the mats!
-        a.button hzref="TODO PDF" Print PDF
+        a.button href="TODO PDF" Print PDF
 
     .container
       section
-        .day-header
+        .day-header.day-header-dark
           .columns
             - @days.each do |day|
               - if day.schedules.present?

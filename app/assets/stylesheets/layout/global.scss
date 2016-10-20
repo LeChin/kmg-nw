@@ -11,6 +11,12 @@ body {
     text-decoration: underline;
   }
 
+  a.no-hover,
+  a.no-hover:hover {
+    color: $c-white;
+    pointer-events: none;
+  }
+
   .menu-list a {
     color: $c-gray-light;
   }
@@ -81,6 +87,12 @@ iframe {
 .large-bold-title {
   font-weight: bold;
   font-size: 5vw;
+  padding-bottom: 10px;
+}
+
+.med-bold-title {
+  font-weight: bold;
+  font-size: 3.5vw;
   padding-bottom: 10px;
 }
 

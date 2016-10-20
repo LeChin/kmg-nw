@@ -1,9 +1,17 @@
-h1 Classes
+.container
+  section.section.tall-section
+    .columns
+      .column.is-one-quarter
+        h1.title.med-bold-title Classes
+      .column.is-one-quarter
+      .column
+        h2.title.medium-bold-title = @page.headline_content
+        = markdown(@page.body_content)
 
-h2 = @page.headline_content
-= markdown(@page.body_content)
 
 - if @classes.present?
-  - @classes.each do |workout|
-    h3 = workout.title
-    p #{ workout.class_types_list } | <a href="#{ classes_detail_path(workout.slug) }"> View Details > </a>
+  .columns
+    - @classes.each do |workout|
+      .column
+        h3 = workout.title
+        p #{ workout.class_types_list } | <a href="#{ classes_detail_path(workout.slug) }"> View Details > </a>
