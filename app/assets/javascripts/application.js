@@ -14,3 +14,16 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+$(document).ready(function ($) {
+  console.log('here');
+  var $toggle = $('#nav-toggle');
+  var $menu = $('#nav-menu-toggle');
+
+  $toggle.click(function() {
+    $(this).toggleClass('is-active');
+    $menu.toggleClass('is-active');
+  });
+});
+

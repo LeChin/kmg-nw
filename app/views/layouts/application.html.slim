@@ -4,9 +4,10 @@ html lang="en"
     title = @page_title.present? ? @page_title : 'Krav Maga Global Northwest'
     / TODO meta tags and opengraph
     = csrf_meta_tags
+    meta name="viewport" content="width=device-width, initial-scale=1"
 
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
-    / = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application'
 
   body class=body_class data-force-encoding="✓"
   	= render 'application/header'

@@ -56,7 +56,7 @@ nav.nav {
   }
 }
 
-#main-nav {
+#nav-menu {
   background-color: $c-gray-dark;
 
   .is-tab {
@@ -85,7 +85,7 @@ nav.nav .is-tab:hover a {
   color: $c-orange;
 }
 
-#main-nav ul li > ul {
+#nav-menu ul li > ul {
   background-color: $c-gray-dark;
   display: none;
   flex-direction: column;
@@ -93,15 +93,15 @@ nav.nav .is-tab:hover a {
   top: 135px;
 }
 
-#main-nav ul li:hover > ul {
+#nav-menu ul li:hover > ul {
   display: flex;
 }
 
-#main-nav ul li ul li:first-child {
+#nav-menu ul li ul li:first-child {
   padding-top: 20px;
 }
 
-#main-nav ul li ul li {
+#nav-menu ul li ul li {
   padding: 10px 15px 20px 15px;
 
   a {
@@ -111,5 +111,39 @@ nav.nav .is-tab:hover a {
 
   a:hover {
     color: $c-orange;
+  }
+}
+
+// bulma overrides
+
+.nav-hero-header {
+  background-color: $c-gray-dark;
+}
+
+.hero-head .container {
+  max-width: 100%;
+}
+
+.nav-toggle.is-active span {
+  background-color: $c-gray-dark;
+}
+
+.nav-menu.nav-right.is-active {
+  background-color: $c-gray-dark;
+
+  a {
+    color: $c-orange;
+  }
+}
+
+// mobile
+
+@media screen and (max-width: 768px) {
+  #contact-bar, #nav-menu {
+    display: none;
+  }
+
+  #mobile-nav {
+    display: flex;
   }
 }

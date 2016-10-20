@@ -1,45 +1,68 @@
-nav.nav.has-shadow#contact-bar
-  .container
-    .nav-center
-      a.nav-item.is-tab href=schedule_path
-        span.time
-        | Class Schedule
-      a.nav-item.is-tab href="mailto:#{ @contact_page.email_content }"
-        span.email
-        = @contact_page.email_content
-      a.nav-item.is-tab href="tel:#{ @contact_page.phone_content }"
-        span.phone
-        = @contact_page.phone_content
-      a.nav-item.is-tab href="http://maps.google.com/?q=#{ @contact_page.address_content }" target="_blank"
-        span.address
-        = @contact_page.address_content
-      a.nav-item.is-tab href=@contact_page.facebook_url_content target="_blank"
-        span.facebook
-      a.nav-item.is-tab href=@contact_page.instagram_url_content target="_blank"
-        span.instagram
+section.hero.nav-hero-header
+  .hero-head
+    .container
+      nav.nav.has-shadow#contact-bar
+        .container
+          .nav-center
+            a.nav-item.is-tab href=schedule_path
+              span.time
+              | Class Schedule
+            a.nav-item.is-tab href="mailto:#{ @contact_page.email_content }"
+              span.email
+              = @contact_page.email_content
+            a.nav-item.is-tab href="tel:#{ @contact_page.phone_content }"
+              span.phone
+              = @contact_page.phone_content
+            a.nav-item.is-tab href="http://maps.google.com/?q=#{ @contact_page.address_content }" target="_blank"
+              span.address
+              = @contact_page.address_content
+            a.nav-item.is-tab href=@contact_page.facebook_url_content target="_blank"
+              span.facebook
+            a.nav-item.is-tab href=@contact_page.instagram_url_content target="_blank"
+              span.instagram
 
-nav.nav#main-nav
-  .container
-    ul.nav-center
-      li.nav-item.is-tab
-        a href=about_index_path About
-        ul
-          li: a.nav-item href=about_index_path What is Krav Maga?
-          li: a.nav-item href=instructors_index_path Instructors
-          li: a.nav-item href=membership_path Membership
 
-      li.nav-item.is-tab
-        a href=classes_index_path Classes
-        ul
-          li: a.nav-item href=schedule_path Schedule
+      nav.nav.hide#mobile-nav
+        .nav-left
+          a.nav-item.is-brand href=root_path
+            img src="#{ asset_path('top-nav/Logo_230x115.png') }" alt="Krav Maga Global Northwest"
 
-      a.nav-item.is-brand href=root_path
-        span.logo
+        span.nav-toggle#nav-toggle
+          span
+          span
+          span
 
-      li.nav-item.is-tab 
-        a href=photos_path Media
-        ul
-          li: a.nav-item href=photos_path Photos
-          li: a.nav-item href=videos_path Videos
-      
-      a.nav-item.is-tab href=news_index_path News
+        .nav-menu.nav-right#nav-menu-toggle
+          a.nav-item href=about_index_path What is Krav Maga?
+          a.nav-item href=instructors_index_path Instructors
+          a.nav-item href=membership_path Membership
+          a.nav-item href=classes_index_path Classes
+          a.nav-item href=schedule_path Schedule
+          a.nav-item href=photos_path Photos
+          a.nav-item href=videos_path Videos
+
+      .nav-menu.nav#nav-menu
+        .container
+          ul.nav-center
+            li.nav-item.is-tab
+              a href=about_index_path About
+              ul
+                li: a.nav-item href=about_index_path What is Krav Maga?
+                li: a.nav-item href=instructors_index_path Instructors
+                li: a.nav-item href=membership_path Membership
+
+            li.nav-item.is-tab
+              a href=classes_index_path Classes
+              ul
+                li: a.nav-item href=schedule_path Schedule
+
+            a.nav-item.is-brand href=root_path
+              span.logo
+
+            li.nav-item.is-tab 
+              a href=photos_path Media
+              ul
+                li: a.nav-item href=photos_path Photos
+                li: a.nav-item href=videos_path Videos
+            
+            a.nav-item.is-tab href=news_index_path News

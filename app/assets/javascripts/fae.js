@@ -16,7 +16,6 @@ var KmgAdmin = {
   },
 
   check_media_type: function(field) {
-    console.log($(field).val());
     if ($(field).val() == 'Video') {
       $('.js-photo-section').addClass('hidden');
       $('.js-video-section').removeClass('hidden');
