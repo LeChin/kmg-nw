@@ -1,37 +1,57 @@
-h1 Membership
-
-h2 = @page.headline_content
-= markdown(@page.body_content)
+.container
+  section.section.tall-section
+    .columns
+      .column.is-one-third
+        h1.title.med-bold-title Membership
+      .column
+        h2.title.medium-bold-title = @page.headline_content
+        = markdown(@page.body_content)
 
 - if @pricings.present?
-  table
-    thead
-      tr
-        th
-        th General Public <span>Month to Month</span>
-        th Public Saftey / Military <span>Month to Month</span>
-    tbody
-      - @pricings.each do |pricing|
-        tr
-          td = pricing.level
-          td #{ pricing.general_price } <span>#{ pricing.time_free }</span>
-          td #{ pricing.public_safety_price } <span>#{ pricing.time_free }</span>
+  section.hero.dark-section
+    .container
+      section
+        .columns#pricings-header
+          .column
+          .column
+            p General Public <span>Month to Month</span>
+          .column
+            p Public Saftey / Military <span>Month to Month</span>
+        .columns#pricings-table
+          .column.price-level
+            ul
+              - @pricings.each do |pricing|
+                li = pricing.level
+          .column
+            ul
+              - @pricings.each do |pricing|
+                li #{ pricing.general_price } <span>#{ pricing.time_free }</span>
+          .column
+            ul
+              - @pricings.each do |pricing|
+                li #{ pricing.public_safety_price } <span>#{ pricing.time_free }</span>
 
-h2 Membership Benefits
-= markdown(@page.benefits_content)
+.container
+  section.section.tall-section
+    .columns
+      .column.is-one-third
+        h1.title.med-bold-title Membership Benefits
+      .column
+        = markdown(@page.benefits_content)
 
-/ todo - move to css
-img src=image_path('Membership_Bgnd_1600.jpg')
+section.hero.dark-section#membership_image
+  .container
+    .columns
+      .column.is-one-third
+        h1.title.med-bold-title Membership Discounts
+      .column
+        h2.title.medium-bold-title Public Saftey Rates
+        p 20% Discount
+        = markdown(@page.public_safety_info_content)
 
-h2 Membership Discounts
+        h2.title.medium-bold-title Corporate Rates
+        p 10% Discount
+        = markdown(@page.corporate_rates_content)
 
-h3 Public Saftey Rates
-p 20% Discount
-= markdown(@page.public_safety_info_content)
-
-h3 Corporate Rates
-p 10% Discount
-= markdown(@page.corporate_rates_content)
-
-- if asset_present?(@page.pdf)
-  a href=@page.pdf Participating Businesses
+        - if asset_present?(@page.pdf)
+          a href=@page.pdf Participating Businesses

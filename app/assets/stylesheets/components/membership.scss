@@ -1,0 +1,57 @@
+.about.membership {
+  #membership_image {
+    background: url(membership/Membership_Bgnd_1600.jpg) no-repeat fixed center;
+  }
+
+  #pricings-header,
+  #pricings-table {
+    .column {
+      padding: 0 80px;
+      min-width: 350px;
+      text-align: center;
+    }
+  }
+
+  #pricings-header {
+    margin-bottom: 40px;
+
+    .column p {
+      text-transform: uppercase;
+
+      span {
+        display: block;
+        text-transform: none;
+      }
+    }
+  }
+
+  #pricings-table {
+    .column {
+      border-right: 2px solid $c-gray-lightest;
+
+      li {
+        padding-bottom: 20px;
+        color: $c-white;
+        font-weight: bold;
+
+        span {
+          display: block;
+        }
+      }
+
+      &.price-level {
+        text-align: left;
+        text-transform: uppercase;
+
+        li {
+          color: $c-gray-lightest;
+          font-weight: normal;
+        }
+      }
+    }
+
+    .column:last-child {
+      border-right: 0px;
+    }
+  }
+}
