@@ -11,7 +11,9 @@
     a.button href=about_index_path About Krav Maga
 
 - if @video.present? && @video.video_link.present?
-  iframe title="YouTube video player" class="youtube-player" type="text/html" width="100%" height="390" src="https://www.youtube.com/embed/#{ @video.video_link }" frameborder="0" allowFullScreen
+  a.js-video.video-link href="https://youtube.com/watch?v=#{ @video.video_link }"
+    span.play-button
+    img src="images/Video_1600x485.jpg"
 
 - if @workouts.present?
   section.hero.dark-section.has-text-centered
