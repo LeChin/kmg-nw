@@ -3,8 +3,12 @@ body {
   color: $c-black;
 
   a:link,
-  a:visited {
+  a:visited,
+  a:active {
     color: $c-orange;
+  }
+  a:active {
+    border-color: $c-orange !important;
   }
 
   a:hover {

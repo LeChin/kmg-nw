@@ -15,5 +15,17 @@
 
   .read-more {
     margin-top: 15px;
+    font-weight: bold;
+    display: block;
+  }
+}
+
+.news.index {
+  .news-items-columns{
+    .column {
+      margin-bottom: 50px;
+      max-width: 350px;
+      padding-right: 50px;
+    }
   }
 }

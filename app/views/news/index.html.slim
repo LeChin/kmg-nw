@@ -1,8 +1,26 @@
-h1 News + Events
+.container
+  section.section.tall-section
+    .columns
+      .column.is-one-third
+        h1.title.med-bold-title
+          | News +
+          br
+          | Events
 
-- if @news_items.present?
-  - @news_items.each do |news_item|
-    h3 = news_item.title
-    p = news_item.date
-    p = news_item.intro
-    a href=news_detail_path(news_item.slug) Read More
+      - if @news_items.present?
+        .column.news-items-columns
+          - row_count = @news_items.size - 2
+          - (1..row_count + 1).each do |row|
+            .columns
+              - if row == 1
+                - range_1 = 0
+                - range_2 = 1
+              - else
+                - range_1 = row
+                - range_2 = row + 1
+              - @news_items[range_1..range_2].each do |news_item|
+                .column.news-item.is-half
+                  h3.title = news_item.title
+                  p.date = news_item.date
+                  p = news_item.intro
+                  a.read-more href=news_detail_path(news_item.slug) Read More
