@@ -18,36 +18,55 @@
 
 $(document).ready(function ($) {
 
+  // nav dropdown
   $(document).on('click', '#nav-toggle', function() {
     $(this).toggleClass('is-active');
     $('#nav-menu-toggle').toggleClass('is-active');
   });
 
+  // youtube popup
   $('.js-video').magnificPopup({
     type: 'iframe',
-
     iframe: {
       markup: '<div class="mfp-iframe-scaler">'+
                 '<div class="mfp-close"></div>'+
                 '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>'+
-              '</div>', // HTML markup of popup, `mfp-close` will be replaced by the close button
-
+              '</div>',
       patterns: {
         youtube: {
-          index: 'youtube.com/', // String that detects type of video (in this case YouTube). Simply via url.indexOf(index).
-
-          id: 'v=', // String that splits URL in a two parts, second part should be %id%
-          // Or null - full URL will be returned
-          // Or a function that should return %id%, for example:
-          // id: function(url) { return 'parsed id'; }
-
-          src: '//www.youtube.com/embed/%id%?autoplay=1' // URL that will be set as a source for iframe.
+          index: 'youtube.com/',
+          id: 'v=',
+          src: '//www.youtube.com/embed/%id%?autoplay=1'
         }
-
       },
-
-      srcAction: 'iframe_src', // Templating object key. First part defines CSS selector, second attribute. "iframe_src" means: find "iframe" and set attribute "src".
+      srcAction: 'iframe_src',
     }
+  });
+
+  // about page fixed sidebar
+  var fixmeTop = $('#sticky-sidebar').offset().top;
+  var heroHeight = $('.bordered-hero').height() + 250;
+  $(window).scroll(function() {
+    var windscroll = $(window).scrollTop();
+
+    if (windscroll >= fixmeTop) {
+      $('#sticky-sidebar').addClass('fixed-column');
+    } else {
+      $('#sticky-sidebar').removeClass('fixed-column');
+    }
+
+    $('#sticky-sidebar a').each(function () {
+      var currLink = $(this);
+      var refElement = $(currLink.attr("href"));
+      console.log(refElement.position().top + heroHeight);
+      if ((refElement.position().top + heroHeight) <= windscroll && (refElement.position().top + refElement.height() + heroHeight) > windscroll) {
+          $('#sticky-sidebar ul li a').removeClass("active");
+          currLink.addClass("active");
+      }
+      else{
+          currLink.removeClass("active");
+      }
+    });
   });
 });
 
