@@ -45,31 +45,38 @@ $(document).ready(function ($) {
 
   // about page fixed sidebar
   if($('#sticky-sidebar').length){
-    var fixmeTop = $('#sticky-sidebar').offset().top;
     var heroHeight = $('.bordered-hero').height() + 250;
 
     $(window).scroll(function() {
       var windscroll = $(window).scrollTop();
-
-      if (windscroll >= fixmeTop) {
-        $('#sticky-sidebar').addClass('fixed-column');
-      } else {
-        $('#sticky-sidebar').removeClass('fixed-column');
-      }
 
       $('#sticky-sidebar a').each(function () {
         var currLink = $(this);
         var refElement = $(currLink.attr("href"));
 
         if ((refElement.position().top + heroHeight) <= windscroll && (refElement.position().top + refElement.height() + heroHeight) > windscroll) {
-            $('#sticky-sidebar ul li a').removeClass("active");
-            currLink.addClass("active");
+          $('#sticky-sidebar ul li a').removeClass("active");
+          currLink.addClass("active");
         }
         else{
-            currLink.removeClass("active");
+          currLink.removeClass("active");
         }
       });
     });
+    
+
+    var sticky  = document.getElementById("sticky-sidebar"),
+    sticky2 = sticky.cloneNode(true);
+
+    sticky2.style.position = "fixed";
+    document.body.appendChild(sticky2);
+
+    function stickIt(){
+      sticky2.style.visibility = sticky.getBoundingClientRect().top<0 ? "visible" : "hidden";
+    }
+
+    stickIt();
+    window.addEventListener("scroll", stickIt, false );
   }
 });
 

@@ -113,9 +113,12 @@
     }
   }
 
-  #sticky-sidebar.fixed-column {
-    position: fixed;
-    top: 0;
+  // #sticky-sidebar.fixed-column {
+  //   position: fixed;
+  //   top: 0;
+  // }
+  #sticky-sidebar {
+    top:0; 
     left: 142px;
   }
 }
