@@ -29,6 +29,21 @@ body {
     color: $c-orange;
     background-color: $c-white;
   }
+
+  .back-link {
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  .back-link:before {
+    content: '';
+    display: inline-block;
+    background: url(global/Arrow.svg) no-repeat;
+    transform: scaleX(-1);
+    width: 10px;
+    height: 10px;
+    margin-right: 5px;
+  }
 }
 
 // BUTTONS

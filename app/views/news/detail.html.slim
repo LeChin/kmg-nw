@@ -1,17 +1,22 @@
-h1 = @news_item.title
-p = @news_item.date
+.container
+  section.section.tall-section
+    a.back-link href=news_index_path Back to All News
 
-p = @news_item.intro
-- if asset_present?(@news_item.image_1)
-  img src=@news_item.image_1.asset_url alt=@news_item.image_1.alt
+    .section-content
+      h1.title.med-bold-title = @news_item.title
+      p.date = @news_item.date
 
-= markdown(@news_item.body)
+      p.intro = @news_item.intro
+      - if asset_present?(@news_item.image_1)
+        img src=@news_item.image_1.asset_url alt=@news_item.image_1.alt
 
-- if asset_present?(@news_item.image_2)
-  img src=@news_item.image_2.asset_url alt=@news_item.image_2.alt
+      = markdown(@news_item.body)
 
-- if asset_present?(@news_item.image_3)
-  img src=@news_item.image_3.asset_url alt=@news_item.image_3.alt
+      - if asset_present?(@news_item.image_2)
+        img src=@news_item.image_2.asset_url alt=@news_item.image_2.alt
 
-- if @news_item.youtube_link.present?
-  iframe title="YouTube video player" class="youtube-player" type="text/html" width="640" height="390" src="https://www.youtube.com/embed/#{ @news_item.youtube_link }" frameborder="0" allowFullScreen
+      - if asset_present?(@news_item.image_3)
+        img src=@news_item.image_3.asset_url alt=@news_item.image_3.alt
+
+      - if @news_item.youtube_link.present?
+        iframe title="YouTube video player" class="youtube-player" type="text/html" width="640" height="390" src="https://www.youtube.com/embed/#{ @news_item.youtube_link }" frameborder="0" allowFullScreen

@@ -18,6 +18,15 @@
     font-weight: bold;
     display: block;
   }
+
+  .read-more:after {
+    content: '';
+    display: inline-block;
+    background: url(global/Arrow.svg) no-repeat;
+    width: 20px;
+    height: 10px;
+    margin-left: 5px;
+  }
 }
 
 .news.index {
@@ -27,5 +36,28 @@
       max-width: 350px;
       padding-right: 50px;
     }
+  }
+}
+
+.news.detail {
+  .section-content {
+    max-width: 800px;
+  }
+
+  .date {
+    color: $c-orange;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+
+  .intro {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  img {
+    padding: 30px 0;
+    display: block;
   }
 }
