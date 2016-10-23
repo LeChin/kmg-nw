@@ -45,7 +45,7 @@ $(document).ready(function ($) {
 
   // about page fixed sidebar
   if($('#sticky-sidebar').length){
-    var heroHeight = $('.bordered-hero').height() + 250;
+    var heroHeight = $('.bordered-hero').height() + 240;
 
     $(window).scroll(function() {
       var windscroll = $(window).scrollTop();
@@ -63,7 +63,7 @@ $(document).ready(function ($) {
         }
       });
     });
-    
+
 
     var sticky  = document.getElementById("sticky-sidebar"),
     sticky2 = sticky.cloneNode(true);
