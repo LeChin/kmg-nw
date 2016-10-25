@@ -10,7 +10,7 @@ nav.nav {
   }
 
   a.is-tab:hover {
-    border-bottom: 1px solid $c-orange;
+    border-bottom: 0;
   }
 }
 
@@ -62,7 +62,7 @@ nav.nav {
     text-transform: uppercase;
     font-weight: bold;
     font-size: 16px;
-    margin: 0 50px;
+    margin: 50px;
   }
 
   span {
@@ -80,33 +80,40 @@ nav.nav {
 
 // Dropdown
 
-nav.nav .is-tab:hover a {
+nav.nav li:hover a {
   color: $c-orange;
 }
 
-#nav-menu ul li > ul {
-  background-color: $c-gray-dark;
+#nav-menu > ul > li {
+  position: relative;
+}
+
+#nav-menu > ul > li div li:first-child {
+  margin-top: 10px;
+}
+
+#nav-menu > ul > li a + div {
   display: none;
-  flex-direction: column;
   position: absolute;
-  top: 135px;
+  width: 195px;
+  background: $c-gray-dark;
 }
 
-#nav-menu ul li:hover > ul {
-  display: flex;
-  z-index: 10;
+#nav-menu > ul > li:hover a + div {
+  display: block;
 }
 
-#nav-menu ul li ul li:first-child {
-  padding-top: 20px;
-}
-
-#nav-menu ul li ul li {
+#nav-menu > ul > li a + div > ul > li > a {
+  display: block;
   padding: 10px 15px 20px 15px;
+}
+
+#nav-menu > ul > li a + div > ul > li {
 
   a {
     color: $c-white;
     font-weight: bold;
+    text-transform: uppercase;
   }
 
   a:hover {

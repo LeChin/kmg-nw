@@ -23,29 +23,33 @@ section.nav-hero-header
 
       nav.nav-menu.nav#nav-menu
         ul.nav-center
-          li.nav-item.is-tab
-            a.no-hover About
-            ul
-              li: a.nav-item href=about_index_path What is Krav Maga?
-              li: a.nav-item href=instructors_index_path Instructors
-              li: a.nav-item href=membership_path Membership
+          li
+            a.no-hover.nav-item.is-tab About
+            div
+              ul
+                li: a.nav-item href=about_index_path What is Krav Maga?
+                li: a.nav-item href=instructors_index_path Instructors
+                li: a.nav-item href=membership_path Membership
 
-          li.nav-item.is-tab
-            a.no-hover Classes
-            ul
-              li: a href=classes_index_path Overview
-              li: a.nav-item href=schedule_path Schedule
+          li
+            a.no-hover.nav-item.is-tab Classes
+            div
+              ul
+                li: a href=classes_index_path Overview
+                li: a.nav-item href=schedule_path Schedule
 
           a.nav-item.is-brand href=root_path
             span.logo
 
-          li.nav-item.is-tab 
-            a.no-hover Media
-            ul
-              li: a.nav-item href=photos_path Photos
-              li: a.nav-item href=videos_path Videos
+          li
+            a.no-hover.nav-item.is-tab Media
+            div
+              ul
+                li: a.nav-item href=photos_path Photos
+                li: a.nav-item href=videos_path Videos
           
-          a.nav-item.is-tab href=news_index_path News
+          li
+            a.nav-item.is-tab href=news_index_path News
 
       / MOBILE
 
