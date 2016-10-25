@@ -73,7 +73,7 @@ body {
 blockquote {
   border-left: 2px solid $c-gray-lightest;
   padding-left: 50px;
-  max-width: 500px;
+  max-width: 600px;
   margin-top: 50px;
 
   p {
@@ -82,11 +82,25 @@ blockquote {
     font-size: 19px;
     line-height: 20px;
     margin-bottom: 20px;
+    width: 430px;
+    display: block;
   }
 
   cite {
     font-style: normal;
   }
+}
+
+blockquote:before {
+  display: block;
+  width: 65px;
+  height: 65px;
+  margin-top: -20px;
+  background: url(global/Quote-Mark.svg) no-repeat;
+  background-size: 65px 65px;
+  float: right;
+  content: '';
+  transform: scale(-1,-1)
 }
 
 // FONT TREATMENT
