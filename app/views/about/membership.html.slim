@@ -2,7 +2,7 @@
   section.section.tall-section
     .columns
       .column.is-one-third
-        h1.title.med-bold-title Membership
+        h1.title.large-bold-title Membership
       .column
         h2.title.medium-bold-title = @page.headline_content
         = markdown(@page.body_content)
@@ -21,7 +21,7 @@
           .column.price-level
             ul
               - @pricings.each do |pricing|
-                li = pricing.level
+                li class="#{ 'padding-bottom' if pricing.time_free.present? }" = pricing.level
           .column
             ul
               - @pricings.each do |pricing|
@@ -32,26 +32,27 @@
                 li #{ pricing.public_safety_price } <span>#{ pricing.time_free }</span>
 
 .container
-  section.section.tall-section
+  section.section.tall-section#membership_benefits
     .columns
       .column.is-one-third
-        h1.title.med-bold-title Membership Benefits
-      .column
+        h1.title.large-bold-title Membership Benefits
+      .column.margin-left
         = markdown(@page.benefits_content)
 
 section.hero.dark-section#membership_image
   .container
     .columns
       .column.is-one-third
-        h1.title.med-bold-title Membership Discounts
-      .column
-        h2.title.medium-bold-title Public Saftey Rates
-        p 20% Discount
-        = markdown(@page.public_safety_info_content)
+        h1.title.large-bold-title Membership Discounts
+      .column.margin-left
+        h2.title.medium-bold-title.no-margin Public Saftey Rates
+        p.discount 20% Discount
+        .svg-columns
+          = markdown(@page.public_safety_info_content)
 
-        h2.title.medium-bold-title Corporate Rates
-        p 10% Discount
+        h2.title.medium-bold-title.no-margin Corporate Rates
+        p.discount 10% Discount
         = markdown(@page.corporate_rates_content)
 
         - if asset_present?(@page.pdf)
-          a href=@page.pdf Participating Businesses
+          a.button.transparent href=@page.pdf Participating Businesses

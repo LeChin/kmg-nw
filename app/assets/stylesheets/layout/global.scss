@@ -147,6 +147,10 @@ blockquote:before {
     background-color: $c-gray-dark;
   }
 
+  .transparent {
+    background: transparent;
+  }
+
   .button:hover {
     color: $c-white;
   }

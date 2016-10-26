@@ -1,6 +1,75 @@
 .about.membership {
+  #membership_benefits {
+
+    .column.margin-left {
+      margin-left: 50px;
+    }
+
+    .markdown-content {
+      li {
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+
+      li:before {
+        content: '';
+        display: inline-block;
+        background: url(global/Arrow.svg) no-repeat;
+        width: 20px;
+        height: 10px;
+        margin-left: 5px;
+      }
+    }
+  }
+
   #membership_image {
     background: url(membership/Membership_Bgnd_1600.jpg) no-repeat fixed center;
+
+    .column.margin-left {
+      margin-left: 50px;
+    }
+
+    .no-margin {
+      margin-bottom: 0;
+    }
+
+    .discount {
+      color: $c-orange;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin-bottom: 15px;
+      margin-top: 5px;
+      font-size: 0.95rem;
+    }
+
+    .button {
+      margin-top: 20px;
+    }
+
+    .svg-columns {
+      margin-bottom: 70px;
+
+      .markdown-content {
+        column-count: 2;
+
+        li {
+          max-width: 230px;
+          padding-left: 2em;
+          text-indent: -2em;
+          margin-bottom: 10px;
+        }
+
+        li:before {
+          content: '';
+          display: inline-block;
+          background: url(global/Arrow.svg) no-repeat;
+          width: 20px;
+          height: 10px;
+          margin-left: 5px;
+        }
+      }
+    }
   }
 
   #pricings-header,
@@ -17,17 +86,21 @@
 
     .column p {
       text-transform: uppercase;
+      color: $c-gray-lightest;
 
       span {
         display: block;
         text-transform: none;
+        font-size: 10px;
+        font-weight: bold;
+        color: $c-white;
       }
     }
   }
 
   #pricings-table {
     .column {
-      border-right: 2px solid $c-gray-lightest;
+      border-right: 1px solid $c-gray-light;
 
       li {
         padding-bottom: 20px;
@@ -36,6 +109,7 @@
 
         span {
           display: block;
+          font-size: 10px;
         }
       }
 
@@ -46,6 +120,10 @@
         li {
           color: $c-gray-lightest;
           font-weight: normal;
+        }
+
+        .padding-bottom {
+          padding-bottom: 40px;
         }
       }
     }
