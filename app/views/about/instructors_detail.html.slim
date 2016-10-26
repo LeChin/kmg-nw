@@ -20,5 +20,6 @@
         - if @instructor.quote.present?
           blockquote
             p = @instructor.quote
-            footer
-              cite - #{ @instructor.quote_attribution } -
+            - if @instructor.quote_attribution.present?
+              footer
+                cite - #{ @instructor.quote_attribution } -

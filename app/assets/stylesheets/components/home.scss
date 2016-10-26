@@ -6,10 +6,10 @@
 
     .play-button {
       background: url(home/Play.svg) no-repeat;
-      background-size: 150px 150px;
+      background-size: 11rem 11rem;
       display: block;
-      width: 150px;
-      height: 150px;
+      width: 11rem;
+      height: 11rem;
       margin: 0 auto;
       position: absolute;
       top: 50%;
@@ -23,5 +23,13 @@
   }
   .video-link:focus {
     outline: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .pages.home .video-link .play-button {
+    background-size: 5rem 5rem;
+    width: 5rem;
+    height: 5rem;
   }
 }
