@@ -145,9 +145,11 @@
     display: block;
   }
 
-  #membership_image {
+  .about.membership #membership_image {
     display: inline-block;
     width: 100%;
+    background-image: none;
+    background-color: $c-gray-dark;
   }
 
   table th {
