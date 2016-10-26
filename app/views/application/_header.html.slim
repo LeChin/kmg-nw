@@ -23,7 +23,7 @@ section.nav-hero-header
 
       nav.nav-menu.nav#nav-menu
         ul.nav-center
-          li
+          li class=nav_active('about')
             a.no-hover.nav-item.is-tab About
             div
               ul
@@ -31,7 +31,7 @@ section.nav-hero-header
                 li: a.nav-item href=instructors_index_path Instructors
                 li: a.nav-item href=membership_path Membership
 
-          li
+          li class=nav_active('classes')
             a.no-hover.nav-item.is-tab Classes
             div
               ul
@@ -41,14 +41,14 @@ section.nav-hero-header
           a.nav-item.is-brand href=root_path
             span.logo
 
-          li
+          li class=nav_active('medium')
             a.no-hover.nav-item.is-tab Media
             div
               ul
                 li: a.nav-item href=photos_path Photos
                 li: a.nav-item href=videos_path Videos
           
-          li
+          li class=nav_active('news')
             a.nav-item.is-tab href=news_index_path News
 
       / MOBILE

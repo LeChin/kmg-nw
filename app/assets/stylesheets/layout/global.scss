@@ -4,6 +4,7 @@ body {
 
   a:link,
   a:visited,
+  a:focus,
   a:active {
     color: $c-orange;
   }
@@ -55,6 +56,7 @@ body {
   color: $c-orange;
   text-transform: uppercase;
   font-size: 13px;
+  font-weight: bold;
   padding: 25px 60px;
 }
 

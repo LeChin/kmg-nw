@@ -35,4 +35,14 @@ module ApplicationHelper
   def body_class
     @body_class.present? ? @body_class : "#{controller_name} #{action_name}"
   end
+
+  def nav_active(controller)
+    active_class = 'current'
+    if controller == 'pages'
+      return unless action_name == 'contact'
+    else
+      return if controller != controller_name
+    end
+    active_class
+  end
 end

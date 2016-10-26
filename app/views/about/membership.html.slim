@@ -68,4 +68,4 @@ section.hero.dark-section#membership_image
         = markdown(@page.corporate_rates_content)
 
         - if asset_present?(@page.pdf)
-          a.button.transparent href=@page.pdf Participating Businesses
+          a.button.transparent href=@page.pdf.asset_url target="_blank" Participating Businesses
