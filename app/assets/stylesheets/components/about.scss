@@ -117,6 +117,29 @@
     top:0; 
     left: 142px;
   }
+
+  .svg-bullet-list {
+    margin: 40px 0;
+
+    h3 {
+      margin-bottom: 10px;
+    }
+
+    li {
+      padding: 10px 0;
+      padding-left: 2em;
+      text-indent: -2em;
+    }
+
+    li:before {
+      content: '';
+      display: inline-block;
+      background: url(global/Arrow.svg) no-repeat;
+      width: 20px;
+      height: 10px;
+      margin-left: 5px;
+    }
+  }
 }
 
 // Mobile
@@ -128,5 +151,9 @@
 
   #about-mobile-header {
     display: block;
+  }
+
+  .about.index .icons-centered .column {
+    border-right: 0;
   }
 } 

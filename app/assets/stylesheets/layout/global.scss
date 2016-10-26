@@ -84,6 +84,7 @@ blockquote {
     margin-bottom: 20px;
     max-width: 430px;
     display: block;
+    font-style: italic;
   }
 
   cite {
@@ -168,6 +169,10 @@ blockquote:before {
 // MOBILE
 
 @media screen and (max-width: 768px) {
+  .tall-section {
+    margin: 0;
+  }
+
   .med-bold-title {
     font-size: 1.5rem;
   }
