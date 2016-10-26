@@ -94,7 +94,7 @@
 
   #mobile-schedule-section {
     display: block;
-    width: 400px;
+    width: auto;
     margin: 10px auto 30px auto;
 
     label{
@@ -135,17 +135,22 @@
       max-height: 0;
       transition: max-height 0.15s ease-out;
 
-      li {
-        padding: 20px;
-        list-style: none;
-        font-size: 19px;
-        font-weight: bold;
-        border: 1px solid $c-gray-light;
+      ul {
+        display: inline-block;
+        width: 100%;
+
+        li {
+          padding: 20px;
+          list-style: none;
+          font-size: 19px;
+          font-weight: bold;
+          border: 1px solid $c-gray-light;
+        }
       }
     }
 
     input:checked ~ article{
-      max-height: 2000px;
+      max-height: 5000px;
       transition: max-height 0.15s ease-in-out;
     }
   }

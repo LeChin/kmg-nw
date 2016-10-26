@@ -49,15 +49,13 @@
               input id="#{ day.name }" name="accordion-#{ i }" type="checkbox"
               label for="#{ day.name }" = day.name
               article
-                .ul
-                  - @days.each do |day|
-                    - if day.schedules.present?
-                      - day.schedules.ordered_by_time.each do |schedule|
-                        - if schedule.workout.live.present?
-                          li
-                            span class="#{ workout_class(schedule.workout) }"
-                            p.bold-upcase = schedule.workout.title
-                            p = schedule.formatted_start_time
+                ul
+                  - day.schedules.ordered_by_time.each do |schedule|
+                    - if schedule.workout.live.present?
+                      li
+                        span class="#{ workout_class(schedule.workout) }"
+                        p.bold-upcase = schedule.workout.title
+                        p #{ day.name } - #{ schedule.formatted_start_time }
 
 
 - if @news_items.present?
