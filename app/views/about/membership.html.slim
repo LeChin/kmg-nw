@@ -8,7 +8,7 @@
         = markdown(@page.body_content)
 
 - if @pricings.present?
-  section.hero.dark-section
+  section.hero.dark-section#membership_pricing
     .container
       section
         .columns#pricings-header
@@ -30,6 +30,19 @@
             ul
               - @pricings.each do |pricing|
                 li #{ pricing.public_safety_price } <span>#{ pricing.time_free }</span>
+  section.hero.dark-section#mobile_membership_pricing.hide
+    table
+      thead
+        tr
+          th
+          th General Public <br>Month to Month
+          th Public Saftey / Military <br>Month to Month
+      tbody
+        - @pricings.each do |pricing|
+          tr
+            td class="#{ 'padding-bottom' if pricing.time_free.present? }" = pricing.level
+            td #{ pricing.general_price } <br>#{ pricing.time_free }
+            td #{ pricing.public_safety_price } <br>#{ pricing.time_free }
 
 .container
   section.section.tall-section#membership_benefits

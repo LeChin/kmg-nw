@@ -133,3 +133,15 @@
     }
   }
 }
+
+// MOBILE
+
+@media screen and (max-width: 768px) {
+  #membership_pricing {
+    display: none;
+  }
+
+  #mobile_membership_pricing {
+    display: block;
+  }
+}
