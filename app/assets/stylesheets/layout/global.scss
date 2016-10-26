@@ -165,3 +165,10 @@ blockquote:before {
   display: none;
 }
 
+// MOBILE
+
+@media screen and (max-width: 768px) {
+  .med-bold-title {
+    font-size: 1.5rem;
+  }
+}

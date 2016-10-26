@@ -113,12 +113,20 @@
     }
   }
 
-  // #sticky-sidebar.fixed-column {
-  //   position: fixed;
-  //   top: 0;
-  // }
   #sticky-sidebar {
     top:0; 
     left: 142px;
   }
 }
+
+// Mobile
+
+@media screen and (max-width: 768px) {
+  #sticky-sidebar {
+    display: none;
+  }
+
+  #about-mobile-header {
+    display: block;
+  }
+} 
