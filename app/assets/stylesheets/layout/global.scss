@@ -82,7 +82,7 @@ blockquote {
     font-size: 19px;
     line-height: 20px;
     margin-bottom: 20px;
-    width: 430px;
+    max-width: 430px;
     display: block;
   }
 
@@ -114,13 +114,13 @@ blockquote:before {
 
 .large-bold-title {
   font-weight: bold;
-  font-size: 5vw;
+  font-size: 5rem;
   padding-bottom: 10px;
 }
 
 .med-bold-title {
   font-weight: bold;
-  font-size: 3.5vw;
+  font-size: 3.5rem;
   padding-bottom: 10px;
 }
 

@@ -3,18 +3,18 @@ section.hero.has-text-centered.section.tall-section
     .container
       h2.title.med-bold-title Class Schedule
       p.subtitle Here is the class schedule we have to offer. We can't wait to see you on the mats!
-      a.button href="TODO PDF" Print PDF
+      a.button.print-pdf href="TODO PDF" Print PDF
 
   - if @workouts.present?
     .container
-      section
+      section#schedule-section
         .day-header
           .columns
             - @days.each do |day|
               - if day.schedules.present?
                 .column
                   p.day-name = day.name
-        .columns..schedule-columns
+        .columns.schedule-columns
           - @days.each do |day|
             - if day.schedules.present?
               .column.border-right
@@ -24,3 +24,18 @@ section.hero.has-text-centered.section.tall-section
                       span class="#{ workout_class(schedule.workout) }"
                       p.bold-upcase = schedule.workout.title
                       p = schedule.formatted_start_time
+
+      section#mobile-schedule-section.light-background-schedule.hide
+        - @days.each_with_index do |day, i|
+          - if day.schedules.present?
+            div
+              input id="#{ day.name }" name="accordion-#{ i }" type="checkbox"
+              label for="#{ day.name }" = day.name
+              article
+                ul
+                  - day.schedules.ordered_by_time.each do |schedule|
+                    - if schedule.workout.live.present?
+                      li
+                        span class="#{ workout_class(schedule.workout) }"
+                        p.bold-upcase = schedule.workout.title
+                        p #{ day.name } - #{ schedule.formatted_start_time }
