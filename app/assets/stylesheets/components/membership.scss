@@ -144,4 +144,14 @@
   #mobile_membership_pricing {
     display: block;
   }
+
+  #membership_image {
+    display: inline-block;
+    width: 100%;
+  }
+
+  table th {
+    color: $c-gray-lightest;
+    font-weight: bold;
+  }
 }
