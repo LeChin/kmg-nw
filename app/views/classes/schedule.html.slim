@@ -14,7 +14,7 @@ section.hero.has-text-centered.section.tall-section
               - if day.schedules.present?
                 .column
                   p.day-name = day.name
-        .columns.schedule
+        .columns..schedule-columns
           - @days.each do |day|
             - if day.schedules.present?
               .column.border-right

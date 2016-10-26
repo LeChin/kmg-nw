@@ -25,16 +25,13 @@
 
     .container
       section#schedule-section
-        / TODO - for mobile,
-        / drawers for each day
-        / open to show classes
         .day-header.day-header-dark
           .columns
             - @days.each do |day|
               - if day.schedules.present?
                 .column
                   p.day-name = day.name
-        .columns.schedule
+        .columns.schedule-columns
           - @days.each do |day|
             - if day.schedules.present?
               .column.border-right
@@ -44,6 +41,24 @@
                       span class="#{ workout_class(schedule.workout) }"
                       p.bold-upcase = schedule.workout.title
                       p = schedule.formatted_start_time
+
+      section#mobile-schedule-section.hide
+        - @days.each_with_index do |day, i|
+          - if day.schedules.present?
+            div
+              input id="#{ day.name }" name="accordion-#{ i }" type="checkbox"
+              label for="#{ day.name }" = day.name
+              article
+                .ul
+                  - @days.each do |day|
+                    - if day.schedules.present?
+                      - day.schedules.ordered_by_time.each do |schedule|
+                        - if schedule.workout.live.present?
+                          li
+                            span class="#{ workout_class(schedule.workout) }"
+                            p.bold-upcase = schedule.workout.title
+                            p = schedule.formatted_start_time
+
 
 - if @news_items.present?
   .container
