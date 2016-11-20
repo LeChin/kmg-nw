@@ -1,17 +1,39 @@
+section.hero.bordered-hero
+  / - if asset_present?(@page.hero_image)
+  img src=image_path('Hero_1600x620.jpg') alt='Our Classes'
+  .hero-quote
+    h1.title.med-bold-title TODO
+    h2.subtitle - TODO -
+
+
 .container
   section.section.tall-section
     .columns
-      .column.is-one-quarter
-        h1.title.med-bold-title Classes
-      .column.is-one-quarter
-      .column
-        h2.title.medium-bold-title = @page.headline_content
-        = markdown(@page.body_content)
+      .column.is-4
+        section.section#sticky-sidebar
+          h1.title.med-bold-title Classes
+          
+          aside.menu
+            ul.menu-list
+              - if @classes.present?
+                - @classes.each do |workout|
+                  li: a href="##{workout.slug}" = workout.title
 
+      .column#classes-mobile-header.hide
+        .section
+          h1.title.large-bold-title Classes
 
-- if @classes.present?
-  .columns
-    - @classes.each do |workout|
-      .column
-        h3 = workout.title
-        p #{ workout.class_types_list } | <a href="#{ classes_detail_path(workout.slug) }"> View Details > </a>
+      - if @classes.present?
+        .column
+          section.section
+            h2.title.medium-bold-title = @page.headline_content
+            = markdown(@page.body_content)
+
+          - @classes.each do |workout|
+            section.section id="#{workout.slug}"
+              h2.subtitle.medium-bold-title = workout.title
+              = markdown(workout.body)
+
+              h2 Class Times
+              - workout.schedules.ordered_by_time.each do |schedule|
+                p = schedule.formatted_start_time

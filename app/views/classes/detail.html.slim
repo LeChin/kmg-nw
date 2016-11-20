@@ -1,9 +1,0 @@
-a.back-link href=classes_index_path Back to All Classes
-
-h1 = @workout.title
-
-= markdown(@workout.body)
-
-h2 Class Times
-- @workout.schedules.ordered_by_time.each do |schedule|
-  p = schedule.formatted_start_time

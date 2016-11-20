@@ -24,7 +24,6 @@ Rails.application.routes.draw do
 
   # CLASSES
   get '/classes', to: "classes#index", as: 'classes_index'
-  get '/classes/:slug', to: "classes#detail", as: 'classes_detail'
   get '/schedule', to: "classes#schedule", as: 'schedule'
 
   # MEDIA

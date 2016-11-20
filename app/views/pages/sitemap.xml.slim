@@ -8,9 +8,6 @@ urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
       url: loc = xml_sitemap_path(instructors_detail_path(slug: instructor.slug))
   url: loc = xml_sitemap_path(membership_path)
   url: loc = xml_sitemap_path(classes_index_path)
-  - if @sitemap_workouts.present?
-    - @sitemap_workouts.each do |workout|
-      url: loc = xml_sitemap_path(classes_detail_path(slug: workout.slug))
   url: loc = xml_sitemap_path(schedule_path)
   url: loc = xml_sitemap_path(photos_path)
   url: loc = xml_sitemap_path(videos_path)
