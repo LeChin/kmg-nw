@@ -62,6 +62,9 @@ body {
 
 .button:hover {
   text-decoration: none;
+  color: $c-white;
+  border: 2px solid $c-white;
+  background-color: $c-orange; 
 }
 
 // SECTIONS
@@ -117,8 +120,12 @@ blockquote:before {
 
 .large-bold-title {
   font-weight: bold;
-  font-size: 4rem;
+  font-size: 3.5rem;
   padding-bottom: 10px;
+}
+
+.large-margin-bottom {
+  margin-bottom: 50px !important;
 }
 
 .med-bold-title {
@@ -140,6 +147,27 @@ blockquote:before {
   color: $c-white;
   padding: 50px 0 80px;
 
+  .light-header-section {
+    background-color: $c-white;
+
+    h2, p {
+      color: $c-gray-dark;
+    }
+
+    .button {
+      border: 2px solid $c-orange;
+      color: $c-orange;
+      background-color: $c-white;
+    }
+
+    .button:hover {
+      text-decoration: none;
+      color: $c-white;
+      border: 2px solid $c-white;
+      background-color: $c-orange; 
+    }
+  }
+
   .title,
   .subtitle {
     color: $c-white;
@@ -149,12 +177,15 @@ blockquote:before {
     background-color: $c-gray-dark;
   }
 
-  .transparent {
-    background: transparent;
+  .button:hover {
+    text-decoration: none;
+    color: $c-gray-dark;
+    border: 2px solid $c-gray-dark;
+    background-color: $c-orange; 
   }
 
-  .button:hover {
-    color: $c-white;
+  .transparent {
+    background: transparent;
   }
 }
 

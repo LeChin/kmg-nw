@@ -16,6 +16,10 @@ nav.nav {
   }
 }
 
+.facebook-icon {
+  padding-right: 0px !important;
+}
+
 #contact-bar {
   background-color: $c-black;
 
@@ -75,8 +79,8 @@ nav.nav {
   }
 
   .logo {
-    background: url(top-nav/Logo_230x115.png);
-    background-size: 230px 115px;
+    background: url(top-nav/Logo_230x115.png) no-repeat center;
+    background-size: 210px 95px;
   }
 }
 
@@ -84,6 +88,10 @@ nav.nav {
 
 nav.nav li:hover a {
   color: $c-orange;
+}
+
+#nav-menu > ul li ul {
+  padding-bottom: 10px;
 }
 
 #nav-menu > ul > li {

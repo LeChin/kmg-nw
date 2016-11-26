@@ -1,3 +1,16 @@
+.classes.schedule {
+  background-color: $c-gray-dark;
+
+  .dark-section {
+    padding: 0 0 100px 0;
+
+  }
+
+  .light-header-section {
+    padding-top: 100px;
+  }
+}
+
 #schedule-section,
 #mobile-schedule-section {
 
@@ -16,12 +29,16 @@
         text-transform: uppercase;
         font-weight: bold;
         width: 120px;
-        margin: 0 auto;
+        margin: 0 0 5px auto;
       }
     }
 
     .column.fixed-height {
       height: 140px;
+
+      p {
+        font-size: 0.9rem;
+      }
     }
 
     .column.border-right {
@@ -77,6 +94,7 @@
 
     .day-name {
       text-transform: uppercase;
+      font-weight: bold;
     }
   }
 

@@ -1,14 +1,14 @@
-section.hero.has-text-centered.section.tall-section
-  .hero-body
+section.hero.has-text-centered.section.dark-section
+  .hero-body.light-header-section
     .container
-      h2.title.med-bold-title Class Schedule
+      h2.title.large-bold-title.large-margin-bottom Class Schedule
       p.subtitle Here is the class schedule we have to offer. We can't wait to see you on the mats!
-      a.button.print-pdf href="TODO PDF" Print PDF
+      a.button.print-pdf href=schedule_path(format: :pdf) Print PDF
 
   - if @workouts.present?
     .container
       section#schedule-section
-        .day-header
+        .day-header.day-header-dark
           .columns
             - @days.each do |day|
               - if day.schedules.present?
