@@ -55,7 +55,7 @@
                       li
                         span class="#{ workout_class(schedule.workout) }"
                         p.bold-upcase = schedule.workout.title
-                        p #{ day.name } - #{ schedule.formatted_start_time }
+                        p = schedule.formatted_start_time
 
 
 - if @news_items.present?

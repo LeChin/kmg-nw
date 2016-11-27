@@ -1,4 +1,8 @@
 .about.membership {
+  .dark-section {
+    padding: 80px 0 80px;
+  }
+
   #membership_benefits {
 
     .column.margin-left {
@@ -24,7 +28,7 @@
   }
 
   #membership_image {
-    background: url(membership/Membership_Bgnd_1600.jpg) no-repeat fixed center;
+    background: url(membership/Membership_Bgnd_1600.jpg) no-repeat fixed center $c-gray-dark;
 
     .column.margin-left {
       margin-left: 50px;
@@ -79,6 +83,10 @@
       min-width: 350px;
       text-align: center;
     }
+
+    .pricing-header-bold {
+      font-weight: bold;
+    }
   }
 
   #pricings-header {
@@ -88,7 +96,7 @@
       text-transform: uppercase;
       color: $c-gray-lightest;
 
-      span {
+      .pricing-subheader {
         display: block;
         text-transform: none;
         font-size: 10px;
@@ -105,7 +113,7 @@
       li {
         padding-bottom: 20px;
         color: $c-white;
-        font-weight: bold;
+        font-weight: normal;
 
         span {
           display: block;
@@ -119,7 +127,7 @@
 
         li {
           color: $c-gray-lightest;
-          font-weight: normal;
+          font-weight: bold;
         }
 
         .padding-bottom {

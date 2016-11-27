@@ -20,3 +20,9 @@ footer.footer {
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .mobile-hide { 
+    display: none;
+  }
+}

@@ -25,7 +25,7 @@ section.hero.has-text-centered.section.dark-section
                       p.bold-upcase = schedule.workout.title
                       p = schedule.formatted_start_time
 
-      section#mobile-schedule-section.light-background-schedule.hide
+      section#mobile-schedule-section.hide
         - @days.each_with_index do |day, i|
           - if day.schedules.present?
             div
@@ -38,4 +38,4 @@ section.hero.has-text-centered.section.dark-section
                       li
                         span class="#{ workout_class(schedule.workout) }"
                         p.bold-upcase = schedule.workout.title
-                        p #{ day.name } - #{ schedule.formatted_start_time }
+                        p = schedule.formatted_start_time
