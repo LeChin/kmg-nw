@@ -72,11 +72,6 @@
     }
   }
 
-  #sticky-sidebar {
-    top:0; 
-    left: 142px;
-  }
-
   .svg-bullet-list {
     margin: 40px 0;
 
@@ -104,7 +99,7 @@
 // Mobile
 
 @media screen and (max-width: 768px) {
-  #sticky-sidebar {
+  .sticky-sidebar {
     display: none;
   }
 
