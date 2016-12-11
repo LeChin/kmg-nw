@@ -55,6 +55,21 @@ $(document).ready(function ($) {
     var heroHeight = $('.bordered-hero').height() + 240;
 
     $(window).scroll(function() {
+      var windscroll = $(window).scrollTop();
+
+      $('.sticky-sidebar a').each(function () {
+        var currLink = $(this);
+        var refElement = $(currLink.attr("href"));
+
+        if ((refElement.position().top + heroHeight) <= windscroll && (refElement.position().top + refElement.height() + heroHeight) > windscroll) {
+          $('.sticky-sidebar ul li a').removeClass("active");
+          currLink.addClass("active");
+        }
+        else{
+          currLink.removeClass("active");
+        }
+      });
+
       stickIt();
     });
 
@@ -68,6 +83,7 @@ $(document).ready(function ($) {
     eventTimeout;
 
 
+    // $("body").append([$sticky_container,$sticky2]);
     $("body").append($sticky_container);
     $sticky_container[0].append($sticky2);
 
