@@ -17,6 +17,7 @@
 
 
 $(document).ready(function ($) {
+  // print pdf
   $(document).on('click', '.print-pdf', function(){
     window.print();
   });
@@ -47,49 +48,42 @@ $(document).ready(function ($) {
   });
 
   // about page fixed sidebar
-    var $sticky  = $(".sticky-sidebar");
+  var $sticky  = $(".sticky-sidebar");
 
-    if ($sticky) {
+  if ($sticky) {
 
-      var heroHeight = $('.bordered-hero').height() + 240;
+    var heroHeight = $('.bordered-hero').height() + 240;
 
-      $(window).scroll(function() {
-        var windscroll = $(window).scrollTop();
-
-        $('.sticky-sidebar a').each(function () {
-          var currLink = $(this);
-          var refElement = $(currLink.attr("href"));
-
-          if ((refElement.position().top + heroHeight) <= windscroll && (refElement.position().top + refElement.height() + heroHeight) > windscroll) {
-            $('.sticky-sidebar ul li a').removeClass("active");
-            currLink.addClass("active");
-          }
-          else{
-            currLink.removeClass("active");
-          }
-        });
-      });
-
-      var sticky-container = document.createElement("div"),
-      $sticky-container = $(sticky-container).addClass("sticky-container"),
-      $sticky2 = $sticky.cloneNode(true),
-      eventTimeout;
-
-      $("body").append([$sticky-container,$sticky2]);
-
-      function stickIt() {
-        // ignore resize events as long as an actualResizeHandler execution is in the queue
-        if ( !eventTimeout ) {
-          eventTimeout = setTimeout(function() {
-            eventTimeout = null;
-            $sticky2.style.visibility = $sticky.getBoundingClientRect().top<0 ? "visible" : "hidden";
-           }, 10);
-        }
-      };
+    $(window).scroll(function() {
       stickIt();
-      $(window).on("scroll resize", stickIt());
-    }
+    });
 
+    $(window).resize(function() {
+      stickIt();
+    });
+
+    var sticky_container = document.createElement("div"),
+    $sticky_container = $(sticky_container).addClass("sticky-container"),
+    $sticky2 = $sticky[0].cloneNode(true),
+    eventTimeout;
+
+
+    $("body").append($sticky_container);
+    $sticky_container[0].append($sticky2);
+
+    function stickIt() {
+      // ignore resize events as long as an actualResizeHandler execution is in the queue
+      if ( !eventTimeout ) {
+        eventTimeout = setTimeout(function() {
+          eventTimeout = null;
+          $sticky2.style.visibility = $sticky[0].getBoundingClientRect().top<0 ? "visible" : "hidden";
+         }, 10);
+      }
+    };
+    stickIt();
+    
+    $(window).on("scroll resize", stickIt());
   }
+
 });
 

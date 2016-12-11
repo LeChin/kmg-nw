@@ -1,10 +1,4 @@
-
-.sticky-sidebar {
-  padding-left: 142px;
-}
-
 .sticky-container {
-
   position: fixed;
   top: 0;
   max-width: 1200px;
@@ -13,4 +7,7 @@
   /* magic number alert: 30px is the total padding of multiple divs that wrap
       the original sticky-sidebar */
 
+  .sticky-sidebar {
+    padding-left: 142px;
+  }
 }
