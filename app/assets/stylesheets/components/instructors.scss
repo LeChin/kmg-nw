@@ -2,6 +2,10 @@
   .columns.instructors {
     margin-bottom: -5px;
 
+    img {
+      float: left;
+    }
+
     .column:nth-child(even) {
       padding-left: 0px;
     }
