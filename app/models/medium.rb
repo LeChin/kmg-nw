@@ -8,7 +8,7 @@ class Medium < ApplicationRecord
     dependent: :destroy
   accepts_nested_attributes_for :image, allow_destroy: true
 
-  validates :media_type, presence: true
+  validates :media_type, :name, presence: true
 
   default_scope { order(:position) }
   scope :live, -> { where(live: true) }

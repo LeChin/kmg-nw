@@ -56,7 +56,7 @@ section.nav-hero-header
       nav.nav.hide#mobile-nav
         .nav-left
           a.nav-item.is-brand href=root_path
-            img src="#{ asset_path('top-nav/Logo_230x115.png') }" alt="Krav Maga Global Northwest"
+            img src="#{ asset_path('top-nav/Logo_230x115.png') }" alt="Invictus Defense Academy"
 
         span.nav-toggle#nav-toggle
           span
@@ -71,5 +71,5 @@ section.nav-hero-header
           a.nav-item href=schedule_path Schedule
           a.nav-item href=photos_path Photos
           a.nav-item href=videos_path Videos
-          a.nav-item href=news_index_path News
+          a.nav-item href=news_index_path news
           a.nav-item href="http://maps.google.com/?q=#{ @contact_page.address_content }" target="_blank" = @contact_page.address_content

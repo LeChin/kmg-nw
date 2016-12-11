@@ -184,3 +184,93 @@
     }
   }
 }
+
+
+
+// PRINT
+
+@media print {
+  .nav-hero-header,
+  .hide-on-print,
+  .footer {
+    display: none !important;
+  }
+
+  .dark-section {
+    background-color: $c-white;
+  }
+
+  #schedule-section {
+    position: relative;
+    padding-top: 10px;
+    color: $c-black;
+    background: $c-white;
+
+    .day-header-dark {
+      background-color: $c-white;
+    }
+
+    .day-header {
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+
+      .columns {
+        display: inline-block;
+        width: 100%;
+
+        .column {
+          width: 16.4%;
+          padding: 10px;
+          margin: 0 auto;
+          float: left;
+
+          .day-name {
+            text-transform: uppercase;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+
+    .schedule-columns {
+      display: block;
+      padding-top: 10px;
+      width: 100%;
+
+      .column {
+        .bold-upcase {
+          text-transform: uppercase;
+          font-weight: bold;
+          width: 100%;
+          margin: 0 auto;
+        }
+      }
+
+      .column.border-right {
+        border-right: 1px solid $c-gray-light;
+        width: 16.6%;
+        float: left;
+      }
+
+      .column.border-right:last-child {
+        border-right: 0px;
+      }
+
+      .column.fixed-height {
+        display: block;
+        height: 120px;
+        position: relative;
+
+        .schedule-icons {
+          display: none;
+        }
+
+        p {
+          font-size: 0.9rem;
+        }
+      }
+
+    }
+  }
+}

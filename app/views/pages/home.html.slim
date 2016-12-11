@@ -1,27 +1,27 @@
 - if @gallery_items.present?
-  section.hero
+  section.hero.hide-on-print
     - @gallery_items.each do |gallery_item|
       - if asset_present?(gallery_item.image)
         img src=gallery_item.image.asset_url alt=gallery_item.image.alt
 
-.container
+.container.hide-on-print
   section.section.has-text-centered.tall-section
     h1.title.large-bold-title.large-margin-bottom = @page.headline_content
     h2.subtitle = @page.subhead_content
     a.button href=about_index_path About Krav Maga
 
 - if @video.present? && @video.video_link.present?
-  a.js-video.video-link href="https://youtube.com/watch?v=#{ @video.video_link }"
-    span.play-button
-    img src="images/Video_1600x485.jpg"
+  a.js-video.video-link.hide-on-print href="https://youtube.com/watch?v=#{ @video.video_link }"
+    span.play-button.hide-on-print
+    img.hide-on-print src="images/Video_1600x485.jpg"
 
 - if @workouts.present?
   section.hero.dark-section.has-text-centered
-    .hero-body
+    .hero-body.hide-on-print
       .container
         h2.title.large-bold-title.large-margin-bottom Class Schedule
         p.subtitle Here is the class schedule we have to offer. We can't wait to see you on the mats!
-        a.button.print-pdf href="TODO PDF" Print PDF
+        .button.print-pdf Print PDF
 
     .container
       section#schedule-section
@@ -38,7 +38,7 @@
                 - day.schedules.ordered_by_time.each do |schedule|
                   - if schedule.workout.live.present?
                     .column.fixed-height
-                      span class="#{ workout_class(schedule.workout) }"
+                      span.schedule-icons class="#{ workout_class(schedule.workout) }"
                       p.bold-upcase = schedule.workout.title
                       p = schedule.formatted_start_time
 
@@ -59,7 +59,7 @@
 
 
 - if @news_items.present?
-  .container
+  .container.hide-on-print
     section.section.tall-section
       .columns
         .column.is-4

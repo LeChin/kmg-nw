@@ -21,7 +21,7 @@ section.hero.has-text-centered.section.dark-section
                 - day.schedules.ordered_by_time.each do |schedule|
                   - if schedule.workout.live.present?
                     .column.fixed-height
-                      span class="#{ workout_class(schedule.workout) }"
+                      span.schedule-icons class="#{ workout_class(schedule.workout) }"
                       p.bold-upcase = schedule.workout.title
                       p = schedule.formatted_start_time
 
