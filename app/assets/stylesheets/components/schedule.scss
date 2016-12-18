@@ -107,6 +107,7 @@
       font-weight: bold;
       border-top: 1px solid $c-gray-light;
       border-bottom: 1px solid $c-gray-light;
+      background-color: $c-black;
     }
 
     label:hover{
@@ -145,6 +146,7 @@
           list-style: none;
           font-size: 19px;
           border: 1px solid $c-gray-light;
+          background-color: $c-gray-dark;
 
           p {
             font-size: 1rem;

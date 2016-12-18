@@ -224,8 +224,9 @@ blockquote:before {
     font-size: 2rem;
   }
 
-  .desktop-header {
-    display: none;
+  .desktop-header,
+  .mobile-hide {
+    display: none !important;
   }
 
   .mobile-header {

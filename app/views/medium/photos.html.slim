@@ -4,7 +4,7 @@
     h2.subtitle = @page.headline_content
 
     - if @photos.present?
-      .photo-slider
+      .photo-slider.mobile-hide
         - @photos.each do |photo|
           - if asset_present?(photo.image)
             div
@@ -13,9 +13,10 @@
                 p.caption = photo.image.caption
                 p.date = photo.date.strftime('%b. %e, %Y')
 
-    .thumbnails
-      - @photos.each do |photo|
-        .column.is-one-third
-          - if asset_present?(photo.image)
-            div.thumbnail
-              img src=photo.image.asset_url alt=photo.image.alt
+    - if @photos.present?
+      .thumbnails
+        - @photos.each do |photo|
+          .column.is-one-third
+            - if asset_present?(photo.image)
+              div.thumbnail
+                img src=photo.image.asset_url alt=photo.image.alt
