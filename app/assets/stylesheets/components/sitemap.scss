@@ -1,0 +1,17 @@
+.sitemap {
+  h2 {
+    color: $c-orange;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+  }
+
+  .instructor-list {
+    margin-left: 20px;
+
+    li {
+      font-size: 1.1rem;
+      list-style: disc;
+    }
+  }
+}
