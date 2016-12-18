@@ -56,7 +56,7 @@ section.nav-hero-header
       nav.nav.hide#mobile-nav
         .nav-left
           a.nav-item.is-brand href=root_path
-            img src="#{ asset_path('logos/main-logo.png') }" alt="Invictus Defense Academy"
+            img src="#{ asset_path('logos/KMG-Logo.png') }" alt="Invictus Defense Academy"
 
         span.nav-toggle#nav-toggle
           span
@@ -72,4 +72,21 @@ section.nav-hero-header
           a.nav-item href=photos_path Photos
           a.nav-item href=videos_path Videos
           a.nav-item href=news_index_path News
-          a.nav-item href="http://maps.google.com/?q=#{ @contact_page.address_content }" target="_blank" = @contact_page.address_content
+          br
+          .utility
+            a.nav-item href="mailto:#{ @contact_page.email_content }"
+              span.email
+              = @contact_page.email_content
+          .utility
+            a.nav-item href="tel:#{ @contact_page.phone_content }"
+              span.phone
+              = @contact_page.phone_content
+          .utility
+            a.nav-item href="http://maps.google.com/?q=#{ @contact_page.address_content }" target="_blank"
+              span.address
+              = @contact_page.address_content
+          .utility
+            a.nav-item.facebook-icon href=@contact_page.facebook_url_content target="_blank"
+              span.facebook
+            a.nav-item href=@contact_page.instagram_url_content target="_blank"
+              span.instagram

@@ -20,7 +20,8 @@ nav.nav {
   padding-right: 0px !important;
 }
 
-#contact-bar {
+#contact-bar,
+#mobile-nav {
   background-color: $c-black;
 
   a span {
@@ -178,5 +179,45 @@ nav.nav li:hover a {
 
   #mobile-nav {
     display: flex;
+
+    .nav-item img {
+      max-height: 49px;
+    }
+
+    .nav-left,
+    .nav-toggle{
+      border-bottom: 1px solid $c-gray-light;
+    }
+
+    .nav-toggle {
+      height: 80px;
+    }
+
+    .nav-right {
+      padding-top: 20px;
+
+      .nav-item {
+        color: $c-white;
+        margin-left: 10px;
+        font-weight: bold;
+      }
+
+      .utility {
+        background-color: $c-black;
+        border-top: 1px solid $c-gray-light;
+
+        span {
+          margin-right: 15px;
+        }
+
+        .facebook-icon {
+          float: left;
+
+          .facebook {
+            margin-right: 0px;
+          }
+        }
+      }
+    }
   }
 }

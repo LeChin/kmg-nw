@@ -223,4 +223,12 @@ blockquote:before {
   .large-bold-title {
     font-size: 2rem;
   }
+
+  .desktop-header {
+    display: none;
+  }
+
+  .mobile-header {
+    display: block;
+  }
 }
