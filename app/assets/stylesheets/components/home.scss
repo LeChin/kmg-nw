@@ -17,10 +17,17 @@
       transform: translate(-50%,-50%);
     }
 
+    .play-button:hover {
+      background: url(home/Play-inverted.svg) no-repeat;
+      background-size: 11rem 11rem;
+    }
+
     img {
       margin-bottom: -5px;
     }
   }
+
+
   .video-link:focus {
     outline: none;
   }

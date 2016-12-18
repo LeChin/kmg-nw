@@ -1,41 +1,12 @@
+.print-logo.hide
+  img src=image_path('logos/logo-01.png')
+
 section.hero.has-text-centered.section.dark-section
-  .hero-body.light-header-section
+  .hero-body.light-header-section.hide-on-print
     .container
       h2.title.large-bold-title.large-margin-bottom Class Schedule
       p.subtitle Here is the class schedule we have to offer. We can't wait to see you on the mats!
-      a.button.print-pdf href=schedule_path(format: :pdf) Print PDF
+      .button.print-pdf Print PDF
 
   - if @workouts.present?
-    .container
-      section#schedule-section
-        .day-header.day-header-dark
-          .columns
-            - @days.each do |day|
-              - if day.schedules.present?
-                .column
-                  p.day-name = day.name
-        .columns.schedule-columns
-          - @days.each do |day|
-            - if day.schedules.present?
-              .column.border-right
-                - day.schedules.ordered_by_time.each do |schedule|
-                  - if schedule.workout.live.present?
-                    .column.fixed-height
-                      span.schedule-icons class="#{ workout_class(schedule.workout) }"
-                      p.bold-upcase = schedule.workout.title
-                      p = schedule.formatted_start_time
-
-      section#mobile-schedule-section.hide
-        - @days.each_with_index do |day, i|
-          - if day.schedules.present?
-            div
-              input id="#{ day.name }" name="accordion-#{ i }" type="checkbox"
-              label for="#{ day.name }" = day.name
-              article
-                ul
-                  - day.schedules.ordered_by_time.each do |schedule|
-                    - if schedule.workout.live.present?
-                      li
-                        span class="#{ workout_class(schedule.workout) }"
-                        p.bold-upcase = schedule.workout.title
-                        p = schedule.formatted_start_time
+    = render 'application/schedule', days: @days

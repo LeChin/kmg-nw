@@ -32,6 +32,33 @@ module ApplicationHelper
     end
   end
 
+  def has_workout_image?(workout)
+    if
+      (workout.class_types_list.include? 'Teen') ||
+      (workout.class_types_list.include? 'Krav') ||
+      (workout.class_types_list.include? 'Strike') ||
+      (workout.class_types_list.include? 'Combat') ||
+      (workout.class_types_list.include? 'Coach')
+      true
+    else
+      false
+    end
+  end
+
+  def workout_image(workout)
+    if workout.class_types_list.include? 'Teen'
+      'icons/Teen.svg'
+    elsif workout.class_types_list.include? 'Krav'
+      'icons/Krav_Maga.svg'
+    elsif workout.class_types_list.include? 'Strike'
+      'icons/Strike_Lab.svg'
+    elsif workout.class_types_list.include? 'Combat'
+      'icons/Combat_Conditioning.svg'
+    elsif workout.class_types_list.include? 'Coach'
+      'icons/Coach.svg'
+    end
+  end
+
   def body_class
     @body_class.present? ? @body_class : "#{controller_name} #{action_name}"
   end
