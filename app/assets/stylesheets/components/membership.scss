@@ -144,7 +144,7 @@
 
 // MOBILE
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 950px) {
   #membership_pricing {
     display: none;
   }
@@ -237,6 +237,23 @@
     input:checked ~ article{
       max-height: 5000px;
       transition: max-height 0.15s ease-in-out;
+    }
+  }
+
+  #membership_benefits {
+
+    .column.margin-left {
+      margin-left: 0 !important;
+    }
+  }
+
+  #membership_image {
+    .large-bold-title {
+      margin-left: 20px;
+    }
+
+    .margin-left {
+      margin-left: 20px !important;
     }
   }
 }

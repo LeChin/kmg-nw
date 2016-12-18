@@ -3,6 +3,7 @@
     display: inline-block;
     position: relative;
     z-index: 1;
+    background-color: $c-black;
 
     .play-button {
       background: url(home/Play.svg) no-repeat;

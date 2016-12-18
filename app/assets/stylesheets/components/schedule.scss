@@ -87,6 +87,10 @@
 // Mobile
 
 @media screen and (max-width: 768px) {
+  .dark-section .container {
+    z-index: 0;
+  }
+
   #schedule-section,
   .print-pdf {
     display: none;
