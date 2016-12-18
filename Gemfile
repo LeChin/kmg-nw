@@ -37,6 +37,7 @@ gem "binding_of_caller"
 # s3 access
 gem 'fog', require: 'fog/aws'
 gem 'magnific-popup-rails', '~> 1.1.0'
+gem 'font-awesome-sass'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

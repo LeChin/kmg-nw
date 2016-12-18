@@ -1,3 +1,6 @@
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
 @import "bulma";
 
 // Layout
@@ -12,6 +15,7 @@
 @import
   'components/home',
   'components/schedule',
+  'components/media',
   'components/news',
   'components/about',
   'components/sitemap',

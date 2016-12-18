@@ -50,7 +50,7 @@ $(document).ready(function ($) {
   // about page fixed sidebar
   var $sticky  = $(".sticky-sidebar");
 
-  if ($sticky) {
+  if ($sticky.length > 0) {
 
     var heroHeight = $('.bordered-hero').height() + 240;
 
@@ -100,6 +100,20 @@ $(document).ready(function ($) {
     
     $(window).on("scroll resize", stickIt());
   }
+
+  // slider
+
+  $('.photo-slider').slick({
+    arrow: true,
+    responsive: [
+      {
+        breakpoint: 1000,
+        settings: {
+          arrows: false
+        }
+      }
+    ]
+  });
 
 });
 

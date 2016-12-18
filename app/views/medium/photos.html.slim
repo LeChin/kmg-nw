@@ -1,13 +1,21 @@
 .container
-  section.section.tall-section
-    h1.title.large-bold-title Photo Album
-    = @page.headline_content
+  section.section.has-text-centered.tall-section
+    h1.title.large-bold-title.large-margin-bottom Photo Album
+    h2.subtitle = @page.headline_content
 
     - if @photos.present?
+      .photo-slider
+        - @photos.each do |photo|
+          - if asset_present?(photo.image)
+            div
+              figure.image
+                img src=photo.image.asset_url alt=photo.image.alt
+                p.caption = photo.image.caption
+                p.date = photo.date.strftime('%b. %e, %Y')
+
+    .thumbnails
       - @photos.each do |photo|
-        - if asset_present?(photo.image)
-          img src=photo.image.asset_url alt=photo.image.alt
-          p = photo.image.caption
-
-
-    / repeat again for thumbnail list...
+        .column.is-one-third
+          - if asset_present?(photo.image)
+            div.thumbnail
+              img src=photo.image.asset_url alt=photo.image.alt

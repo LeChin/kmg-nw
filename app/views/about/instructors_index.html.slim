@@ -9,8 +9,8 @@
         = markdown(@page.body_content)
 
 - if @instructors.present?
-  - row_count = @instructors.size - 2
-  - (1..row_count + 1).each do |row|
+  - row_count = (@instructors.size / 2.to_f).ceil
+  - (1..row_count).each do |row|
     .columns.instructors
       - if row == 1
         - range_1 = 0

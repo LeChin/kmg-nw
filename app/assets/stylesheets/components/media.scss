@@ -1,0 +1,48 @@
+.medium {
+  .slick-slider {
+    height: 100%;
+    margin: 0;
+  }
+
+  figure {
+    margin: 0 auto;
+
+    img {
+      height: 700px;
+      width: auto;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .caption,
+    .date {
+      margin-top: 10px;
+    }
+
+    .date {
+      color: $c-orange;
+      font-weight: bold;
+    }
+  }
+
+  .thumbnails {
+    display: inline-block;
+    width: 100%;
+    margin-top: 100px;
+
+    .column {
+      float: left;
+      height: 250px;
+
+      .thumbnail {
+        height: 100%;
+
+        img {
+          height: 100%;
+          display: block;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
