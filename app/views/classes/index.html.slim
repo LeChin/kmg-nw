@@ -1,8 +1,7 @@
 section.hero.bordered-hero
   img src=image_path('Hero_1600x620.jpg') alt='Our Classes'
   .hero-quote
-    h1.title.med-bold-title TODO
-    h2.subtitle - TODO -
+    h1.title.med-bold-title Helping You Become the Best Version of Yourself
 
 .container
   section.section.tall-section
@@ -32,6 +31,9 @@ section.hero.bordered-hero
               h2.subtitle.medium-bold-title = workout.title
               = markdown(workout.body)
 
-              h2 Class Times
+              p.sm-bold-upcase Class Times
               - workout.schedules.ordered_by_time.each do |schedule|
-                p = schedule.formatted_start_time
+                p
+                  span = schedule.formatted_days
+                  br
+                  span = schedule.formatted_start_time
