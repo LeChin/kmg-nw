@@ -83,23 +83,6 @@
       text-decoration: none;
        color: $c-orange;
     }
-
-    li a.active {
-      color: $c-orange;
-    }
-
-    li a.active:before {
-      content: '';
-      display: inline-block;
-      background: url(global/Arrow.svg) no-repeat;
-      width: 20px;
-      height: 10px;
-      margin-left: 5px;
-    }
-
-    li a:not(.active) {
-      margin-left: 25px;
-    }
   }
 
   .citation {
