@@ -3,9 +3,11 @@
 
 - if @gallery_items.present?
   section.hero.hide-on-print
-    - @gallery_items.each do |gallery_item|
-      - if asset_present?(gallery_item.image)
-        img src=gallery_item.image.asset_url alt=gallery_item.image.alt
+    .home-photo-slider
+      - @gallery_items.each do |gallery_item|
+        - if asset_present?(gallery_item.image)
+          div
+            img src=gallery_item.image.asset_url alt=gallery_item.image.alt
 
 .container.hide-on-print
   section.section.has-text-centered.tall-section

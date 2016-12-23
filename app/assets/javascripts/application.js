@@ -47,64 +47,10 @@ $(document).ready(function ($) {
     }
   });
 
-  // about + classes page fixed sidebar
-  // Commenting out for now, width needs to be dynamically set
-  // 
-  // 
-  // var $sticky  = $(".sticky-sidebar");
-
-  // if ($sticky.length > 0) {
-
-  //   var heroHeight = $('.bordered-hero').height() + 240;
-
-  //   $(window).scroll(function() {
-  //     var windscroll = $(window).scrollTop();
-
-  //     $('.sticky-sidebar a').each(function () {
-  //       var currLink = $(this);
-  //       var refElement = $(currLink.attr("href"));
-
-  //       if ((refElement.position().top + heroHeight) <= windscroll && (refElement.position().top + refElement.height() + heroHeight) > windscroll) {
-  //         $('.sticky-sidebar ul li a').removeClass("active");
-  //         currLink.addClass("active");
-  //       }
-  //       else{
-  //         currLink.removeClass("active");
-  //       }
-  //     });
-
-  //     stickIt();
-  //   });
-
-  //   $(window).resize(function() {
-  //     stickIt();
-  //   });
-
-  //   var sticky_container = document.createElement("div"),
-  //   $sticky_container = $(sticky_container).addClass("sticky-container"),
-  //   $sticky2 = $sticky[0].cloneNode(true),
-  //   eventTimeout;
-
-
-  //   // $("body").append([$sticky_container,$sticky2]);
-  //   $("body").append($sticky_container);
-  //   $sticky_container[0].append($sticky2);
-
-  //   function stickIt() {
-  //     // ignore resize events as long as an actualResizeHandler execution is in the queue
-  //     if ( !eventTimeout && $(window).width() > 1060 ) {
-  //       eventTimeout = setTimeout(function() {
-  //         eventTimeout = null;
-  //         $sticky2.style.visibility = $sticky[0].getBoundingClientRect().top<0 ? "visible" : "hidden";
-  //        }, 10);
-  //     }
-  //   };
-  //   stickIt();
-    
-  //   $(window).on("scroll resize", stickIt());
-  // }
-
-  // slider
+  // slick slider
+  $('.home-photo-slider').slick({
+    dots: true
+  });
 
   $('.photo-slider').slick({
     arrow: true,
