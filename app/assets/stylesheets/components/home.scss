@@ -4,6 +4,7 @@
     position: relative;
     z-index: 1;
     background-color: $c-black;
+    width: 100%;
 
     .play-button {
       background: asset_url('home/Play.svg') no-repeat;
