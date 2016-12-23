@@ -20,7 +20,6 @@
 
     .play-button:hover {
       background: asset_url('home/Play-inverted.svg') no-repeat;
-      background-size: 11rem 11rem;
     }
 
     img {
@@ -35,7 +34,8 @@
 }
 
 @media screen and (max-width: 768px) {
-  .pages.home .video-link .play-button {
+  .pages.home .video-link .play-button,
+  .pages.home .video-link .play-button:hover {
     background-size: 5rem 5rem;
     width: 5rem;
     height: 5rem;
