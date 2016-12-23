@@ -7,6 +7,10 @@ module ApplicationHelper
     end
   end
 
+  def meta_description
+    "'So one may walk in peace.' Imi Lichtenfeld. Invictus Defense Academy"
+  end
+
   def asset_present?(asset_object)
     asset_object.present? && asset_object.asset.present?
   end
