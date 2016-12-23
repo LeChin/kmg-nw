@@ -20,6 +20,10 @@ class Schedule < ApplicationRecord
     end_time.strftime('%I:%M %p')
   end
 
+  def formatted_total_time
+    start_time.strftime('%l:%M') + ' - ' + end_time.strftime('%l:%M %p')
+  end
+
   def formatted_days
     days.pluck(:name).to_sentence
   end

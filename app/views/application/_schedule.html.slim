@@ -17,8 +17,9 @@
                     - if has_workout_image?(schedule.workout)
                       img src=image_path(workout_image(schedule.workout))
                   p.bold-upcase = schedule.workout.title
-                  p = schedule.formatted_start_time
+                  p = schedule.formatted_total_time
 
+  / MOBILE
   section#mobile-schedule-section.hide
     - @days.each_with_index do |day, i|
       - if day.schedules.present?
@@ -34,4 +35,4 @@
                       - if has_workout_image?(schedule.workout)
                         img src=image_path(workout_image(schedule.workout))
                     p.bold-upcase = schedule.workout.title
-                    p = schedule.formatted_start_time
+                    p = schedule.formatted_total_time
