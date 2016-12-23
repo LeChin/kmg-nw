@@ -1,17 +1,32 @@
 .sitemap {
   h2 {
-    color: $c-orange;
     font-weight: bold;
     font-size: 1.5rem;
     padding-bottom: 10px;
+    a {
+      color: $c-gray-dark;
+    }
+    a:hover {
+      text-decoration: none;
+      color: $c-orange;
+    }
   }
 
-  .instructor-list {
-    margin-left: 20px;
+  .sitemap-list {
 
     li {
-      font-size: 1.1rem;
-      list-style: disc;
+      padding: 10px 0;
+      padding-left: 2em;
+      text-indent: -2em;
+    }
+
+    li:before {
+      content: '';
+      display: inline-block;
+      background: asset_url('global/Arrow.svg') no-repeat;
+      width: 20px;
+      height: 10px;
+      margin-left: 5px;
     }
   }
 }

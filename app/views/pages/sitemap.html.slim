@@ -6,21 +6,28 @@
     .columns
       .column
         h2: a href=about_index_path About
-        h2: a href=about_index_path What is Krav Maga?
+        ul.sitemap-list
+          li: a href=about_index_path What is Krav Maga?
+          li: a href=membership_path Membership
 
       .column
         h2: a href=instructors_index_path Instructors
         - if @sitemap_instructors.present?
-          ul.instructor-list
+          ul.sitemap-list
             - @sitemap_instructors.each do |instructor|
               li: a href=instructors_detail_path(slug: instructor.slug) = instructor.name
 
       .column
-        h2: a href=membership_path Membership
         h2: a href=classes_index_path Classes
-        h2: a href=schedule_path Schedule
+        ul.sitemap-list
+          li: a href=classes_index_path Overview
+          li: a href=schedule_path Schedule
 
       .column
-        h2: a href=photos_path Photos
-        h2: a href=videos_path Videos
+        h2: a href=photos_path Media
+        ul.sitemap-list
+          li: a href=photos_path Photos
+          li: a href=videos_path Videos
+
+      .column
         h2: a href=news_index_path News

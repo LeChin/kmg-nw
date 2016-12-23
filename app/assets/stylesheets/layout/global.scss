@@ -20,6 +20,9 @@ body {
   a.no-hover,
   a.no-hover:hover {
     color: $c-white;
+  }
+
+  .no-click {
     pointer-events: none;
   }
 
