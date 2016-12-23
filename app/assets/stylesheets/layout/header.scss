@@ -32,32 +32,32 @@ nav.nav {
   }
 
   .time {
-    background: url(top-nav/Time.svg);
+    background: asset_url('top-nav/Time.svg');
     background-size: 25px 35px;
   }
 
   .address {
-    background: url(top-nav/Address.svg);
+    background: asset_url('top-nav/Address.svg');
     background-size: 25px 35px;
   }
 
   .email {
-    background: url(top-nav/Email.svg);
+    background: asset_url('top-nav/Email.svg');
     background-size: 25px 35px;
   }
 
   .phone {
-    background: url(top-nav/Phone.svg);
+    background: asset_url('top-nav/Phone.svg');
     background-size: 25px 35px;
   }
 
   .facebook {
-    background: url(top-nav/Facebook.svg);
+    background: asset_url('top-nav/Facebook.svg');
     background-size: 25px 35px;
   }
 
   .instagram {
-    background: url(top-nav/Instagram.svg);
+    background: asset_url('top-nav/Instagram.svg');
     background-size: 25px 35px;
   }
 }
@@ -80,7 +80,7 @@ nav.nav {
   }
 
   .logo {
-    background: url(logos/KMG-Logo.png) no-repeat center;
+    background: asset_url('logos/KMG-Logo.png') no-repeat center;
     background-size: 150px 120px;
   }
 }

@@ -40,7 +40,7 @@ body {
   .back-link:before {
     content: '';
     display: inline-block;
-    background: url(global/Arrow.svg) no-repeat;
+    background: asset_url('global/Arrow.svg') no-repeat;
     transform: scaleX(-1);
     width: 10px;
     height: 10px;
@@ -102,7 +102,7 @@ blockquote:before {
   width: 65px;
   height: 65px;
   margin-top: -20px;
-  background: url(global/Quote-Mark.svg) no-repeat;
+  background: asset_url('global/Quote-Mark.svg') no-repeat;
   background-size: 65px 65px;
   float: right;
   content: '';

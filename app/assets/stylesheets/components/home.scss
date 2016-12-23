@@ -6,7 +6,7 @@
     background-color: $c-black;
 
     .play-button {
-      background: url(home/Play.svg) no-repeat;
+      background: asset_url('home/Play.svg') no-repeat;
       background-size: 11rem 11rem;
       display: block;
       width: 11rem;
@@ -19,7 +19,7 @@
     }
 
     .play-button:hover {
-      background: url(home/Play-inverted.svg) no-repeat;
+      background: asset_url('home/Play-inverted.svg') no-repeat;
       background-size: 11rem 11rem;
     }
 

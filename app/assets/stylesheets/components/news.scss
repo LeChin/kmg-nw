@@ -22,7 +22,7 @@
   .read-more:after {
     content: '';
     display: inline-block;
-    background: url(global/Arrow.svg) no-repeat;
+    background: asset_url('global/Arrow.svg') no-repeat;
     width: 20px;
     height: 10px;
     margin-left: 5px;

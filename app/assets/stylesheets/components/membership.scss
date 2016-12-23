@@ -19,7 +19,7 @@
       li:before {
         content: '';
         display: inline-block;
-        background: url(global/Arrow.svg) no-repeat;
+        background: asset_url('global/Arrow.svg') no-repeat;
         width: 20px;
         height: 10px;
         margin-left: 5px;
@@ -28,7 +28,7 @@
   }
 
   #membership_image {
-    background: url(membership/Membership_Bgnd_1600.jpg) no-repeat fixed center $c-gray-dark;
+    background: asset_url('membership/Membership_Bgnd_1600.jpg') no-repeat fixed center $c-gray-dark;
 
     .column.margin-left {
       margin-left: 50px;
@@ -67,7 +67,7 @@
         li:before {
           content: '';
           display: inline-block;
-          background: url(global/Arrow.svg) no-repeat;
+          background: asset_url('global/Arrow.svg') no-repeat;
           width: 20px;
           height: 10px;
           margin-left: 5px;
