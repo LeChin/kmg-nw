@@ -19,7 +19,7 @@ class AboutController < ApplicationController
 
   def membership
     @page = MembershipLandingPage.instance
-    @pricings = @page.pricings
+    @pricings = @page.pricings.order(:position)
     @page_title =  'Membership | Invictus Defense Academy'
   end
 
