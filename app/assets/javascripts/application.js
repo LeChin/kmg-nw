@@ -49,7 +49,15 @@ $(document).ready(function ($) {
 
   // slick slider
   $('.home-photo-slider').slick({
-    dots: true
+    dots: true,
+    responsive: [
+      {
+        breakpoint: 1000,
+        settings: {
+          dots: false
+        } 
+      }
+    ]
   });
 
   $('.photo-slider').slick({
