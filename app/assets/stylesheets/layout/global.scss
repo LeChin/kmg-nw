@@ -212,6 +212,25 @@ blockquote:before {
   display: none;
 }
 
+// HERO QUOTE
+
+.hero {
+  position: relative;
+
+  .hero-quote {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 70%;
+
+    h1, h2 {
+      color: $c-white;
+    }
+  }
+}
+
 // MOBILE
 
 @media screen and (max-width: 768px) {
