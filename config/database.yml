@@ -78,8 +78,42 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
-production:
-  <<: *default
-  database: kmg-nw_production
-  username: kmg-nw
-  password: <%= ENV['KMG-NW_DATABASE_PASSWORD'] %>
+
+
+
+# ON DIGITAL OCEAN
+# 
+# production:
+#   <<: *default
+#   database: kmg-nw_production
+#   username: kmg-nw
+#   password: <%= ENV['KMG-NW_DATABASE_PASSWORD'] %>
+
+
+# default: &default
+#   adapter: postgresql
+#   encoding: unicode
+#   # For details on connection pooling, see rails configuration guide
+#   # http://guides.rubyonrails.org/configuring.html#database-pooling
+#   pool: 5
+#   host: localhost
+#   username: rails
+#   password: <%= ENV['APP_DATABASE_PASSWORD'] %>
+
+# development:
+#   <<: *default
+#   database: kmg-nw_development
+
+# # Warning: The database defined as "test" will be erased and
+# # re-generated from your development database when you run "rake".
+# # Do not set this db to the same as development or production.
+# test:
+#   <<: *default
+#   database: kmg-nw_test
+
+# production:
+#   <<: *default
+#   database: kmg-nw_production
+#   username: rails
+#   password: <%= ENV['APP_DATABASE_PASSWORD'] %>
+
