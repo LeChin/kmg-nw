@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161226211415) do
+ActiveRecord::Schema.define(version: 20161231230720) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -185,6 +185,17 @@ ActiveRecord::Schema.define(version: 20161226211415) do
     t.index ["unlock_token"], name: "index_fae_users_on_unlock_token", unique: true, using: :btree
   end
 
+  create_table "free_trial_requests", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.text     "comments"
+    t.string   "workout"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "trial_time"
+    t.string   "trial_day"
+  end
+
   create_table "home_gallery_items", force: :cascade do |t|
     t.boolean  "live"
     t.integer  "position"
@@ -276,11 +287,12 @@ ActiveRecord::Schema.define(version: 20161226211415) do
     t.text     "body"
     t.boolean  "appointment_only"
     t.boolean  "live"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
     t.string   "slug"
     t.boolean  "show_on_landing"
     t.integer  "position"
+    t.boolean  "trial_class",      default: false
     t.index ["appointment_only"], name: "index_workouts_on_appointment_only", using: :btree
     t.index ["live"], name: "index_workouts_on_live", using: :btree
   end

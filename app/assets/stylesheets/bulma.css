@@ -1291,8 +1291,8 @@ a.box:active {
   }
 }
 
-.input,
-.textarea {
+.input input,
+.input textarea {
   -moz-appearance: none;
   -webkit-appearance: none;
   -webkit-box-align: center;
@@ -1320,50 +1320,17 @@ a.box:active {
   width: 100%;
 }
 
-.input:hover,
-.textarea:hover {
+.input input:hover,
+.input textarea:hover {
   border-color: #b5b5b5;
 }
 
-.input:active, .input:focus, .input.is-active,
-.textarea:active,
-.textarea:focus,
-.textarea.is-active {
-  border-color: #00d1b2;
+.input input:active, .input input:focus, .input input.is-active,
+.input textarea:active,
+.input textarea:focus,
+.input textarea.is-active {
+  border-color: #df8026;
   outline: none;
-}
-
-.input[disabled], .input.is-disabled,
-.textarea[disabled],
-.textarea.is-disabled {
-  background-color: whitesmoke;
-  border-color: #dbdbdb;
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.input[disabled]::-moz-placeholder, .input.is-disabled::-moz-placeholder,
-.textarea[disabled]::-moz-placeholder,
-.textarea.is-disabled::-moz-placeholder {
-  color: rgba(54, 54, 54, 0.3);
-}
-
-.input[disabled]::-webkit-input-placeholder, .input.is-disabled::-webkit-input-placeholder,
-.textarea[disabled]::-webkit-input-placeholder,
-.textarea.is-disabled::-webkit-input-placeholder {
-  color: rgba(54, 54, 54, 0.3);
-}
-
-.input[disabled]:-moz-placeholder, .input.is-disabled:-moz-placeholder,
-.textarea[disabled]:-moz-placeholder,
-.textarea.is-disabled:-moz-placeholder {
-  color: rgba(54, 54, 54, 0.3);
-}
-
-.input[disabled]:-ms-input-placeholder, .input.is-disabled:-ms-input-placeholder,
-.textarea[disabled]:-ms-input-placeholder,
-.textarea.is-disabled:-ms-input-placeholder {
-  color: rgba(54, 54, 54, 0.3);
 }
 
 .input.is-white,
@@ -1406,8 +1373,8 @@ a.box:active {
   border-color: #ffdd57;
 }
 
-.input.is-danger,
-.textarea.is-danger {
+.input input.is-danger,
+.input textarea.is-danger {
   border-color: #ff3860;
 }
 
@@ -1501,7 +1468,7 @@ a.box:active {
   margin-left: 10px;
 }
 
-.select {
+.select select {
   display: inline-block;
   height: 32px;
   position: relative;
@@ -1544,29 +1511,6 @@ a.box:active {
 .select select:active, .select select:focus, .select select.is-active {
   border-color: #00d1b2;
   outline: none;
-}
-
-.select select[disabled], .select select.is-disabled {
-  background-color: whitesmoke;
-  border-color: #dbdbdb;
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.select select[disabled]::-moz-placeholder, .select select.is-disabled::-moz-placeholder {
-  color: rgba(54, 54, 54, 0.3);
-}
-
-.select select[disabled]::-webkit-input-placeholder, .select select.is-disabled::-webkit-input-placeholder {
-  color: rgba(54, 54, 54, 0.3);
-}
-
-.select select[disabled]:-moz-placeholder, .select select.is-disabled:-moz-placeholder {
-  color: rgba(54, 54, 54, 0.3);
-}
-
-.select select[disabled]:-ms-input-placeholder, .select select.is-disabled:-ms-input-placeholder {
-  color: rgba(54, 54, 54, 0.3);
 }
 
 .select select.is-white {
@@ -1619,27 +1563,6 @@ a.box:active {
 
 .select.is-fullwidth select {
   width: 100%;
-}
-
-.select:after {
-  border: 1px solid #00d1b2;
-  border-right: 0;
-  border-top: 0;
-  content: " ";
-  display: block;
-  height: 7px;
-  pointer-events: none;
-  position: absolute;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  width: 7px;
-  margin-top: -6px;
-  right: 16px;
-  top: 50%;
-}
-
-.select:hover:after {
-  border-color: #363636;
 }
 
 .select.is-small {

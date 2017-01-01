@@ -8,6 +8,7 @@ main.content
         th Title
         th.-action-wide data-sorter="false" Show on Class Landing?
         th.-action-wide data-sorter="false" Live?
+        th.-action-wide data-sorter="false" Trail Class?
         th.-action-wide Modified
         th.-action data-sorter="false"
 
@@ -19,6 +20,7 @@ main.content
             td = link_to item.fae_display_field, edit_admin_workout_path(item)
             td = fae_toggle item, :show_on_landing
             td = fae_toggle item, :live
+            td = fae_toggle item, :trial_class
             td = fae_date_format item.updated_at
             td = fae_delete_button item
       - else

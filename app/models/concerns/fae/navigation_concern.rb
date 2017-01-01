@@ -47,7 +47,8 @@ module Fae
           item('Media Landing', path: fae.edit_content_block_path('photo_landing')),
           item('Memebership Landing', path: fae.edit_content_block_path('membership_landing')),
           item('Contact Info', path: fae.edit_content_block_path('contact_info')),
-        ])
+        ]),
+        item('Free Trial Requests', path: admin_free_trial_requests_path)
       ]
     end
 

@@ -1,0 +1,29 @@
+== render 'fae/shared/index_header', title: @klass_humanized.pluralize.titleize, new_button: false
+
+main.content
+  table.js-sort-column
+    thead
+      tr
+        th Name
+        th Email
+        th Workout
+        th Time
+        th Day
+        th Comments
+        th.-action-wide Date Created
+        th.-action data-sorter="false"
+
+    tbody
+      - if @items.present?
+        - @items.each do |item|
+          tr id=fae_sort_id(item)
+            td = item.name
+            td = item.email
+            td = item.workout_name if item.workout.present?
+            td = item.time_name if item.trial_time.present?
+            td = item.day_name if item.trial_day.present?
+            td = item.comments
+            td = fae_date_format item.created_at
+            td = fae_delete_button item
+      - else
+        tr: td colspan="7" No items found

@@ -1,0 +1,11 @@
+= simple_form_for(['admin', @item]) do |f|
+  header.content-header.js-content-header
+    == render 'fae/shared/form_header', header: @klass_name
+  == render 'fae/shared/errors'
+
+  main.content
+    = fae_input f, :name, display_only: true
+    = fae_input f, :email, display_only: true
+    = fae_input f, :comments, display_only: true
+    = fae_input f, :workout, display_only: true
+

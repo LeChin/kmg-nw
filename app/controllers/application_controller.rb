@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   layout 'application'
-  before_filter :init_contact_page, :init_markdown
+  before_filter :init_contact_page, :init_markdown, :init_trial
 
   private
 
@@ -15,6 +15,10 @@ class ApplicationController < ActionController::Base
 
   def init_markdown
     @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true)
+  end
+
+  def init_trial
+    @free_trial_request = FreeTrialRequest.new
   end
 
 end

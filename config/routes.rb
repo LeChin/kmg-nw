@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   namespace :admin do
+    resources :free_trial_requests
     resources :pricings
     resources :news_items
     resources :media
@@ -33,6 +34,11 @@ Rails.application.routes.draw do
   # NEWS
   get '/news', to: "news#index", as: 'news_index'
   get '/news/:slug', to: "news#detail", as: 'news_detail'
+
+  # FREE TRIAL REQUEST
+  get '/free_trials/get_schedules', to: 'free_trials#get_schedules', as: 'get_schedules'
+  get '/free_trials/get_days', to: 'free_trials#get_days', as: 'get_days'
+  post '/free-trial-request/submit', to: 'free_trials#submit', as: 'submit'
 
   get '/sitemap', to: "pages#sitemap", as: 'sitemap'
 

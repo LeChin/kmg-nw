@@ -4,9 +4,9 @@ section.nav-hero-header
       nav.nav.has-shadow#contact-bar
         .container
           .nav-center
-            a.nav-item.is-tab href=schedule_path
+            a.nav-item.is-tab.js-trial-modal href='#free-trial'
               span.time
-              | Class Schedule
+              | Free 1 Week Trial
             a.nav-item.is-tab href="mailto:#{ @contact_page.email_content }"
               span.email
               = @contact_page.email_content
