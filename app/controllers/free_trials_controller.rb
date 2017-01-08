@@ -25,7 +25,7 @@ class FreeTrialsController < ApplicationController
 
       if request.save
         FreeTrialMailer.email(params[:free_trial_request]).deliver
-        FreeTrialMailer.thank_you(params[:free_trial_request]).deliver
+        # FreeTrialMailer.thank_you(params[:free_trial_request]).deliver
         @data = { email: '' }
       else
         @data = { error: 'Please fill out the form.' }

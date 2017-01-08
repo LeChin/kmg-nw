@@ -17,9 +17,7 @@ module ApplicationHelper
 
   def xml_sitemap_path(path)
     # If https is turned on we may have to slide the following code into place. Request objects seem to be finicky w https.
-    # protocol = Rails.env.production? ? 'https' : 'http'
-    # full_url_w_protocol = "#{protocol}://" + "www." "#{request.domain}" + "#{path}"
-    request.protocol + request.subdomain + '.' + request.domain + path
+    full_url_w_protocol = "https://" + "www." "#{request.domain}" + "#{path}"
   end
 
   def workout_class(workout)

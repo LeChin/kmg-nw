@@ -3,4 +3,4 @@
 
 User-agent: *
 Disallow: 
-Sitemap: http://kravmaganw.net/sitemap.xml
+Sitemap: https://invictusdefenseacademy.com/sitemap.xml
