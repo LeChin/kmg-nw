@@ -8,7 +8,7 @@ module ApplicationHelper
   end
 
   def meta_description
-    "'So one may walk in peace.' Imi Lichtenfeld. Invictus Defense Academy"
+    "'So one may walk in peace.' Imi Lichtenfeld. Invictus Defense Academy. Krav Maga, Self Defense, Defense Academy, Strike Lab, Combat Conditioning, Combat Fitness."
   end
 
   def asset_present?(asset_object)
