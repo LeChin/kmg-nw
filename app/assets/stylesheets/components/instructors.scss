@@ -42,8 +42,13 @@
               padding: 0 10px;
             }
 
-            &.link {
-              // TODO - icon
+            &.link:after {
+              content: '';
+              display: inline-block;
+              background: asset_url('global/Arrow.svg') no-repeat;
+              width: 20px;
+              height: 10px;
+              margin-left: 5px;
             }
           }
         }
