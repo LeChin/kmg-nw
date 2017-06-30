@@ -16,7 +16,7 @@
           .column
             p <span class='pricing-header-bold'>General Public</span> <span class='pricing-subheader'>Month to Month</span>
           .column
-            p <span class='pricing-header-bold'>Public Saftey / Military</span> <span class='pricing-subheader'>Month to Month</span>
+            p <span class='pricing-header-bold'>Public Safety / Military</span> <span class='pricing-subheader'>Month to Month</span>
         .columns#pricings-table
           .column.price-level
             ul
@@ -42,7 +42,7 @@
               span #{ pricing.general_price } <br>#{ pricing.time_free }
     div
       input id="public-safety" name="accordion-2" type="checkbox"
-      label for="public-safety" Public Saftey / Military (Month to Month)
+      label for="public-safety" Public Safety / Military (Month to Month)
       article
         ul
           - @pricings.each do |pricing|
@@ -64,7 +64,7 @@ section.hero.dark-section#membership_image
       .column.is-one-third
         h1.title.large-bold-title Membership Discounts
       .column.margin-left
-        h2.title.medium-bold-title.no-margin Public Saftey Rates
+        h2.title.medium-bold-title.no-margin Public Safety Rates
         p.discount 20% Discount
         .svg-columns
           = markdown(@page.public_safety_info_content)

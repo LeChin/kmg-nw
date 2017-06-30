@@ -11,7 +11,7 @@
         - if day.schedules.present?
           .column.border-right
             - day.schedules.ordered_by_time.each do |schedule|
-              - if schedule.workout.live.present?
+              - if schedule.workout.present? && schedule.workout.live.present?
                 .column.fixed-height
                   span.schedule-icons class="#{ workout_class(schedule.workout) }"
                     - if has_workout_image?(schedule.workout)
@@ -29,7 +29,7 @@
           article
             ul
               - day.schedules.ordered_by_time.each do |schedule|
-                - if schedule.workout.live.present?
+                - if schedule.workout.present? && schedule.workout.live.present?
                   li
                     span class="#{ workout_class(schedule.workout) }"
                       - if has_workout_image?(schedule.workout)

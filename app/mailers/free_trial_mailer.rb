@@ -7,7 +7,7 @@ class FreeTrialMailer < ActionMailer::Base
     @day = Day.find_by_id(params['trial_day']).try(:name)
     @comments = params['comments']
 
-    mail(to: 'elohcin@gmail.com', subject: 'Free Trial Request', from: 'info@invictusdefenseacademy.com')
+    mail(to: 'info@invictusdefenseacademy.com', subject: 'Free Trial Request', from: 'info@invictusdefenseacademy.com')
   end
 
   def thank_you(params)

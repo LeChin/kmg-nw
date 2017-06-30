@@ -8,7 +8,8 @@ class Workout < ApplicationRecord
   has_many :class_type_workouts
   has_many :class_types,
     through: :class_type_workouts
-  has_many :schedules
+  has_many :schedules,
+    dependent: :destroy
   has_many :days,
     through: :schedules
 

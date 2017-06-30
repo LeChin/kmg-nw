@@ -27,7 +27,7 @@ class FreeTrialRequest < ApplicationRecord
   end
 
   def day_name
-    Day.find_by_id(trial_day).name
+    Day.find_by_id(trial_day).try(:name)
   end
 
 end
