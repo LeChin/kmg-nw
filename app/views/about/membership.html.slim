@@ -21,7 +21,7 @@
           .column.price-level
             ul
               - @pricings.each do |pricing|
-                li class="#{ 'padding-bottom' if pricing.time_free.present? }" = pricing.level
+                li = pricing.level
           .column
             ul
               - @pricings.each do |pricing|
@@ -38,7 +38,7 @@
         ul
           - @pricings.each do |pricing|
             li
-              span.pricing-level class="#{ 'padding-bottom' if pricing.time_free.present? }" = pricing.level
+              span.pricing-level = pricing.level
               span #{ pricing.general_price } <br>#{ pricing.time_free }
     div
       input id="public-safety" name="accordion-2" type="checkbox"
@@ -47,7 +47,7 @@
         ul
           - @pricings.each do |pricing|
             li
-              span.pricing-level class="#{ 'padding-bottom' if pricing.time_free.present? }" = pricing.level
+              span.pricing-level = pricing.level
               span #{ pricing.public_safety_price } <br>#{ pricing.time_free }
 
 .container

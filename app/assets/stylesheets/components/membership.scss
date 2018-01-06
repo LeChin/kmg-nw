@@ -32,6 +32,12 @@
 
     .column.margin-left {
       margin-left: 50px;
+
+      .markdown-content {
+        strong {
+          color: $c-white;
+        }
+      }
     }
 
     .no-margin {
@@ -56,6 +62,10 @@
 
       .markdown-content {
         column-count: 2;
+
+        strong {
+          color: $c-white;
+        }
 
         li {
           max-width: 230px;
@@ -114,6 +124,7 @@
         padding-bottom: 20px;
         color: $c-white;
         font-weight: normal;
+        height: 65px;
 
         span {
           display: block;
@@ -128,10 +139,7 @@
         li {
           color: $c-gray-lightest;
           font-weight: bold;
-        }
-
-        .padding-bottom {
-          padding-bottom: 40px;
+          height: 65px;
         }
       }
     }
