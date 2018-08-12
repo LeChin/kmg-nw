@@ -1,6 +1,0 @@
-$('#free_trial_request_trial_time').empty();
-$('#free_trial_request_trial_time').append( $('<option>Select the Time</option>'));
-$('.js-trial-schedule').show()
-<% @schedules.each do |schedule| %>
-  $('#free_trial_request_trial_time').append($('<option value="<%= schedule.id %>"><%= schedule.formatted_start_time %></option>'));
-<% end %>

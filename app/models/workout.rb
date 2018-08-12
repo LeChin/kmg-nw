@@ -17,7 +17,6 @@ class Workout < ApplicationRecord
 
   default_scope { order(:position) }
   scope :live, -> { where(live: true) }
-  scope :trial_classes, -> { live.where(trial_class: true) }
   scope :for_landing, -> { live.where(show_on_landing: true) }
 
   def fae_display_field
@@ -27,5 +26,4 @@ class Workout < ApplicationRecord
   def class_types_list
     class_types.collect{ |c| c.name }.join(', ')
   end
-
 end
