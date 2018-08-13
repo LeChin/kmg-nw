@@ -2,35 +2,8 @@
   .container
     section.section
       h1.title.large-bold-title Free 1 Week Trial
-      h1.title.large-bold-title style="display: none;" Thank You
+      h2 Sign up now for your Free One Week Trial!
 
-      .form-wrapper
-        .js-form
-          p Sign up now for your Free One Week Trial!
-          
-          = simple_form_for(@free_trial_request, url: submit_path) do |f|
-            label.label Full Name *
-            = f.input :name, validate: true, label: false
-            label.label Email Address *
-            = f.input :email, validate: true, label: false
-            label.label Workout *
-            = f.input :workout, validate: true, label: false, collection: Workout.trial_classes
-            .js-trial-schedule style="display: none;"
-              label.label Time *
-              = f.input :trial_time, validate: true, label: false, as: :select
-            .js-trial-day style="display: none;"
-              label.label Day *
-              = f.input :trial_day, validate: true, label: false, as: :select
-            label.label Comments
-            = f.input :comments, as: :text, placeholder: 'Type your note, or request, in this box.', label: false
+      section.section
 
-            / DO NOT REMOVE secondary_email! Used as honeypot
-            = f.input :secondary_email, wrapper_html: { style: "display: none;" }
-
-            = f.submit 'Submit'
-
-          p: em Press 'x' or Esc to close
-
-        .js-thank-you style='display: none;'
-          p We recieved your note. Thank you very much.
-          p: em Press 'x' or Esc to close
+        a.button href="https://InvictusDefenseAcademy.zenplanner.com/zenplanner/portal/freeTrial.cfm" target="_blank"  Free Class Registration

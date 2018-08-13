@@ -1,6 +1,0 @@
-$('#free_trial_request_trial_day').empty();
-$('#free_trial_request_trial_day').append( $('<option>Select the Day</option>'));
-$('.js-trial-day').show();
-<% @days.each do |day| %>
-  $('#free_trial_request_trial_day').append($('<option value="<%= day.id %>"><%= day.name %></option>'));
-<% end %>

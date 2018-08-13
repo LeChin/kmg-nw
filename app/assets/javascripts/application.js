@@ -15,9 +15,6 @@
 //= require magnific-popup
 //= require underscore
 //= require judge
-//= require email_validate
-//= require form_submit
-//= require validation
 //= require_tree .
 
 
@@ -81,36 +78,5 @@ $(document).ready(function ($) {
       }
     ]
   });
-
-  // preselect
-  $('#free_trial_request_workout').change(function(){
-    var $this = $(this);
-
-    $.ajax({
-      url: '/free_trials/get_schedules/',
-      type: 'GET',
-      dataType: 'script',
-      data: {
-        workout_id: $this.val()
-      }
-    });
-  });
-
-  $('#free_trial_request_trial_time').change(function(){
-    var $this = $(this);
-
-    $.ajax({
-      url: '/free_trials/get_days/',
-      type: 'GET',
-      dataType: 'script',
-      data: {
-        schedule_id: $this.val()
-      }
-    });
-  });
-
-  Validator.init();
-  _email_validate.init()
-
 });
 
