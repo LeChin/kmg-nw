@@ -6,6 +6,7 @@
       .column
         h2.title.medium-bold-title = @page.headline_content
         = markdown(@page.body_content)
+        a.button href="https://InvictusDefenseAcademy.zenplanner.com/zenplanner/portal/sign-up-now.cfm" target="_blank" Member Registration
 
 - if @pricings.present?
   section.hero.dark-section#membership_pricing
