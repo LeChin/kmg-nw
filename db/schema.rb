@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161231230720) do
+ActiveRecord::Schema.define(version: 20190310174727) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -269,6 +269,7 @@ ActiveRecord::Schema.define(version: 20161231230720) do
     t.datetime "updated_at",          null: false
     t.integer  "static_page_id"
     t.integer  "position"
+    t.string   "corporate_price"
   end
 
   create_table "schedules", force: :cascade do |t|

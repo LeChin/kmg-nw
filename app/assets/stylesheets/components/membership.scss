@@ -90,7 +90,7 @@
   #pricings-table {
     .column {
       padding: 0 80px;
-      min-width: 350px;
+      min-width: 300px;
       text-align: center;
     }
 
@@ -101,6 +101,10 @@
 
   #pricings-header {
     margin-bottom: 40px;
+
+    .price-level {
+      min-width: 350px;
+    }
 
     .column p {
       text-transform: uppercase;
@@ -135,6 +139,7 @@
       &.price-level {
         text-align: left;
         text-transform: uppercase;
+        min-width: 350px;
 
         li {
           color: $c-gray-lightest;
