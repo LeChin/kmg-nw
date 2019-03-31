@@ -186,3 +186,9 @@
     content: "\f111";
     color: #df8026;
 }
+.home-photo-slider .slick-track {
+    background: black !important;
+}
+.home-photo-slider .slick-slide img {
+    margin: 0 auto;
+}

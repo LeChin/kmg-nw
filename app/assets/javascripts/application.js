@@ -57,6 +57,8 @@ $(document).ready(function ($) {
   // slick slider
   $('.home-photo-slider').slick({
     dots: true,
+    centerMode: true,
+    autoplay: true,
     responsive: [
       {
         breakpoint: 1000,

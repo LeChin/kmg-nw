@@ -15,11 +15,11 @@
         .columns#pricings-header
           .column.price-level
           .column
-            p <span class='pricing-header-bold'>General Public</span> <span class='pricing-subheader'>Month to Month</span>
+            p <span class='pricing-header-bold'>General Public</span>
           .column
-            p <span class='pricing-header-bold'>Corporate</span> <span class='pricing-subheader'>Month to Month</span>
+            p <span class='pricing-header-bold'>Corporate</span>
           .column
-            p <span class='pricing-header-bold'>Public Safety / Military</span> <span class='pricing-subheader'>Month to Month</span>
+            p <span class='pricing-header-bold'>Public Safety / Military</span>
         .columns#pricings-table
           .column.price-level
             ul
@@ -28,12 +28,11 @@
           .column
             ul
               - @pricings.each do |pricing|
-                li #{ pricing.corporate_price } <span>#{ pricing.time_free }</span>
-                li = pricing.level
+                li #{ pricing.general_price } <span>#{ pricing.time_free }</span>
           .column
             ul
               - @pricings.each do |pricing|
-                li #{ pricing.general_price } <span>#{ pricing.time_free }</span>
+                li #{ pricing.corporate_price } <span>#{ pricing.time_free }</span>
           .column
             ul
               - @pricings.each do |pricing|
