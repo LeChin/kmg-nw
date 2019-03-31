@@ -13,11 +13,13 @@
     .container
       section
         .columns#pricings-header
+          .column.price-level
           .column
+            p <span class='pricing-header-bold'>General Public</span>
           .column
-            p <span class='pricing-header-bold'>General Public</span> <span class='pricing-subheader'>Month to Month</span>
+            p <span class='pricing-header-bold'>Corporate</span>
           .column
-            p <span class='pricing-header-bold'>Public Safety / Military</span> <span class='pricing-subheader'>Month to Month</span>
+            p <span class='pricing-header-bold'>Public Safety / Military</span>
         .columns#pricings-table
           .column.price-level
             ul
@@ -27,6 +29,10 @@
             ul
               - @pricings.each do |pricing|
                 li #{ pricing.general_price } <span>#{ pricing.time_free }</span>
+          .column
+            ul
+              - @pricings.each do |pricing|
+                li #{ pricing.corporate_price } <span>#{ pricing.time_free }</span>
           .column
             ul
               - @pricings.each do |pricing|
@@ -42,7 +48,16 @@
               span.pricing-level = pricing.level
               span #{ pricing.general_price } <br>#{ pricing.time_free }
     div
-      input id="public-safety" name="accordion-2" type="checkbox"
+      input id="corporate" name="accordion-2" type="checkbox"
+      label for="corporate" Corporate (Month to Month)
+      article
+        ul
+          - @pricings.each do |pricing|
+            li
+              span.pricing-level = pricing.level
+              span #{ pricing.corporate_price } <br>#{ pricing.time_free }
+    div
+      input id="public-safety" name="accordion-3" type="checkbox"
       label for="public-safety" Public Safety / Military (Month to Month)
       article
         ul

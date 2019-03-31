@@ -15,5 +15,5 @@
     = render 'fae/shared/nested_table_advanced',
       assoc: :pricings,
       parent_item: Fae::StaticPage.find_by_id(@item.id),
-      cols: [:level, :general_price, :public_safety_price, :time_free],
+      cols: [:level, :general_price, :corporate_price, :public_safety_price, :time_free],
       ordered: true
