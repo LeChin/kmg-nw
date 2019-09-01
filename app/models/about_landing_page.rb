@@ -7,7 +7,9 @@ class AboutLandingPage < Fae::StaticPage
     {
       hero_image: { type: Fae::Image },
       quote: { type: Fae::TextField },
-      quote_attribution: { type: Fae::TextField }
+      quote_attribution: { type: Fae::TextField },
+      headline: { type: Fae::TextField },
+      body: { type: Fae::TextArea }
     }
   end
 
