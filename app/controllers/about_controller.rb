@@ -2,7 +2,7 @@ class AboutController < ApplicationController
 
   def index
     @page = AboutLandingPage.instance
-    @page_title = 'What is Krav Maga? | Invictus Defense Academy'
+    @page_title = 'About Invictus | Invictus Defense Academy'
   end
 
   def instructors_index
@@ -14,13 +14,13 @@ class AboutController < ApplicationController
   def instructors_detail
     @instructor = Instructor.live.find_by_slug(params[:slug])
     return show_404 if @instructor.blank?
-    @page_title =  @instructor.name + ' | Instructors | Invictus Defense Academy'
+    @page_title = @instructor.name + ' | Instructors | Invictus Defense Academy'
   end
 
   def membership
     @page = MembershipLandingPage.instance
     @pricings = @page.pricings.order(:position)
-    @page_title =  'Membership | Invictus Defense Academy'
+    @page_title = 'Membership | Invictus Defense Academy'
   end
 
 end
